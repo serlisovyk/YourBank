@@ -50,5 +50,16 @@ export const pages = {
     description:
       'How YourBank protects your accounts and personal data, with answers to common security questions.',
     navKey: 'security',
+    hero: {
+      titleStart: 'Your Security is Our',
+      titleAccent: 'Top Priority',
+      text: 'At YourBank, we understand the importance of keeping your financial information secure. We employ robust security measures and advanced technologies to protect your personal and financial data. Rest assured that when you bank with us, your security is our utmost priority.',
+      image: {
+        src: '/assets/images/security-hero.webp',
+        alt: '',
+        width: 968,
+        height: 716,
+      },
+    },
   },
 }

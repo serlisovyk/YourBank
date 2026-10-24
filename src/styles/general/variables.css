@@ -109,6 +109,7 @@
   --space-value-inset: clamp(24px, calc(1.25vw + 6px), 30px);
   --space-benefits-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
   --icon-card: var(--icon-product);
+  --space-protection: clamp(80px, calc(3.125vw + 35px), 95px);
 
   --space-job-card: clamp(40px, calc(2.0833vw + 10px), 50px);
   --space-job-block: clamp(32px, calc(1.6667vw + 8px), 40px);
@@ -212,6 +213,7 @@
     --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
     --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
     --space-benefits-gap: clamp(48px, calc(1.1429vw + 43.54px), 60px);
+    --space-protection: clamp(24px, calc(8.3333vw - 40px), 80px);
 
     --space-job-card: clamp(24px, calc(1.5238vw + 18.06px), 40px);
     --space-job-block: clamp(24px, calc(0.7619vw + 21.03px), 32px);

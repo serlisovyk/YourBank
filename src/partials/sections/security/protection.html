@@ -1,0 +1,12 @@
+<section class="protection section">
+  <div class="container">
+    {{> components/section-heading titleStart="How We" titleAccent="Protect You"
+    text="At YourBank, we prioritize the security and confidentiality of your
+    financial information. Our state-of-the-art encryption technology and stringent
+    data protection measures ensure your assets and transactions are safeguarded at
+    all times" }}
+    <div class="protection__items">
+      {{#each protection}} {{> components/icon-card inset=true }} {{/each}}
+    </div>
+  </div>
+</section>
