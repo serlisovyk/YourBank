@@ -302,10 +302,11 @@ line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn 
 ### About
 
 1. **Hero** (page hero) with the small label "Welcome to YourBank" above the title.
-2. **Mission & Vision.** Heading block; two staggered rows overlapping by 100 / 84 px at
-   1920 / 1440: row 1 the image plate (664 × 621) at the left and the Mission text on the right
-   (title `--text-title-lg`, a 1 px `--green-60` rule at its left); row 2 the Vision text at the
-   left and the image plate at the right. At 390: image above the text, rows stacked.
+2. **Mission & Vision.** Heading block; two staggered rows, the second pulled up by 100 / 84 px (`--space-mission-overlap`).
+   Row 1: the plate (664 × 621 at 1920, 41.6 % of the row) at the left, Mission right of it; row 2 mirrored. Plate:
+   `--grey-11`, 1 px `--grey-15`, radius 40, the photo inset 60 / 48 / 20 (`--space-mission-inset`) on three sides, flush with
+   the bottom edge (542 × 559). Text: a 1 px `--green-60` line on the plate side, 50 / 40 / 30 from it, title `--text-title-lg`.
+   At 390 the photo is first and the line is horizontal over the title.
 3. **Press Releases.** Heading block; a 2 × 2 grid of press cards (783 / 630 wide); one column
    at 390.
 4. **Footer** (no FAQ or CTA).
@@ -326,7 +327,7 @@ photo (968 × 716 at 1920, 715 × 568 at 1440, 329 × 253 at 390, radius 16) at 
 a text card (`--grey-10`, radius `20 0 80 20`, padding 80 / 60 / 24, 791 / 658 wide) on top of the
 photo's left edge: the title, a paragraph, nothing else (About adds the label above the title). Card
 and photo share one grid cell, so the panel is as tall as the taller of the two. At 390 the photo is first and the
-text card overlaps its lower part, with a plain radius 20.
+text card, centred, overlaps its lower part, with a plain radius 20.
 
 ## Known inconsistencies
 

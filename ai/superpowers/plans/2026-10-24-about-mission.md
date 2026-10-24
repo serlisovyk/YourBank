@@ -9,7 +9,9 @@ come from the fluid tokens, like Careers.
 
 - Hero: `data/pages.js` gets `about.hero` (`eyebrow`, `titleStart`, `titleAccent`, text, image) and
   `about.html` calls `{{> sections/shared/page-hero page.hero }}`. The partial and its stylesheet already
-  support `eyebrow`, so Careers is not touched; it is checked unchanged.
+  support `eyebrow`. The design centres the hero text below 1024 px (About and Security show it), so
+  `page-hero.css` gets one `text-align: center` there; at 1024 and wider Careers is unchanged, below
+  it its text is now centred too.
 - `partials/sections/about/mission-vision.html`, block `.mission-vision`: `section-heading` ("Mission &
   Vision" all accent) and `{{#each missionVision}}` rows. A row is a plate (the photo in a frame) and a text
   block (`h3`, paragraph). The Vision row is the same markup with a `--reverse` modifier, set from an
