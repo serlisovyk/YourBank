@@ -36,7 +36,7 @@ captures of the layout at 1920 and 390 (no 1440 capture: its values are scaled).
   `--text-press-title` 24 / 20 / 18, `--press-photo-height` 333 / 268 / 208 (1440 scaled to keep the
   1920 proportions of a 582 px photo). Spacing inside the card reuses the existing scale:
   photo to title `--space-card` (50 / 40 / 30), title to badges `--space-card-gap-sm`, badges to text
-  `--space-card-gap`; checked against the captures.
+  `--space-card-gap`; checked against the captures. The capture at 1920 shows the title, badges and text inset by one more card padding from the photo (a text column of 663 px against a 723 px photo; the lines break where the capture breaks them), none at 390: `padding-inline: var(--space-press-card)`, reset to 0 below 768 px.
 - Texts come from the template, with two edits: card 2 says "Chennai" where the template left a
   literal "[City]"; card 3's template text is a copy of card 4's (sustainability), so it is a new
   paragraph about the financial education partnership, the same tone and length.
