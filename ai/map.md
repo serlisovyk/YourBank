@@ -69,7 +69,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
-- `site.js` → `site` (name, absolute URL); `structured-data.js` → `organizationJsonLd`, the JSON-LD string of Home's `<head>`, built from `site`, `contacts`, `socials`.
+- `structured-data.js` → `organizationJsonLd`, the JSON-LD string of Home's `<head>`, built from `site`, `pages`, `contacts`, `socials`.
 - `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `path`, `title`, `description`, `navKey`, `hero` (page-hero pages), per page file name.
 - `site.js` → `site` (name, the production origin, theme colour, the preview image: its size and alt).
