@@ -10,6 +10,7 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
 - Pages are `src/*.html`; partials live in `src/partials/`. `partials/sections/<page>/` — one
   page section: `<section class="<name> section">` with a `.container` inside; `shared/` holds
   what two or more pages use. `partials/components/` — a repeated element (a card, a list item).
+- A new page is also added to `public/sitemap.xml` and `public/llms.txt`.
 - A partial is called by its path under `partials/`, without the extension:
   `{{> sections/home/hero }}`, `{{> components/product-card }}`. The path is the name, so two
   partials never collide; a folder is created with its first file.

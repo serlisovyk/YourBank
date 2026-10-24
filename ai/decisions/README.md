@@ -71,6 +71,7 @@ each with the record that replaced it.
 - [Carousel: CSS scroll-snap, no library](2026-10-24-carousel-scroll-snap.md)
 - [Open Account leads to Our Products, the tab in the address](2026-10-24-open-account-to-products.md)
 - [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md)
+- [Search files are hand-written in `public/`; the JSON-LD comes from `data/`](2026-10-24-seo-files-in-public.md)
 
 ### Superseded
 

@@ -11,7 +11,8 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `src/data/` — the data the partials render; each file exports one constant, wired in through `context` in `vite.config.js`.
 - `src/styles/` — all CSS (below). `src/scripts/` — all JavaScript (below).
 - `src/assets/` — `fonts/`, `images/`: referenced as `/assets/…`, bundled and hashed (below).
-- `public/` — files that need a fixed URL, served as they are: `favicon.svg`, `apple-touch-icon.png`, `og-image.png` (the link preview).
+- `public/` — files that need a fixed URL, served as they are: `favicon.svg`, `apple-touch-icon.png`, `og-image.png` (the link
+  preview), `robots.txt`, `sitemap.xml`, `llms.txt`, `logo.svg` (for the JSON-LD).
 - `vite.config.js` — Vite (`root: 'src'`, output `dist/` at the repo root) with `vite-plugin-handlebars`: the `partials`
   folder and `context(pagePath)`, which passes the current `page` and the
   `data/` constants, and the `eq` helper. The pages are listed in `build.rollupOptions.input`.
@@ -68,6 +69,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
+- `site.js` → `site` (name, absolute URL); `structured-data.js` → `organizationJsonLd`, the JSON-LD string of Home's `<head>`, built from `site`, `contacts`, `socials`.
 - `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `path`, `title`, `description`, `navKey`, `hero` (page-hero pages), per page file name.
 - `site.js` → `site` (name, the production origin, theme colour, the preview image: its size and alt).

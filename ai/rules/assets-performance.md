@@ -52,7 +52,8 @@ decision `vanilla-js-vite-handlebars`.
 
 - No third-party runtime scripts, no analytics, no font or icon CDN: the only script is
   `scripts/main.js`.
-- No sitemap and no web app manifest unless the author asks.
+- No web app manifest unless the author asks. `robots.txt`, `sitemap.xml` and `llms.txt` are
+  hand-written in `public/` (decision `seo-files-in-public`).
 - No source maps in the production build: `vite.config.js` sets no `build.sourcemap`.
 - A dependency is added only with the author's yes; the runtime has none today.
 - `npm run size` holds the built JS, CSS, font and images to the limits in `.size-limit.json`

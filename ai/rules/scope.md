@@ -18,7 +18,7 @@ application template.
 More linter rules beyond the ones in `eslint.config.js` and `.stylelintrc.json` are a new decision
 (`ai/decisions/`). A new page beyond the four needs the author's explicit request.
 
-Third-party scripts, a font CDN, a sitemap and a web app manifest:
+Third-party scripts, a font CDN and a web app manifest:
 `ai/rules/assets-performance.md`. The decisions behind these limits are in `ai/decisions/`.
 
 ## Prefer
