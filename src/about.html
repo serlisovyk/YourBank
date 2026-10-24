@@ -5,7 +5,9 @@
   </head>
   <body>
     {{> sections/shared/header }}
-    <main>{{> sections/shared/page-hero page.hero }}</main>
+    <main>
+      {{> sections/shared/page-hero page.hero }} {{> sections/about/mission-vision }}
+    </main>
     {{> sections/shared/footer }}
   </body>
 </html>

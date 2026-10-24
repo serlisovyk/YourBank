@@ -1,0 +1,31 @@
+<section class="mission-vision section">
+  <div class="container">
+    {{> components/section-heading titleAccent="Mission & Vision" text="We envision
+    being a leading force in the industry, driven by innovation, integrity, and
+    inclusivity, creating a brighter financial future for individuals and businesses
+    while maintaining a strong commitment to customer satisfaction and community
+    development" }}
+    <div class="mission-vision__rows">
+      {{#each missionVision}}
+      <div
+        class="mission-vision__row{{#if imageEnd}} mission-vision__row--reverse{{/if}}"
+      >
+        <div class="mission-vision__plate">
+          <img
+            class="mission-vision__image"
+            src="{{image.src}}"
+            width="{{image.width}}"
+            height="{{image.height}}"
+            alt="{{image.alt}}"
+            loading="lazy"
+          />
+        </div>
+        <div class="mission-vision__text">
+          <h3 class="mission-vision__title">{{title}}</h3>
+          <p>{{text}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

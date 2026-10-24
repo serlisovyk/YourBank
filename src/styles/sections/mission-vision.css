@@ -1,0 +1,101 @@
+.mission-vision__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-vision__row {
+  display: grid;
+  grid-template-columns: minmax(0, 664fr) minmax(0, 932fr);
+  align-items: center;
+
+  @media (width < 1024px) {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+}
+
+.mission-vision__row + .mission-vision__row {
+  margin-top: calc(-1 * var(--space-mission-overlap));
+
+  @media (width < 1024px) {
+    margin-top: var(--space-heading-block);
+  }
+}
+
+.mission-vision__plate {
+  background: url('/assets/images/decor/dots-fine.avif'), var(--grey-11);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 320px;
+  width: 100%;
+  border: 1px solid var(--grey-15);
+  border-radius: var(--border-radius);
+  padding: var(--space-mission-inset) var(--space-mission-inset) 0;
+
+  @media (width < 1024px) {
+    max-width: 664px;
+  }
+
+  @media (width < 768px) {
+    background-size: 240px;
+    border-radius: var(--border-radius-large);
+  }
+}
+
+.mission-vision__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+  @media (width < 768px) {
+    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+  }
+}
+
+.mission-vision__text {
+  border: solid var(--green-60);
+  border-width: 0 0 0 1px;
+  padding: 0 0 0 var(--space-card);
+
+  @media (width < 1024px) {
+    width: 100%;
+    border-width: 1px 0 0;
+    padding: var(--space-card) 0 0;
+    text-align: center;
+  }
+}
+
+.mission-vision__title {
+  font-weight: 500;
+  font-size: var(--text-title-lg);
+  line-height: 150%;
+  margin-bottom: var(--space-heading-gap);
+  color: var(--white);
+}
+
+.mission-vision__row--reverse {
+  grid-template-columns: minmax(0, 932fr) minmax(0, 664fr);
+
+  @media (width < 1024px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mission-vision__plate {
+    order: 1;
+
+    @media (width < 1024px) {
+      order: 0;
+    }
+  }
+
+  .mission-vision__text {
+    border-width: 0 1px 0 0;
+    padding: 0 var(--space-card) 0 0;
+
+    @media (width < 1024px) {
+      border-width: 1px 0 0;
+      padding: var(--space-card) 0 0;
+    }
+  }
+}

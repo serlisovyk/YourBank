@@ -134,6 +134,9 @@
   --page-hero-photo-width: clamp(715px, calc(52.7083vw - 44px), 968px);
   --page-hero-photo-height: clamp(568px, calc(30.8333vw + 124px), 716px);
 
+  --space-mission-inset: clamp(48px, calc(2.5vw + 12px), 60px);
+  --space-mission-overlap: clamp(84px, calc(3.3333vw + 36px), 100px);
+
   --space-cta: clamp(60px, 4.1667vw, 80px);
 }
 
@@ -233,6 +236,9 @@
     --page-hero-card-width: 658px;
     --page-hero-photo-width: clamp(329px, calc(36.7619vw + 185.63px), 715px);
     --page-hero-photo-height: clamp(253px, calc(30vw + 136px), 568px);
+
+    --space-mission-inset: clamp(20px, calc(2.6667vw + 9.6px), 48px);
+    --space-mission-overlap: 84px;
 
     --space-cta: clamp(30px, calc(2.8571vw + 18.86px), 60px);
   }

@@ -22,6 +22,7 @@ import { testimonials } from './src/data/testimonials.js'
 import { values } from './src/data/values.js'
 import { benefits } from './src/data/benefits.js'
 import { jobs } from './src/data/jobs.js'
+import { missionVision } from './src/data/mission-vision.js'
 
 const root = resolve(import.meta.dirname, 'src')
 
@@ -93,6 +94,7 @@ export default defineConfig({
           values,
           benefits,
           jobs,
+          missionVision,
           testimonials,
           heroTransactions,
           currencies,
