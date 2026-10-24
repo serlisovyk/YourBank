@@ -147,8 +147,7 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
   - FAQ fade: a 275 px overlay on the lower row, `to bottom`, transparent from 35 % to
     `--grey-10`; it disappears when the list is expanded.
   - Testimonial edge fades: an alpha mask on the track (transparent, opaque from 30 % to 70 %, transparent), off below 1024.
-  - Security panel: a dark, grainy backdrop with a faint green tint that overhangs the
-    panel's top edge.
+  - Security panel: a dark, grainy backdrop with a faint green tint behind the cards.
 
 ## Components
 
@@ -243,7 +242,7 @@ new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 | `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                                       |
 | `growth-arrows.svg`        | top right of the Home hero, 418 × 383 at 1920, 300 × 275 at 1440                              |
 | `dots-grid.avif`           | top right of the page-hero panel                                                              |
-| `dots-fine.avif`           | top left of the CTA panel and the benefit card, a fine grid fading out, 320 wide (240 at 390) |
+| `dots-fine.avif`           | top left of CTA, Security panel, benefit card: a fine grid fading out, 320 wide (240 at 390). |
 | `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211                         |
 
 ## Pages
@@ -314,10 +313,11 @@ line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn 
 ### Security
 
 1. **Hero** (page hero).
-2. **How We Protect You.** Heading block; a panel with the grainy backdrop that holds a 2 × 2
-   grid of cards (688 / 550 wide; the grid is inset 100 / 80 from the panel's sides, cards
-   have a 16 px radius and a `--grey-10` fill); each card has an icon circle left of its
-   title, the text under it. At 390 the panel goes and the four cards stack.
+2. **How We Protect You.** Heading block; a panel with the grainy backdrop (built as `--grey-11`
+   with `dots-fine.avif` at its top left) behind a 2 × 2 grid of cards (688 / 550 wide; the grid is
+   inset 95 / 80 from the panel's sides, cards have a 16 px radius and a `--grey-10` fill). The panel
+   ends about a fifth of the grid above its bottom: the lower cards overhang it. Each card has an icon
+   circle left of its title, the text under it. At 390 the panel goes and the four cards stack.
 3. **FAQ**, **footer** (no CTA).
 
 ### Page hero (Careers, About, Security)
