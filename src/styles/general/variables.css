@@ -109,6 +109,8 @@
   --space-tabs-panel: clamp(40px, calc(2.0833vw + 10px), 50px);
   --space-tabs-gap: clamp(20px, calc(0.8333vw + 8px), 24px);
   --space-faq-line: clamp(24px, calc(1.25vw + 6px), 30px);
+  --faq-preview: clamp(295px, calc(5.2083vw + 220px), 320px);
+  --faq-fade: clamp(240px, calc(4.5833vw + 174px), 262px);
   --space-values-gap: clamp(60px, 4.1667vw, 80px);
   --space-value-inset: clamp(24px, calc(1.25vw + 6px), 30px);
   --space-benefits-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
@@ -218,6 +220,8 @@
     --space-tabs-panel: clamp(20px, calc(1.9048vw + 12.57px), 40px);
     --space-tabs-gap: 20px;
     --space-faq-line: clamp(20px, calc(0.381vw + 18.51px), 24px);
+    --faq-preview: clamp(295px, calc(-37.5238vw + 835.34px), 689px);
+    --faq-fade: clamp(235px, calc(0.4762vw + 233.14px), 240px);
     --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
     --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
     --space-benefits-gap: clamp(48px, calc(1.1429vw + 43.54px), 60px);

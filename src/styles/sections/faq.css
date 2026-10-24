@@ -13,7 +13,7 @@
   --faq-more-animation-easing: ease-in-out;
 
   position: relative;
-  max-height: 220px;
+  max-height: var(--faq-preview);
   overflow: hidden;
   margin-top: var(--space-grid-gap);
   transition: max-height var(--faq-more-animation-duration)
@@ -22,9 +22,9 @@
   &::after {
     content: '';
     position: absolute;
-    inset: 0 0 auto;
-    height: 220px;
-    background: linear-gradient(to bottom, transparent 35%, var(--grey-10));
+    inset: auto 0 0;
+    height: var(--faq-fade);
+    background: linear-gradient(to bottom, transparent, var(--grey-10));
     pointer-events: none;
     transition: opacity var(--faq-more-animation-duration)
       var(--faq-more-animation-easing);
@@ -32,7 +32,7 @@
 }
 
 .faq__more--expanded {
-  max-height: var(--faq-expanded-height, 220px);
+  max-height: var(--faq-expanded-height, var(--faq-preview));
 
   &::after {
     opacity: 0;
@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  margin: -20px auto 0;
+  margin: 0 auto;
   transition:
     background var(--transition-duration),
     margin-top 650ms ease-in-out;
