@@ -8,8 +8,10 @@ About and Security, measured in px at the drawn width. No open questions.
 
 - **Section text width.** The longest line of the text under a title is 1228 to 1280 px at 1920
   (Careers, Home, About, Security) and every text wraps before the next word would make it 1313 px
-  or more: the box is about 1290 px, 80 % of the content width. Home sections without a toggle give
-  the same width (Features: 1237). With a toggle the existing 580 px stays.
+  or more. Rendered here, one width reproduces every drawn line break (Values, Benefits, Jobs, Home
+  Features, Mission, Protect): 1302 px. Home sections without a toggle give the same width (Features:
+  1237). Beside a toggle the design wraps at 905 to 961 px (Products 905, Testimonials 893), not at the
+  580 px in the code: 935 reproduces both breaks.
 - **FAQ.** At 1920 the second row (items 3 and 4) is shown almost whole under the fade: 320 px of
   a 323 px row; the fade is linear from fully clear 60 px below the row's top to the page colour at its
   bottom (about 262 px), and the button starts where the row ends, with no overlap. At 390 the
@@ -24,9 +26,10 @@ About and Security, measured in px at the drawn width. No open questions.
 
 ## Changes
 
-- `components/section-heading`: `.section-heading__text` gets `max-width: var(--text-width-section)`;
-  the token is `1147 / 1290` between 1440 and 1920 in `variables.css` (flat below, the 390 content is
-  narrower than the box anyway). 1147 keeps the same 71.7 characters per line as 1290 at 1920.
+- `components/section-heading`: `.section-heading__text` gets `max-width: var(--section-text-width)`,
+  and the one beside a toggle `--section-text-width-toggle`, instead of 580 px. Tokens in
+  `variables.css`: 1157 / 1302 and 831 / 935 between 1440 and 1920 (flat below, the content is
+  narrower than the box). The 1440 values keep the characters per line of the 1920 ones.
 - `sections/faq`: the collapsed height is a token `--faq-preview` (320 / 295 / 689) and the fade a
   token `--faq-fade` (262 / 240 / 235), both in `variables.css`; the overlay sits at the bottom of the
   region and runs `transparent` to `--grey-10`; the button loses its negative margin. `FaqController`
