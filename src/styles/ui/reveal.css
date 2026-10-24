@@ -1,0 +1,16 @@
+.js-reveal [data-reveal] {
+  --reveal-delay: calc(var(--reveal-index, 0) * var(--reveal-step));
+
+  transition:
+    opacity var(--reveal-duration) var(--reveal-easing) var(--reveal-delay),
+    transform var(--reveal-duration) var(--reveal-easing) var(--reveal-delay);
+
+  &:not(.is-revealed, :focus-within) {
+    opacity: 0;
+    transform: translateY(var(--reveal-offset));
+  }
+
+  &:focus-within {
+    transition: none;
+  }
+}

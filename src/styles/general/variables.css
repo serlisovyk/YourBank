@@ -35,6 +35,10 @@
   --border-radius-small: 12px;
 
   --transition-duration: 0.2s;
+  --reveal-duration: 0.5s;
+  --reveal-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-offset: 20px;
+  --reveal-step: 0.08s;
   --focus-ring: 2px solid var(--green-60);
   --touch-target: 44px;
 

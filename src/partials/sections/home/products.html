@@ -36,7 +36,7 @@
       >
         {{#each products.individuals}} {{> components/product-card}} {{#unless
         @last}}
-        <div class="products__content-divider" aria-hidden="true"></div>
+        <div class="products__content-divider" aria-hidden="true" data-reveal></div>
         {{/unless}} {{/each}}
       </div>
 
@@ -48,7 +48,7 @@
         hidden
       >
         {{#each products.businesses}} {{> components/product-card}} {{#unless @last}}
-        <div class="products__content-divider" aria-hidden="true"></div>
+        <div class="products__content-divider" aria-hidden="true" data-reveal></div>
         {{/unless}} {{/each}}
       </div>
     </div>
