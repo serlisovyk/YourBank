@@ -15,6 +15,7 @@ import { navigation } from './src/data/navigation.js'
 import { pages } from './src/data/pages.js'
 import { products } from './src/data/products.js'
 import { questionGroups } from './src/data/question-items.js'
+import { site } from './src/data/site.js'
 import { socials } from './src/data/socials.js'
 import { testimonials } from './src/data/testimonials.js'
 import { values } from './src/data/values.js'
@@ -78,6 +79,7 @@ export default defineConfig({
         const pageName = pagePath.split('/').at(-1).replace('.html', '') || 'index'
 
         return {
+          site,
           page: pages[pageName],
           navigation,
           contacts,

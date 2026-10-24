@@ -1,14 +1,16 @@
 export const pages = {
   index: {
-    title: 'YourBank',
+    path: '/',
+    title: 'YourBank | Banking for Individuals and Businesses',
     description:
       'YourBank offers checking and savings accounts, loans and mortgages for individuals and businesses.',
     navKey: 'home',
   },
   careers: {
+    path: '/careers',
     title: 'Careers | YourBank',
     description:
-      'Join YourBank: the values that guide our work and the people who share them.',
+      'Join YourBank: explore the values that guide our work, the benefits we offer and our open positions.',
     navKey: 'careers',
     hero: {
       titleStart: 'Welcome to',
@@ -24,13 +26,17 @@ export const pages = {
     },
   },
   about: {
+    path: '/about',
     title: 'About | YourBank',
-    description: 'Learn who we are and what drives YourBank.',
+    description:
+      'Learn about YourBank: our mission and vision, and the latest press releases from the bank.',
     navKey: 'about',
   },
   security: {
+    path: '/security',
     title: 'Security | YourBank',
-    description: 'How YourBank protects your accounts and your data.',
+    description:
+      'How YourBank protects your accounts and personal data, with answers to common security questions.',
     navKey: 'security',
   },
 }
