@@ -9,7 +9,7 @@
     "name": "CSS",
     "path": "dist/assets/*.css",
     "gzip": true,
-    "limit": "8 kB"
+    "limit": "8.5 kB"
   },
   {
     "name": "Font",

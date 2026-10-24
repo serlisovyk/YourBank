@@ -55,7 +55,7 @@ each with the record that replaced it.
 - [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
 - [Linters: ESLint, Stylelint, Husky and lint-staged](2026-10-23-linters.md)
 - [Line endings: Prettier `endOfLine: auto`, no `.gitattributes`](2026-10-23-line-endings-auto.md)
-- [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md)
+- [CI on GitHub Actions and size-limit: the checks, the size limits, room for the font fallback in the CSS](2026-10-24-ci-size-limit-css-room.md)
 - [The design is a third-party template: a reference only, never published](2026-10-23-design-is-a-reference.md)
 
 ### Code
@@ -74,8 +74,10 @@ each with the record that replaced it.
 - [Open Account leads to Our Products, the tab in the address](2026-10-24-open-account-to-products.md)
 - [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md)
 - [Search files are hand-written in `public/`; the JSON-LD comes from `data/`](2026-10-24-seo-files-in-public.md)
+- [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md)
 
 ### Superseded
 
 - [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md) — superseded by `clean-urls-vercel-json`
 - [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md) — superseded by `ci-size-limit-photos`
+- [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md) — superseded by `ci-size-limit-css-room`

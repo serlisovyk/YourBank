@@ -8,6 +8,10 @@ decision `vanilla-js-vite-handlebars`.
 
 - Lexend is self-hosted: a `woff2` in `src/assets/fonts/`, declared in
   `src/styles/general/fonts.css` with `font-display: swap`. No font CDN.
+- The head preloads the font (`<link rel="preload" as="font" crossorigin>` with the source path,
+  which Vite rewrites to the hashed file), and `Lexend Fallback`, a local Arial scaled by
+  `size-adjust`, follows Lexend in `--font-family`, so the swap moves no line (decision
+  `lighthouse-100`). A new weight needs its own `size-adjust` face.
 - A new weight, style or face is a decision for the author, not a drive-by edit; a variable
   file already covers the weights in use.
 
@@ -15,7 +19,8 @@ decision `vanilla-js-vite-handlebars`.
 
 - Every `<img>` has `width` and `height` (no layout shift), and `alt`: a decorative image has
   `alt=""` and `aria-hidden="true"`, an informative one says what it shows.
-- An image below the first screen has `loading="lazy"`; the first screen's own image does not.
+- An image below the first screen has `loading="lazy"`; the first screen's own image does not, and a
+  photo there carries `fetchpriority="high"`.
 - Icons and illustrations are SVG. An export from a design tool is cleaned before it is
   committed (no editor metadata, no embedded raster, no needless paths); a file that stays
   heavy after that (over about 200 kB) is questioned first: a simpler shape, a CSS gradient,
@@ -57,5 +62,5 @@ decision `vanilla-js-vite-handlebars`.
 - No source maps in the production build: `vite.config.js` sets no `build.sourcemap`.
 - A dependency is added only with the author's yes; the runtime has none today.
 - `npm run size` holds the built JS, CSS, font and images to the limits in `.size-limit.json`
-  (decision `ci-size-limit-photos`). A change that comes near them is questioned first: a lighter way,
+  (decision `ci-size-limit-css-room`). A change that comes near them is questioned first: a lighter way,
   a smaller image; raising a limit is a new dated record.
