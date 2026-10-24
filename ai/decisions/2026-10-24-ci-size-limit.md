@@ -1,6 +1,6 @@
 # CI on GitHub Actions and size-limit
 
-Date: 2026-10-24 · Status: accepted
+Date: 2026-10-24 · Status: superseded by `ci-size-limit-photos`
 
 ## Context
 

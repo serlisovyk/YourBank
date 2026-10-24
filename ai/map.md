@@ -21,7 +21,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   (decision `license-in-package-json`).
 - `.prettierrc`, `.prettierignore` — Prettier. `eslint.config.js` — ESLint, `.stylelintrc.json` — Stylelint (decision `linters`).
 - `.size-limit.json` — limits on the built JS, CSS, font and images, checked by `npm run size` after a build.
-- `.github/workflows/ci.yml` — GitHub Actions: the checks of `AGENTS.md` "Verification" on every push (decision `ci-size-limit`).
+- `.github/workflows/ci.yml` — GitHub Actions: the checks of `AGENTS.md` "Verification" on every push (decision `ci-size-limit-photos`).
 - `.husky/pre-commit` runs lint-staged (`.lintstagedrc.json`): ESLint and Stylelint `--fix`, then Prettier, on staged files.
 - `vercel.json` — Vercel: clean URLs, the redirect from the old `/pages/…` links, the cache header of `/assets/`.
 - `AGENTS.md` — the entry point for agents; `CLAUDE.md` points to it.

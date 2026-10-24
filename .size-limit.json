@@ -23,6 +23,6 @@
     "path": "dist/assets/*.{avif,webp}",
     "gzip": false,
     "brotli": false,
-    "limit": "120 kB"
+    "limit": "320 kB"
   }
 ]

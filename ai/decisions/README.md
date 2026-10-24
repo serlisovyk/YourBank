@@ -55,7 +55,7 @@ each with the record that replaced it.
 - [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
 - [Linters: ESLint, Stylelint, Husky and lint-staged](2026-10-23-linters.md)
 - [Line endings: Prettier `endOfLine: auto`, no `.gitattributes`](2026-10-23-line-endings-auto.md)
-- [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md)
+- [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md)
 - [The design is a third-party template: a reference only, never published](2026-10-23-design-is-a-reference.md)
 
 ### Code
@@ -76,3 +76,4 @@ each with the record that replaced it.
 ### Superseded
 
 - [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md) — superseded by `clean-urls-vercel-json`
+- [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md) — superseded by `ci-size-limit-photos`
