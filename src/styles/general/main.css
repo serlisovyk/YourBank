@@ -25,6 +25,10 @@ body {
   outline-offset: 2px;
 }
 
+main:focus-visible {
+  outline: none;
+}
+
 .container {
   max-width: calc(var(--content-width) + 2 * var(--gutter));
   margin: 0 auto;
