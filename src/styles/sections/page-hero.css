@@ -1,5 +1,5 @@
 .page-hero {
-  padding-block: 50px calc(var(--space-section) / 2);
+  padding-block: var(--space-page-hero-top) calc(var(--space-section) / 2);
 }
 
 .page-hero__inner {
@@ -50,7 +50,7 @@
   font-weight: 500;
   font-size: var(--text-title-hero);
   line-height: 130%;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-page-hero-title);
   color: var(--white);
 
   span {

@@ -139,6 +139,8 @@
   --icon-quote: clamp(44px, calc(3.3333vw - 4px), 60px);
   --text-testimonial-name: clamp(16px, calc(0.4167vw + 10px), 18px);
 
+  --space-page-hero-top: 50px;
+  --space-page-hero-title: 24px;
   --space-page-hero: clamp(40px, calc(2.0833vw + 10px), 50px);
   --space-page-hero-card: clamp(60px, 4.1667vw, 80px);
   --page-hero-card-width: clamp(658px, calc(27.7083vw + 259px), 791px);
@@ -249,6 +251,8 @@
     --icon-quote: 44px;
     --text-testimonial-name: 16px;
 
+    --space-page-hero-top: clamp(30px, calc(1.9048vw + 22.57px), 50px);
+    --space-page-hero-title: clamp(15px, calc(0.8571vw + 11.66px), 24px);
     --space-page-hero: clamp(14px, calc(2.4762vw + 4.34px), 40px);
     --space-page-hero-card: clamp(24px, calc(3.4286vw + 10.63px), 60px);
     --page-hero-card-width: 658px;
