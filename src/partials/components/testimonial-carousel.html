@@ -20,7 +20,13 @@
     />
   </button>
 
-  <div class="testimonial-carousel__track" data-carousel-track>
+  <div
+    class="testimonial-carousel__track"
+    role="group"
+    aria-label="Testimonial slides"
+    tabindex="0"
+    data-carousel-track
+  >
     {{#each items}}
     <figure
       class="testimonial-carousel__slide"
