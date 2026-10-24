@@ -1,5 +1,6 @@
 export const MOBILE_MEDIA_QUERY = '(width < 768px)'
 export const TABLET_MEDIA_QUERY = '(width < 1024px)'
+export const REDUCED_MOTION_MEDIA_QUERY = '(prefers-reduced-motion: reduce)'
 
 export const KEYS = Object.freeze({
   escape: 'Escape',
@@ -42,6 +43,15 @@ export const TESTIMONIALS = Object.freeze({
 
 export const CAROUSEL = Object.freeze({
   edgeTolerance: 1,
+})
+
+export const REVEAL = Object.freeze({
+  pendingClass: 'js-reveal',
+  revealedClass: 'is-revealed',
+  indexProperty: '--reveal-index',
+  maxIndex: 4,
+  rootMargin: '0px 0px -10% 0px',
+  threshold: 0,
 })
 
 export const CURRENCY_CONVERTER = Object.freeze({

@@ -1,4 +1,5 @@
 import { CurrencyConverter } from './components/CurrencyConverter.js'
+import { Reveal } from './components/Reveal.js'
 import { FaqController } from './controllers/FaqController.js'
 import { FeaturesController } from './controllers/FeaturesController.js'
 import { FooterController } from './controllers/FooterController.js'
@@ -13,6 +14,7 @@ const SECTIONS = [
   { selector: '[data-faq]', Controller: FaqController },
   { selector: '[data-testimonials]', Controller: TestimonialsController },
   { selector: '[data-currency-converter]', Controller: CurrencyConverter },
+  { selector: '[data-reveal-root]', Controller: Reveal },
   { selector: '[data-footer]', Controller: FooterController },
 ]
 
