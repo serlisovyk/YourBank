@@ -11,7 +11,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `src/data/` — the data the partials render; each file exports one constant, wired in through `context` in `vite.config.js`.
 - `src/styles/` — all CSS (below). `src/scripts/` — all JavaScript (below).
 - `src/assets/` — `fonts/`, `images/`: referenced as `/assets/…`, bundled and hashed (below).
-- `public/` — files that need a fixed URL, served as they are: `favicon.svg`, `apple-touch-icon.png`, `og-image.png` (the link
+- `public/` — files that need a fixed URL, served as they are: `favicon.svg`, `og-image.png` (the link
   preview), `robots.txt`, `sitemap.xml`, `llms.txt`, `logo.svg` (for the JSON-LD).
 - `vite.config.js` — Vite (`root: 'src'`, output `dist/` at the repo root) with `vite-plugin-handlebars`: the `partials`
   folder and `context(pagePath)`, which passes the current `page` and the
