@@ -122,6 +122,10 @@
   --button-padding-y-compact: clamp(12px, 0.8333vw, 16px);
   --button-padding-x-compact: clamp(20px, calc(2.0833vw - 10px), 30px);
 
+  --space-press-card: clamp(24px, calc(1.25vw + 6px), 30px);
+  --text-press-title: clamp(20px, calc(0.8333vw + 8px), 24px);
+  --press-photo-height: clamp(268px, calc(13.5417vw + 73px), 333px);
+
   --space-testimonial-gap: clamp(60px, 4.1667vw, 80px);
   --space-testimonial-arrow: clamp(40px, calc(2.0833vw + 10px), 50px);
   --testimonial-arrow-size: clamp(52px, calc(2.0833vw + 22px), 62px);
@@ -225,6 +229,10 @@
     --badge-gap: clamp(6px, calc(0.1905vw + 5.26px), 8px);
     --button-padding-y-compact: 12px;
     --button-padding-x-compact: 20px;
+
+    --space-press-card: clamp(20px, calc(0.381vw + 18.51px), 24px);
+    --text-press-title: clamp(18px, calc(0.1905vw + 17.26px), 20px);
+    --press-photo-height: clamp(208px, calc(5.7143vw + 185.71px), 268px);
 
     --space-testimonial-gap: 60px;
     --space-testimonial-arrow: 40px;

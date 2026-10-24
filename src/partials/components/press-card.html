@@ -1,0 +1,16 @@
+<article class="press-card">
+  <img
+    class="press-card__image"
+    src="{{image}}"
+    alt="{{imageAlt}}"
+    width="723"
+    height="333"
+    loading="lazy"
+  />
+  <h3 class="press-card__title">{{title}}</h3>
+  <div class="press-card__badges">
+    {{> components/badge label="Location" value=location}} {{> components/badge
+    label="Date" value=displayDate datetime=date}}
+  </div>
+  <p class="press-card__text">{{text}}</p>
+</article>

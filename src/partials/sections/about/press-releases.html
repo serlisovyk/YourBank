@@ -1,0 +1,10 @@
+<section class="press-releases section">
+  <div class="container">
+    {{> components/section-heading titleAccent="Press Releases" text="Stay updated
+    with the latest happenings and exciting developments at YourBank through our
+    press releases." }}
+    <div class="press-releases__items">
+      {{#each pressReleases}} {{> components/press-card }} {{/each}}
+    </div>
+  </div>
+</section>

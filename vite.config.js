@@ -24,6 +24,7 @@ import { benefits } from './src/data/benefits.js'
 import { jobs } from './src/data/jobs.js'
 import { missionVision } from './src/data/mission-vision.js'
 import { protection } from './src/data/protection.js'
+import { pressReleases } from './src/data/press-releases.js'
 
 const root = resolve(import.meta.dirname, 'src')
 
@@ -97,6 +98,7 @@ export default defineConfig({
           jobs,
           missionVision,
           protection,
+          pressReleases,
           testimonials,
           heroTransactions,
           currencies,

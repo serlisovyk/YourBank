@@ -10,6 +10,7 @@
 @import url('./components/icon-card.css');
 @import url('./components/badge.css');
 @import url('./components/job-card.css');
+@import url('./components/press-card.css');
 @import url('./components/case-item.css');
 @import url('./components/feature-item.css');
 @import url('./components/question-item.css');
@@ -28,4 +29,5 @@
 @import url('./sections/protection.css');
 @import url('./sections/jobs.css');
 @import url('./sections/mission-vision.css');
+@import url('./sections/press-releases.css');
 @import url('./sections/cta.css');
