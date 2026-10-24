@@ -12,6 +12,20 @@
         />
       </a>
 
+      <button
+        id="header-menu-toggle"
+        data-header-menu-toggle
+        type="button"
+        class="header__menu-toggle hit-area"
+        aria-label="Open menu"
+        aria-controls="header-navigation"
+        aria-expanded="false"
+      >
+        <span class="header__menu-line" aria-hidden="true"></span>
+        <span class="header__menu-line" aria-hidden="true"></span>
+        <span class="header__menu-line" aria-hidden="true"></span>
+      </button>
+
       <nav
         class="header__nav"
         id="header-navigation"
@@ -31,20 +45,6 @@
           {{/each}}
         </ul>
       </nav>
-
-      <button
-        id="header-menu-toggle"
-        data-header-menu-toggle
-        type="button"
-        class="header__menu-toggle hit-area"
-        aria-label="Open menu"
-        aria-controls="header-navigation"
-        aria-expanded="false"
-      >
-        <span class="header__menu-line" aria-hidden="true"></span>
-        <span class="header__menu-line" aria-hidden="true"></span>
-        <span class="header__menu-line" aria-hidden="true"></span>
-      </button>
     </div>
   </div>
 </header>
