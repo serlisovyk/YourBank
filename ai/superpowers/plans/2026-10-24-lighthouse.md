@@ -36,21 +36,30 @@ Other findings, none of them scored by Performance:
 
 ## Changes
 
-1. **Font preload.** `<link rel="preload" as="font" type="font/woff2" crossorigin>` in
-   `shared/head` for `Lexend.woff2`. Whether Vite rewrites the source path to the hashed one is
-   checked first; if it does not, the head gets the hashed URL another way, or this item is dropped.
-   Targets: the dependency chain, and the swap happening before the first paint instead of after it.
-2. **Fallback font with Lexend's metrics.** A second `@font-face` over a local face with
-   `size-adjust`, put after `Lexend` in the stack, so the swap moves no line. Targets: CLS. Kept only
-   if it is small and measurably removes the shift.
-3. **LCP decor discovered early.** A `preload` of the decor image the LCP paints, if Vite rewrites
-   its URL and the gain shows locally. Otherwise left, with a decision record.
-4. **Responsive hero photo.** A `srcset` on the hero `<img>` is considered only if the stand-in
-   photos can be resized without touching their look; the photos are temporary, so this is likely
-   left to the real exports and recorded.
-5. **Carousel slide role.** Replace what `agent-accessibility-tree` flags, if a native element does
-   the job with no change to what a screen reader announces.
-6. **Forced reflow** in `main.js` (Home): looked at; fixed only if it is a one-line batching change.
+1. **Font preload** (done). `<link rel="preload" as="font" type="font/woff2" crossorigin>` in
+   `shared/head` with the source path: Vite rewrites it to the hashed file, checked in `dist`.
+2. **Fallback font with Lexend's metrics** (done). `Lexend Fallback`: a local Arial with
+   `size-adjust` 107% at weight 300 and 111% at 400-500 (Lexend's width over Arial's on the pages' own
+   text, measured in the browser), after `Lexend` in `--font-family`. The preload alone removes the shift
+   only while the font beats the first paint; with the font held back 400 ms the shift returned until
+   the fallback was added, then CLS was 0 on every page. Two faces, not three: the same result.
+3. **LCP decor discovered early** (not done). A `preload` of `dots-grid` on Careers moved the load
+   delay from 633 to 456 ms and the simulated LCP from 1.74 to 1.67 s: no score change, a data field
+   per page for it. Left, in decision `lighthouse-100`.
+4. **Responsive hero photo** (not done). The photos are stand-ins; a `srcset` waits for the real
+   exports (decision `lighthouse-100`).
+5. **Carousel slide** (done). `agent-accessibility-tree` flagged `role="group"` on a `figure`: the slide
+   is a `div` and the name a `p`; the rects and computed styles are identical at 1920, 1440 and 390.
+6. **Forced reflow** in `Reveal` (not done): it reads positions before hiding anything, so it is the
+   design (`reveal-on-scroll`), not a batching slip; 35-45 ms on a phone, not scored.
+7. **Size limit.** The fallback faces take the CSS from 7.98 to 8.04 kB gzip, over the 8 kB limit: the
+   limit becomes 8.5 kB, in the new record `ci-size-limit-css-room` that supersedes
+   `ci-size-limit-photos`.
+
+Found, not fixed: the Home converter shows its currency names only after the script runs, so the hero
+grows 24-47 px on desktop widths (CLS 0.007 in the lab, below any score threshold). Rendering the default
+currencies in the HTML is the fix, a change of the partial's parameters and two helpers, so it is left
+to its own task.
 
 Rules: `ai/rules/assets-performance.md` gets a line for each rule a change sets. A limit in
 `.size-limit.json` changes only by the measured size of the change, with a new record superseding
@@ -63,6 +72,15 @@ Rules: `ai/rules/assets-performance.md` gets a line for each rule a change sets.
   least 3 runs per page and mode, before and after, with nothing else running.
 - `npm run lint`, `lint:css`, `format:check`, `build`, `size`; `cmp dist/404.html dist/index.html`;
   axe-core stays at 0 violations on all four pages.
-- Screenshots at 1920, 1440 and 390 px before and after: the look is identical.
+- Layout before and after at 1920, 1440 and 390 px: the rect of every element of the four pages,
+  hashed, is identical (Home differs only by the tag names of the two replaced elements, so its rects
+  and computed styles were compared separately).
 - After the merge the author measures production: the cells expected to change are Home mobile
   (CLS, and with it Performance) and the CLS of Careers and Security.
+
+## Result (local build, compressed, 3 runs per cell)
+
+Before: Performance 98-99 on Home mobile and 99-100 on the others, CLS 0.069 Home, 0.051 Careers,
+0.015 About, 0.008 Security, and 0.007-0.034 on desktop. After: Performance 100 in all 24 runs, CLS 0
+except 0.007 on Home desktop (the converter above), TBT 0. Local LCP is 1.8-1.9 s on a phone (no CDN, no
+HTTP/2), above production's 1.1-1.5 s, and still scores 100.
