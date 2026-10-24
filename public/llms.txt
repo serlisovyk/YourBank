@@ -11,4 +11,4 @@
 
 ## Optional
 
-- [Source code](https://github.com/serlisovyk/Banking): the repository of this website
+- [Source code](https://github.com/serlisovyk/YourBank): the repository of this website

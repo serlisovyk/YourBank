@@ -13,7 +13,7 @@ automated tests. Keep the code clean, practical, accessible, and proportional to
 project size.
 
 - Live demo: <https://banking-coral-three.vercel.app> (Vercel)
-- Repo: <https://github.com/serlisovyk/Banking>
+- Repo: <https://github.com/serlisovyk/YourBank>
 - Tasks: Linear, project **Banking** (team `MY`, issues `MY-<n>`)
 
 ## Read First
