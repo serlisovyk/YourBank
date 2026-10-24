@@ -51,7 +51,11 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
 ## Semantics and ARIA
 
 - Semantic elements for the page regions (`header`, `nav`, `main`, `section`, `article`,
-  `footer`); one `h1` per page, headings in order without skipping a level.
+  `footer`); one `h1` per page, headings in order without skipping a level; text that only looks
+  like a title is not a heading.
+- The first thing in `header` is the "Skip to content" link to `<main id="main" tabindex="-1">`.
+  Controls come in the DOM in the order they are read: the menu button before the menu it opens.
+- A scrollable region (a carousel track) is a tab stop (`tabindex="0"`) with a role and a name.
 - A button for an action (`<button type="button">`), a link only for going to another
   address; a link that opens a new tab has `target="_blank"` and `rel="noopener"` and says so.
   Every button outside a form has `type="button"`.

@@ -29,7 +29,13 @@ over for approval.
   hover and focus included.
 - New animation takes its duration from a token and does not break under
   `prefers-reduced-motion`.
-- Touch targets are at least 44px.
+- Touch targets are at least 44px: a smaller drawn control takes the `hit-area` utility.
+- A new page or section keeps the skip link first and `main#main` as its target, one `h1` and
+  headings in order, and contrast in every state, checked by a script (axe cannot read text over a
+  background image).
+- Tab through it: the order follows the reading order, no stop is hidden or lost, no trap.
+- Reduced motion (`prefers-reduced-motion: reduce`): no transition, animation or smooth scroll,
+  pseudo-elements included.
 
 ## Docs (in the same change, within `ai/rules/docs.md`)
 

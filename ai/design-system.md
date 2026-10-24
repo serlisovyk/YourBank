@@ -56,15 +56,16 @@ The palette is the template's; every swatch is a token already.
 | `--grey-11`                      | `#1c1c1c`                               | surfaces: navbar, panels, cards, toggle container, secondary button                       |
 | `--grey-15`                      | `#262626`                               | every 1 px border and divider; the active nav pill; hero badge; hover fill                |
 | `--grey-20`                      | `#333`                                  | palette only (the template's swatch frames)                                               |
-| `--grey-30`                      | `#4c4c4d`                               | the big titles of Our Values                                                              |
+| `--grey-30`                      | `#4c4c4d`                               | palette only (the template's Values title, under 3:1)                                     |
 | `--grey-35`, `-40`, `-60`, `-75` | `#59595a` `#656567` `#98989a` `#bfbfbf` | palette only                                                                              |
+| `--grey-45`                      | `#737375`                               | the big titles of Our Values (3.7:1, lightened from `--grey-30`)                          |
 | `--grey-70`                      | `#b3b3b3`                               | body text (weight 300), badge text, footer legal links                                    |
 | `--green-10`                     | `#22251b`                               | dark olive: the two floating pills of the hero card and its Exchange button               |
 
 - Opacity is part of the look: the three transaction rows of the hero card are 100 % / 50 % /
   20 %; the green tints of the icon circles are baked into their SVGs.
-- Contrast: white and `--grey-70` on `--grey-10` are far above 4.5:1. `--grey-30` on
-  `--grey-10` is about 2:1, below the 3:1 that large text needs (see "Known inconsistencies").
+- Contrast: white and `--grey-70` on `--grey-10` are far above 4.5:1; `--grey-45` on `--grey-10` is
+  3.7:1, enough for the large Values titles. The 20 % transaction row is the one text under the floor.
 
 ## Typography
 
@@ -79,7 +80,7 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 | Large title: Mission, Vision, CTA (`--text-title-lg`)           | 38 / 32 / 26                       | 500    | 1.5                 | white, CTA accent words green             |
 | Block title: use-case title, job title (`--text-title-md`)      | 30 / 26 / 20 (job: 30 / 24 / 20)   | 500    | 1.5                 | white                                     |
 | Stat number (`--text-stat`)                                     | 58 / 40 / 40                       | 500    | 1.5                 | `--green-60`                              |
-| Value title (`--text-value`)                                    | 58 / 40 / 30                       | 500    | 1.5                 | `--grey-30`                               |
+| Value title (`--text-value`)                                    | 58 / 40 / 30                       | 500    | 1.5                 | `--grey-45`                               |
 | Card title: product, press (`--text-card-title`)                | 24 / 20 / 20 (press: 24 / 20 / 18) | 400    | 1.5                 | white                                     |
 | Sub-heading in a job card (About This Job…)                     | 24 / 20 / 18                       | 500    | 1.5                 | white                                     |
 | Feature card title (`--text-card-title-sm`)                     | 22 / 18 / 18                       | 400    | 1.5                 | white                                     |
@@ -337,9 +338,7 @@ text card, centred, overlaps its lower part, with a plain radius 20.
   larger (58 / 48 / 28, line 1.3). Both are intended.
 - **Heading block gap** to the content is 80 / 60 / 60, or 100 / 80 / 60 with a toggle;
   the FAQ and Values blocks at 390 are 10 px tighter and take 60 like the rest.
-- **Value titles** in `--grey-30` are about 2:1 against the background, under the 3:1 that
-  large text needs (`ai/rules/css.md`). The design wins on look; raise it to `--grey-40` or
-  `--grey-60` only with the author's say.
+- **Value titles** are drawn in `--grey-30` (about 2:1); the page uses `--grey-45` for 3:1.
 - **Approximate values**, read from the rendered pages because the layout data does not carry
   them: the corner radii of the use-case plate, the job, press and security cards; the CTA title
   size (about 38 / 32 / 26) and its inner spacing; the weights of card and badge text; the

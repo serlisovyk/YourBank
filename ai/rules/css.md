@@ -68,7 +68,10 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 - A `transition` names its properties, never `all`.
 - One `:focus-visible` rule in `general/main.css` draws the ring for every control, from the
   token `--focus-ring`; a hover look never sits on `:focus`, and never `outline: none` without a
-  replacement.
+  replacement; the one exception is `main`, a `tabindex="-1"` skip-link target, not a control.
+- A control drawn under 44 px keeps its drawn size and takes the `hit-area` utility (`ui/`): an
+  invisible `::after` that grows the clickable box to `--touch-target`
+  (`ai/decisions/2026-10-24-touch-targets-hit-area.md`).
 - Use `hidden` or `inert` to take an element out of the page; text for assistive technology
   only is a utility class in `ui/`, not `display: none`, which hides it from them too.
 - Every `@keyframes` lives in one stylesheet in `general/`.
