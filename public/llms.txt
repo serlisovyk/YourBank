@@ -1,0 +1,14 @@
+# YourBank
+
+> YourBank is a fictional bank: a multi-page portfolio website built with HTML, CSS and vanilla JavaScript from a third-party design template. It presents checking and savings accounts, loans and mortgages for individuals and businesses. The content is illustrative, and no real banking services are offered.
+
+## Pages
+
+- [Home](https://banking-coral-three.vercel.app/): the products for individuals and businesses, use cases, features, frequently asked questions and customer testimonials
+- [Careers](https://banking-coral-three.vercel.app/careers): the values and benefits of working at YourBank, and its open positions
+- [About](https://banking-coral-three.vercel.app/about): the mission, the vision and the press releases of YourBank
+- [Security](https://banking-coral-three.vercel.app/security): how YourBank protects its customers' accounts and data, with a security FAQ
+
+## Optional
+
+- [Source code](https://github.com/serlisovyk/Banking): the repository of this website
