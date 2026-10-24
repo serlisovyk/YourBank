@@ -20,7 +20,7 @@ order of the work.
    `partials/components/<item>.html` with one root and parameters (a hash, or the context of
    `{{#each}}`). The section's title and text are `{{> components/section-heading }}`. File name =
    BEM block name. Roles and ARIA go in the markup; the root gets `data-<name>`, the children the
-   hooks of the component that drives them (`ai/rules/oop.md`).
+   hooks of the component that drives them (`ai/rules/oop.md`). Cards and rows below the first screen carry `data-reveal` (`ai/rules/html.md`).
 3. **Styles** — `styles/sections/<name>.css` (and `styles/components/<item>.css`): BEM, native
    nesting, only tokens from `variables.css` (a value that changes with the width is a fluid token); import it in `styles/style.css` beside its kind.
    Compare 1920, 1440 and 390 px with the design.

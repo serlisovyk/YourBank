@@ -66,6 +66,8 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 - Reduced motion is handled once, in `general/reset.css`; a component never adds its own
   `prefers-reduced-motion` block. A duration comes from a token (`--transition-duration`).
 - A `transition` names its properties, never `all`.
+- A state that hides content for an animation applies only under a class a script puts on `<html>`
+  (`.js-reveal`), so the page is complete without script.
 - One `:focus-visible` rule in `general/main.css` draws the ring for every control, from the
   token `--focus-ring`; a hover look never sits on `:focus`, and never `outline: none` without a
   replacement; the one exception is `main`, a `tabindex="-1"` skip-link target, not a control.

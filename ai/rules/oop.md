@@ -9,7 +9,7 @@ to every file in `scripts/`. Why: `ai/decisions/2026-10-23-oop-javascript.md`.
 - The only non-class module is `main.js`, the composition root, in camelCase.
 - Named exports only, no default exports; imports carry the `.js` extension.
 - Folders by role: `scripts/components/` — reusable widgets (`Tabs`, `Toggle`,
-  `Disclosure`, `Carousel`, `CurrencyConverter`); `scripts/controllers/` — one controller per section (`HeaderMenuController`,
+  `Disclosure`, `Carousel`, `CurrencyConverter`, `Reveal`); `scripts/controllers/` — one controller per section (`HeaderMenuController`,
   `ProductsController`, `FeaturesController`, `FaqController`, `TestimonialsController`).
 - `scripts/constants.js` — what scripts share: the media queries (equal to the CSS
   breakpoints), key names, button texts and state classes.

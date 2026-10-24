@@ -69,5 +69,8 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
   `aria-labelledby` in the markup; the script changes only the states
   (`ai/rules/style.md`, "ARIA patterns").
 - A hook for a script is a `data-<block>-<role>` attribute, not a BEM class.
+- Whatever sits below the first screen and should fade in on scroll carries `data-reveal`: the card and
+  heading components already do, a new section marks its own rows and cards. The first screen (heroes, header,
+  footer) never does; `<main>` has `data-reveal-root` (decision `reveal-on-scroll`).
 - No inline `style`, no inline handlers, no `<br>` for spacing.
 - Interface texts follow the design; one action has one name wherever it shows.
