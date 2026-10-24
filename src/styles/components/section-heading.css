@@ -29,8 +29,12 @@
   }
 }
 
+.section-heading__text {
+  max-width: var(--section-text-width);
+}
+
 .section-heading--with-actions .section-heading__text {
-  max-width: 580px;
+  max-width: var(--section-text-width-toggle);
 }
 
 .section-heading__link {

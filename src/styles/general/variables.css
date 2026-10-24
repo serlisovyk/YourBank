@@ -77,6 +77,8 @@
   --footer-social-size: clamp(44px, calc(1.6667vw + 20px), 52px);
 
   --space-heading-gap: clamp(10px, calc(0.8333vw - 2px), 14px);
+  --section-text-width: clamp(1157px, calc(30.2083vw + 722px), 1302px);
+  --section-text-width-toggle: clamp(831px, calc(21.6667vw + 519px), 935px);
   --space-heading-block: clamp(60px, 4.1667vw, 80px);
   --space-heading-block-toggle: clamp(80px, calc(4.1667vw + 20px), 100px);
   --space-card: clamp(40px, calc(2.0833vw + 10px), 50px);
