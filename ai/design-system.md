@@ -22,8 +22,6 @@ it is described here in words and numbers, never linked.
 - A new section takes its numbers from these tables: the section gap, the heading block, the
   card padding and the grid gap are the same everywhere; copy a neighbouring section, not
   a new rhythm (`ai/skills/section.md`).
-- Check every change at 1920, 1440 and 390 px (`AGENTS.md`). The three widths are the only
-  places where the design is exact; in between, the fluid values interpolate.
 - If the design is inconsistent, this document records the dominant value and the exception
   ("Known inconsistencies"). Do not average them, and do not "fix" the look without the author.
 
@@ -35,8 +33,6 @@ it is described here in words and numbers, never linked.
   the product columns, the use-case and mission rows, the feature tabs, the CTA) and
   `width < 768px` (the remaining multi-column grids become one column; the header becomes
   the menu button). No component has a query at 1440.
-- Sizes and spacing are tokens that interpolate linearly 390 → 1440 and 1440 → 1920, flat
-  outside. The page content is at most 1596 px wide.
 
 ## Colours
 
@@ -92,8 +88,6 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 | Testimonial name                                                | 18 / 16 / 16                       | 500    | 1.5                 | `--green-60`                              |
 | About hero label (`--text-page-hero-label`)                     | 20 / 18 / 14                       | 400    | 1.5                 | white                                     |
 
-- The `@font-face` in `fonts.css` covers weights 300 to 700.
-
 ## Spacing and layout
 
 | What                                                      | 1920 / 1440 / 390                                                                                 |
@@ -124,7 +118,8 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 
 - Grids are flexible (`fr`, `flex`), not the drawn pixel widths; the widths in the page
   sections below are for checking, not for copying.
-- The numbers above are the dominant value; the exceptions are in "Known inconsistencies".
+- The text under a section title wraps at 1302 / 1157 px (`--section-text-width`; the 390 container is
+  narrower), beside a toggle at 935 / 831 (`--section-text-width-toggle`).
 - Spacing tokens are `--space-<what>` after the row they implement (`--space-heading-block`,
   `--space-card`, `--space-grid-gap`, `--space-plate`, …); sizes are `--icon-*`, `--hero-card-*`,
   `--page-hero-*`, `--navbar-*`, `--button-*`, `--toggle-*`; the page gutter is `--gutter`.
@@ -145,8 +140,9 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 - **Gradients (always built from tokens):**
   - Hero card: `linear-gradient(215deg, transparent 0%, var(--grey-10) 40%)` over a dotted
     texture drawn at 50 % with a screen blend.
-  - FAQ fade: a 275 px overlay on the lower row, `to bottom`, transparent from 35 % to
-    `--grey-10`; it disappears when the list is expanded.
+  - FAQ fade: the lower row (items 3 and 4) is shown almost whole, 320 / 295 / 689 px high
+    (`--faq-preview`; at 390 the items stack), under an overlay at its bottom, 262 / 240 / 235 px
+    (`--faq-fade`), `to bottom` from transparent to `--grey-10`; it disappears when the list is expanded.
   - Testimonial edge fades: an alpha mask on the track (transparent, opaque from 30 % to 70 %, transparent), off below 1024.
   - Security panel: a dark, grainy backdrop with a faint green tint behind the cards.
 
@@ -176,7 +172,7 @@ Pressed: moves down 2 px. Sizes (height, vertical × horizontal padding):
 | Menu button, 390 only (primary, three lines)                             | n/a / n/a / 40 (56 wide) | n/a                         |
 
 - **Load All FAQ's** is a secondary button with a chevron on its right (22 px at 1920).
-  It sits at the bottom edge of the list, over the fade.
+  It starts where the faded row ends.
 
 ### Individuals / Businesses toggle
 
@@ -323,12 +319,12 @@ line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn 
 
 ### Page hero (Careers, About, Security)
 
-A panel (`--grey-11`, radius 20, padding 50 / 40 / 14, dotted decor at its top right) with a
+A panel (`--grey-11`, radius 20, padding 50 / 40 / 14, 50 / 50 / 30 under the navbar, dotted decor at its top right) with a
 photo (968 × 716 at 1920, 715 × 568 at 1440, 329 × 253 at 390, radius 16) at the right and
 a text card (`--grey-10`, radius `20 0 80 20`, padding 80 / 60 / 24, 791 / 658 wide) on top of the
-photo's left edge: the title, a paragraph, nothing else (About adds the label above the title). Card
-and photo share one grid cell, so the panel is as tall as the taller of the two. At 390 the photo is first and the
-text card, centred, overlaps its lower part, with a plain radius 20.
+photo's left edge: the title (24 / 24 / 15 above the paragraph), a paragraph, nothing else (About adds
+the label above the title). Card and photo share one grid cell, so the panel is as tall as the taller
+of the two. At 390 the photo is first and the text card, centred, follows it, with a plain radius 20.
 
 ## Known inconsistencies
 
@@ -345,9 +341,10 @@ text card, centred, overlaps its lower part, with a plain radius 20.
   icon-circle tints. Check them against the design when building that element.
 - **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap
   and the logo width at 1440 (156); the hero column gap (120 / 80 / 80), the hero card padding
-  and the type inside it (`--text-body`); the Careers photo height at 1440 and 390; the space
-  from the navbar to the Careers panel (50); in the footer the author line, the 12 × 8 padding of
+  and the type inside it (`--text-body`); the Careers photo height at 1440 and 390; in the footer the author line, the 12 × 8 padding of
   links (44 px targets, so the footer runs about 45 px taller than drawn), the bar padding
   (`--toggle-padding`) and the green current link; the testimonial text, its gaps
   (`--space-card-gap`, `--space-card-gap-sm`) and its width (600 at most), and five cards per audience.
+- **Page hero at 390:** the card overlaps the photo by about 42 px on About, not on Security (the
+  photo is drawn about 276 high there), so the photo stays 253 and the card follows it.
 - **Hover and focus looks** come from the built code; the layout data carries none.
