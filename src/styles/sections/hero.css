@@ -162,7 +162,7 @@
 
 .hero__currencies {
   position: absolute;
-  right: -60px;
+  right: max(-60px, calc(12px - var(--gutter)));
   bottom: -64px;
   display: inline-flex;
   align-items: center;
