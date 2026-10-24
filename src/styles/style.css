@@ -4,6 +4,7 @@
 @import url('./general/main.css');
 @import url('./ui/button.css');
 @import url('./ui/toggle.css');
+@import url('./ui/hit-area.css');
 @import url('./ui/visually-hidden.css');
 @import url('./components/section-heading.css');
 @import url('./components/product-card.css');

@@ -1,0 +1,9 @@
+.hit-area {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: min(0px, calc((100% - var(--touch-target)) / 2));
+  }
+}

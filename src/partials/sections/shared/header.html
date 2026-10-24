@@ -2,7 +2,7 @@
   <a class="button header__skip-link" href="#main">Skip to content</a>
   <div class="container">
     <div class="header__inner">
-      <a href="/" class="header__logo">
+      <a href="/" class="header__logo hit-area">
         <img
           src="/assets/images/logo.svg"
           alt="YourBank"
@@ -23,7 +23,7 @@
           <li class="header__nav-item">
             <a
               href="{{href}}"
-              class="header__nav-link"
+              class="header__nav-link hit-area"
               aria-current="{{#if (eq key ../page.navKey)}}page{{else}}false{{/if}}"
               >{{label}}</a
             >
@@ -36,7 +36,7 @@
         id="header-menu-toggle"
         data-header-menu-toggle
         type="button"
-        class="header__menu-toggle"
+        class="header__menu-toggle hit-area"
         aria-label="Open menu"
         aria-controls="header-navigation"
         aria-expanded="false"

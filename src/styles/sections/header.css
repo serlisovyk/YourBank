@@ -120,6 +120,8 @@
     flex-direction: column;
     gap: 4px;
     min-height: 0;
+    padding-block: 2px;
+    margin-block: -2px;
     overflow: hidden;
   }
 }
