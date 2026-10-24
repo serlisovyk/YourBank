@@ -36,7 +36,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `index.html` — `shared/header`, `home/hero`, `home/products`, `home/cases`, `home/features`, `shared/faq`, `home/testimonials`, `shared/cta`, `shared/footer`.
 - `careers.html` — `shared/header`, `shared/page-hero`, `careers/values`, `careers/benefits`, `careers/jobs`, `shared/faq`, `shared/cta`, `shared/footer`.
-- `about.html` — `shared/header`, `shared/page-hero`, `about/mission-vision`, `shared/footer`.
+- `about.html` — `shared/header`, `shared/page-hero`, `about/mission-vision`, `about/press-releases`, `shared/footer`.
 - `security.html` — `shared/header`, `shared/page-hero`, `security/protection`, `shared/faq`, `shared/footer`.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
   with status 404 for an unknown path.
@@ -58,17 +58,20 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/security/protection` — How We Protect You: `protection` as `icon-card` (`inset`) on a dotted panel.
 - `sections/careers/jobs` — Job Openings: `jobs` as `job-card`; the Apply Now link is a `mailto:` built in `data/jobs.js`.
 - `sections/about/mission-vision` — Mission & Vision on About: `missionVision` as two rows (photo plate, text with a green line), the second mirrored.
+- `sections/about/press-releases` — Press Releases: `pressReleases` as `press-card`.
 - `components/section-heading` — a section's title (one accent word), text (an optional link at its end) and an optional right slot (the toggle).
 - `components/` — `product-card`, `case-item`, `feature-item`, `question-item`: data comes as hash parameters or from `each`.
 - `components/icon-card` — an icon circle left of an `h3`, text under it (`icon`, `title`, `text`; flag `inset` for the Security card).
-- `components/badge` — a "Label: value" pill (`label`, `value`); `components/job-card` — a vacancy: badges, About, a requirements list, Apply Now.
+- `components/badge` — a "Label: value" pill (`label`, `value`, optional `datetime`: a `<time>`); `components/job-card` — a vacancy: badges, About, a requirements list, Apply Now.
+- `components/press-card` — a press release: photo, title, badges (Location, Date), text.
 - `components/currency-converter` — the hero card's Money Exchange: two native selects, an amount, the result, Exchange.
 - `components/testimonial-carousel` — arrows and a scroll-snap track of quote cards (`items`, `label` as parameters).
 
 ## Data (`src/data/`)
 
 - `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
-  `products.js` → `products`, `values.js` → `values`, `benefits.js` → `benefits`, `jobs.js` → `jobs`, `mission-vision.js` → `missionVision`, `protection.js` → `protection`, `hero-transactions.js` → `heroTransactions`,
+  `products.js` → `products`, `values.js` → `values`, `benefits.js` → `benefits`, `jobs.js` → `jobs`, `mission-vision.js` → `missionVision`, `press-releases.js` → `pressReleases` (`date` ISO),
+  `protection.js` → `protection`, `hero-transactions.js` → `heroTransactions`,
   `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
@@ -97,7 +100,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 ## Assets (`src/assets/`)
 
-- `fonts/` — the self-hosted Lexend `woff2`. `images/` — `logo.svg`, the page-hero photos, `about/` (About photos), `icons/`, `decor/`, `flags/`.
+- `fonts/` — the self-hosted Lexend `woff2`. `images/` — `logo.svg`, the page-hero photos, `about/` and `press/` (About photos), `icons/`, `decor/`, `flags/`.
 - Referenced by the root path (`/assets/images/…`) in HTML, `data/` and CSS; the build emits each once, hashed.
 
 ## Where is the recipe

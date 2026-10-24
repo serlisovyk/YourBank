@@ -211,8 +211,8 @@ the links open below.
   between rows), then the compact button at the card's bottom edge. Card: no decor, radius
   `--border-radius-medium` (about 15 measured), 783 wide at 1920. Gaps at 1920: badges to About 50, text to
   Requirements 40, list to button 50.
-- Press card: image (723 × 333 at 1920, radius 16), title, badge row (Location, Date),
-  paragraph.
+- Press card: radius `--border-radius-medium` like the job card; image 723 × 333 at 1920, 208 high at 390 (cover), radius 16; title,
+  badge row, text inset by the card padding from 768 up (none below); gaps: image to title 50 / 40 / 30, title to badges 20 / 16 / 12, badges to text 30 / 24 / 20.
 
 ### Badges (Location, Department, Date)
 
