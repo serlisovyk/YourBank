@@ -42,6 +42,9 @@ decision `vanilla-js-vite-handlebars`.
 
 - Every page has a unique `<title>` and meta `description`, the viewport meta, and `lang`
   equal to the language of its content.
+- Absolute URLs (canonical, `og:url`, `og:image`) are built from `site.url`, never written out. The
+  link preview is one 1200×630 PNG under 300 kB in `public/` (a fixed name: crawlers cache the
+  URL), with `og:image:alt`.
 - The head holds only what the page needs: the stylesheet, the one script entry, the
   metadata.
 

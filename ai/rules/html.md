@@ -5,7 +5,7 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
 
 ## Pages and partials
 
-- A page is a shell: `<html lang="en">`, `<head>`, the header, and a `<main>` holding the list of
+- A page is a shell: `<html lang="en">`, `<head>{{> sections/shared/head }}</head>`, the header, and a `<main>` holding the list of
   `{{> section }}` calls (the footer goes after it). Section markup is never written on a page.
 - Pages are `src/*.html`; partials live in `src/partials/`. `partials/sections/<page>/` — one
   page section: `<section class="<name> section">` with a `.container` inside; `shared/` holds
@@ -29,8 +29,10 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
   or the context of `{{#each items}} {{> item }} {{/each}}`.
 - A variation is a parameter flag and a BEM modifier
   (`{{#if inverted}} case-item--inverted{{/if}}`).
-- The current page reaches a partial as `page` from `context` (an entry of `data/pages.js`); the `<title>`
-  is `{{page.title}}`. The navigation is `{{#each navigation}}`; every link has `aria-current`, `page` on
+- The current page reaches a partial as `page` from `context` (an entry of `data/pages.js`); the head partial builds the
+  `<title>`, description, canonical and social tags from it and from `site` (`data/site.js`). A new page is a
+  record in `data/pages.js` with its `path` (a clean URL), a unique `title` and `description`: the head needs
+  nothing else. The navigation is `{{#each navigation}}`; every link has `aria-current`, `page` on
   the current one and `false` on the rest. The condition sits inside the value
   (`aria-current="{{#if (eq key ../page.navKey)}}page{{else}}false{{/if}}"`), never around the
   attribute: Prettier cannot parse a tag with a conditional attribute.

@@ -11,7 +11,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `src/data/` — the data the partials render; each file exports one constant, wired in through `context` in `vite.config.js`.
 - `src/styles/` — all CSS (below). `src/scripts/` — all JavaScript (below).
 - `src/assets/` — `fonts/`, `images/`: referenced as `/assets/…`, bundled and hashed (below).
-- `public/` — files that need a fixed URL, served as they are; not created until one exists.
+- `public/` — files that need a fixed URL, served as they are: `favicon.svg`, `apple-touch-icon.png`, `og-image.png` (the link preview).
 - `vite.config.js` — Vite (`root: 'src'`, output `dist/` at the repo root) with `vite-plugin-handlebars`: the `partials`
   folder and `context(pagePath)`, which passes the current `page` and the
   `data/` constants, and the `eq` helper. The pages are listed in `build.rollupOptions.input`.
@@ -38,10 +38,11 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `about.html`, `security.html` — only `shared/header` and `shared/footer` so far.
 - No `404.html` source: the build copies `dist/index.html` to `dist/404.html` (a plugin in `vite.config.js`); Vercel serves it
   with status 404 for an unknown path.
-- Every page links `/styles/style.css` and `/scripts/main.js` in `<head>`.
+- Every page's `<head>` is `shared/head`: the stylesheet, the script, the meta and social tags.
 
 ## Partials (`src/partials/`)
 
+- `sections/shared/head` — the `<head>` content of every page, built from `page` and `site`.
 - `sections/shared/header` — the logo link, navigation (`navigation` as a loop, `aria-current` from `page`), the mobile menu button.
 - `sections/shared/footer` — the logo link, navigation like the header, `contacts`, the bar with `socials` and legal text, the author line.
 - `sections/home/hero` — the first screen of home. `sections/shared/page-hero` — the hero of Careers, About and Security: one context, `page.hero`.
@@ -68,7 +69,8 @@ Navigation only: where things live and who owns what. How it works is in the cod
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
 - `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
-- `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `title`, `description`, `navKey` and the `hero` of the page-hero pages, per page file name.
+- `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `path`, `title`, `description`, `navKey`, `hero` (page-hero pages), per page file name.
+- `site.js` → `site` (name, the production origin, theme colour, the preview image: its size and alt).
 
 ## Styles (`src/styles/`)
 
