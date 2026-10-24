@@ -29,7 +29,7 @@
     data-carousel-track
   >
     {{#each items}}
-    <figure
+    <div
       class="testimonial-carousel__slide"
       role="group"
       aria-roledescription="slide"
@@ -45,8 +45,8 @@
         aria-hidden="true"
       />
       <blockquote class="testimonial-carousel__text">{{text}}</blockquote>
-      <figcaption class="testimonial-carousel__name">{{name}}</figcaption>
-    </figure>
+      <p class="testimonial-carousel__name">{{name}}</p>
+    </div>
     {{/each}}
   </div>
 
