@@ -1,6 +1,6 @@
 .testimonial-carousel {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-areas: 'previous track next';
   align-items: center;
   column-gap: var(--space-testimonial-arrow);

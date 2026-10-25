@@ -29,7 +29,7 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
   specific selector win, never `!important`.
 - `:hover` only inside `@media (hover: hover)`, so a tap leaves no hover look.
 
-## Longhands
+## Longhands and plain grids
 
 - `background` is never the shorthand: write `background-image`, `background-position`,
   `background-size`, `background-repeat` and `background-color`, each only where it is needed. A
@@ -38,6 +38,8 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 - Spacing on one side is a longhand: `padding-left: X`, never `padding: 0 0 0 X`; `margin-top` and
   `margin-bottom`, `border-left`, `inset-inline` with `bottom`, the same way. An axis is
   `padding-inline` / `padding-block` / `margin-inline`. A `padding: Y X` that sets both axes stays.
+- Grid tracks are written plain: `repeat(2, 1fr)`, `1fr auto 1fr`, `664fr 932fr`, never
+  `minmax(0, …)`. An item that would push its column past its share gets `min-width: 0`.
 
 ## Tokens
 

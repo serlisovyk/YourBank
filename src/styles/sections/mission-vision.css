@@ -5,11 +5,11 @@
 
 .mission-vision__row {
   display: grid;
-  grid-template-columns: minmax(0, 664fr) minmax(0, 932fr);
+  grid-template-columns: 664fr 932fr;
   align-items: center;
 
   @media (width < 1024px) {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
     justify-items: center;
   }
 }
@@ -78,10 +78,10 @@
 }
 
 .mission-vision__row--reverse {
-  grid-template-columns: minmax(0, 932fr) minmax(0, 664fr);
+  grid-template-columns: 932fr 664fr;
 
   @media (width < 1024px) {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .mission-vision__plate {
