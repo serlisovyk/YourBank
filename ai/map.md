@@ -23,7 +23,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `.size-limit.json` — limits on the built JS, CSS, font and images, checked by `npm run size` after a build.
 - `.github/workflows/ci.yml` — GitHub Actions: the checks of `AGENTS.md` "Verification" on every push (decision `ci-size-limit-css-room`).
 - `.husky/pre-commit` runs lint-staged (`.lintstagedrc.json`): ESLint and Stylelint `--fix`, then Prettier, on staged files.
-- `vercel.json` — Vercel: clean URLs, the redirect from the old `/pages/…` links, the cache header of `/assets/`.
+- `vercel.json` — Vercel: clean URLs and the cache header of `/assets/`.
 - `AGENTS.md` — the entry point for agents; `CLAUDE.md` points to it.
 - `ai/` — agent docs: this map, `workflow.md`, `rules/`, `skills/`, `decisions/`, `prompts/`,
   `linear-task-template.md`, and the archive `superpowers/`.
@@ -112,7 +112,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Deployment
 
 Live at <https://banking-coral-three.vercel.app> on Vercel through its Git integration: `main` is production, other
-branches get previews; the config is `vercel.json` only (decision `clean-urls-vercel-json`).
+branches get previews; the config is `vercel.json` only (decision `vercel-json-without-old-redirect`).
 
 ## Not in this project
 

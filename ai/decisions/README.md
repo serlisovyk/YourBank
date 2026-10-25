@@ -49,7 +49,7 @@ each with the record that replaced it.
 - [Vanilla JavaScript, Vite and Handlebars; no framework, no TypeScript](2026-10-23-vanilla-js-vite-handlebars.md)
 - [Four pages, no Login or Sign Up](2026-10-23-four-pages-no-auth.md)
 - [No automated tests](2026-10-23-no-automated-tests.md)
-- [Vercel: clean URLs, a real 404 and cached assets, set in `vercel.json`](2026-10-23-clean-urls-vercel-json.md)
+- [Vercel: clean URLs, a real 404 and cached assets, without the old `/pages/` redirect](2026-10-25-vercel-json-without-old-redirect.md)
 - [Merge locally into `main`, no pull requests](2026-10-23-local-merge-without-pr.md)
 - [npm is the package manager; one `package-lock.json`](2026-10-23-npm-package-manager.md)
 - [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
@@ -80,6 +80,7 @@ each with the record that replaced it.
 ### Superseded
 
 - [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md) — superseded by `clean-urls-vercel-json`
+- [Vercel: clean URLs, a real 404 and cached assets, set in `vercel.json`](2026-10-23-clean-urls-vercel-json.md) — superseded by `vercel-json-without-old-redirect`
 - [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md) — superseded by `ci-size-limit-photos`
 - [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md) — superseded by `ci-size-limit-css-room`
 - [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md) — superseded by `font-stack-no-fallback-face`

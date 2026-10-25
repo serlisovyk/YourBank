@@ -1,6 +1,6 @@
 # Clean URLs, a real 404 and cached assets, set in `vercel.json`
 
-Date: 2026-10-23 · Status: accepted
+Date: 2026-10-23 · Status: superseded by `vercel-json-without-old-redirect`
 
 ## Context
 
