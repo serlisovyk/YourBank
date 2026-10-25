@@ -264,7 +264,7 @@
     --page-hero-photo-height: clamp(253px, calc(30vw + 136px), 568px);
 
     --space-mission-inset: clamp(20px, calc(2.6667vw + 9.6px), 48px);
-    --space-mission-overlap: 84px;
+    --space-mission-overlap: clamp(0px, calc(22.73vw - 200px), 84px);
 
     --space-cta: clamp(30px, calc(2.8571vw + 18.86px), 60px);
   }

@@ -300,7 +300,7 @@ line (`--grey-60`, weight 300) with a 44 px GitHub icon link beside it (`--green
 ### About
 
 1. **Hero** (page hero) with the small label "Welcome to YourBank" above the title.
-2. **Mission & Vision.** Heading block; two staggered rows, the second pulled up by 100 / 84 px (`--space-mission-overlap`).
+2. **Mission & Vision.** Heading block; two staggered rows, the second pulled up by 100 / 84 px (`--space-mission-overlap`; below 1250 it eases down to 33 at 1024, so the text never runs under the other plate, and it is not used when the rows stack).
    Row 1: the plate (664 × 621 at 1920, 41.6 % of the row) at the left, Mission right of it; row 2 mirrored. Plate:
    `--grey-11`, 1 px `--grey-15`, radius 40, the photo inset 60 / 48 / 20 (`--space-mission-inset`) on three sides, flush with
    the bottom edge (542 × 559). Text: a 1 px `--green-60` line on the plate side, 50 / 40 / 30 from it, title `--text-title-lg`.
