@@ -15,13 +15,6 @@
     "prepare": "husky",
     "size": "size-limit"
   },
-  "keywords": [
-    "banking",
-    "website",
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
   "author": "Serhii Lisovyk",
   "license": "MIT",
   "type": "module",
