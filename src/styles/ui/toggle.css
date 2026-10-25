@@ -7,5 +7,9 @@
 }
 
 .toggle__button {
-  padding: var(--toggle-button-padding-y) var(--toggle-button-padding-x);
+  padding-block: calc(10px + (14 - 10) * var(--ramp-1440-1920));
+  padding-inline: calc(
+    8px + (18 - 8) * clamp(0px, (100vw - 320px) / 50, 1px) + (24 - 18) *
+      var(--ramp-1440-1920)
+  );
 }

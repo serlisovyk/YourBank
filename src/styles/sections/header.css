@@ -1,5 +1,7 @@
 .header {
-  margin-top: var(--space-navbar-top);
+  margin-top: calc(
+    40px + (30 - 40) * var(--ramp-390-1440) + (50 - 30) * var(--ramp-1440-1920)
+  );
 }
 
 .header__skip-link {
@@ -20,7 +22,12 @@
   background-color: var(--grey-11);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-pill);
-  padding: var(--navbar-padding-y) var(--navbar-padding-x);
+  padding-block: calc(
+    13px + (15 - 13) * var(--ramp-390-1440) + (21 - 15) * var(--ramp-1440-1920)
+  );
+  padding-inline: calc(
+    24px + (28 - 24) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
+  );
 
   @media (width < 1024px) {
     grid-template-columns: 1fr auto;
@@ -138,7 +145,8 @@
   color: var(--white);
   display: block;
   border-radius: var(--border-radius-pill);
-  padding: var(--navbar-link-padding-y) var(--navbar-link-padding-x);
+  padding-block: calc(10px + (12 - 10) * var(--ramp-1440-1920));
+  padding-inline: calc(18px + (24 - 18) * var(--ramp-1440-1920));
   transition: background-color var(--transition-duration);
 
   &[aria-current='page'] {

@@ -36,14 +36,7 @@
   --border-radius-small: 12px;
 
   --transition-duration: 0.2s;
-  --reveal-duration: 0.5s;
-  --reveal-easing: cubic-bezier(0.22, 1, 0.36, 1);
-  --reveal-offset: 20px;
-  --reveal-step: 0.08s;
-  --focus-ring: 2px solid var(--green-60);
   --touch-target: 44px;
-
-  --content-width: 1596px;
 
   --ramp-390-1440: 1px;
   --ramp-768-1440: 1px;
@@ -55,21 +48,10 @@
   --space-section: calc(
     80px + (120 - 80) * var(--ramp-390-1440) + (150 - 120) * var(--ramp-1440-1920)
   );
-  --space-navbar-top: calc(
-    40px + (30 - 40) * var(--ramp-390-1440) + (50 - 30) * var(--ramp-1440-1920)
-  );
-  --navbar-padding-y: calc(
-    13px + (15 - 13) * var(--ramp-390-1440) + (21 - 15) * var(--ramp-1440-1920)
-  );
-  --navbar-padding-x: calc(
-    24px + (28 - 24) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
-  );
   --logo-width: calc(101px + (156 - 101) * var(--ramp-390-1440));
   --space-nav-gap: calc(
     16px + (20 - 16) * var(--ramp-390-1440) + (26 - 20) * var(--ramp-1440-1920)
   );
-  --navbar-link-padding-y: calc(10px + (12 - 10) * var(--ramp-1440-1920));
-  --navbar-link-padding-x: calc(18px + (24 - 18) * var(--ramp-1440-1920));
 
   --text-title: calc(
     28px + (38 - 28) * var(--ramp-390-1440) + (48 - 38) * var(--ramp-1440-1920)
@@ -101,24 +83,8 @@
   );
   --text-button: calc(14px + (18 - 14) * var(--ramp-1440-1920));
 
-  --button-padding-y: calc(14px + (18 - 14) * var(--ramp-1440-1920));
   --button-padding-x: calc(20px + (24 - 20) * var(--ramp-1440-1920));
-  --button-padding-x-lg: calc(24px + (30 - 24) * var(--ramp-1440-1920));
   --toggle-padding: calc(12px + (14 - 12) * var(--ramp-1440-1920));
-  --toggle-button-padding-y: calc(10px + (14 - 10) * var(--ramp-1440-1920));
-  --toggle-button-padding-x: calc(
-    8px + (18 - 8) * clamp(0px, (100vw - 320px) / 50, 1px) + (24 - 18) *
-      var(--ramp-1440-1920)
-  );
-
-  --space-footer-top: calc(
-    50px + (60 - 50) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
-  );
-  --space-footer-bottom: calc(30px + (50 - 30) * var(--ramp-1440-1920));
-  --space-footer-gap: calc(
-    30px + (40 - 30) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
-  );
-  --footer-social-size: calc(44px + (52 - 44) * var(--ramp-1440-1920));
 
   --space-heading-gap: calc(10px + (14 - 10) * var(--ramp-1440-1920));
   --section-text-width: calc(1157px + (1302 - 1157) * var(--ramp-1440-1920));
@@ -225,8 +191,6 @@
   --badge-gap: calc(
     6px + (8 - 6) * var(--ramp-390-1440) + (10 - 8) * var(--ramp-1440-1920)
   );
-  --button-padding-y-compact: calc(12px + (16 - 12) * var(--ramp-1440-1920));
-  --button-padding-x-compact: calc(20px + (30 - 20) * var(--ramp-1440-1920));
 
   --space-press-card: calc(
     20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)

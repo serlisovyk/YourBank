@@ -21,7 +21,7 @@ body {
 }
 
 :focus-visible {
-  outline: var(--focus-ring);
+  outline: 2px solid var(--green-60);
   outline-offset: 2px;
 }
 
@@ -30,7 +30,7 @@ main:focus-visible {
 }
 
 .container {
-  max-width: calc(var(--content-width) + 2 * var(--gutter));
+  max-width: calc(1596px + 2 * var(--gutter));
   margin-inline: auto;
   padding-inline: var(--gutter);
 }

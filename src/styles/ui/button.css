@@ -3,7 +3,8 @@
   background-color: var(--green-60);
   border-radius: var(--border-radius-pill);
   font-family: var(--font-family);
-  padding: var(--button-padding-y) var(--button-padding-x);
+  padding-block: calc(14px + (18 - 14) * var(--ramp-1440-1920));
+  padding-inline: var(--button-padding-x);
   font-weight: 400;
   font-size: var(--text-button);
   line-height: 150%;
@@ -25,11 +26,12 @@
 }
 
 .button--large {
-  padding-inline: var(--button-padding-x-lg);
+  padding-inline: calc(24px + (30 - 24) * var(--ramp-1440-1920));
 }
 
 .button--compact {
-  padding: var(--button-padding-y-compact) var(--button-padding-x-compact);
+  padding-block: calc(12px + (16 - 12) * var(--ramp-1440-1920));
+  padding-inline: calc(20px + (30 - 20) * var(--ramp-1440-1920));
 }
 
 .button--empty {
