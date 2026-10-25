@@ -5,13 +5,9 @@ export class FaqController {
   #disclosure
 
   constructor(root, options = {}) {
-    const { expandedClass, heightProperty, labels } = { ...FAQ, ...options }
+    const { heightProperty, labels } = { ...FAQ, ...options }
 
-    this.#disclosure = new Disclosure(root, {
-      expandedClass,
-      heightProperty,
-      labels,
-    })
+    this.#disclosure = new Disclosure(root, { heightProperty, labels })
   }
 
   start() {

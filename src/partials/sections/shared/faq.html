@@ -8,6 +8,16 @@
         <div class="faq__items">
           {{#each groups.initial}} {{> components/question-item}} {{/each}}
         </div>
+        <div
+          class="faq__preview"
+          id="faq-{{name}}-preview"
+          data-disclosure-region
+          inert
+        >
+          <div class="faq__items">
+            {{#each groups.preview}} {{> components/question-item}} {{/each}}
+          </div>
+        </div>
         <div class="faq__more" id="faq-{{name}}-more" data-disclosure-region inert>
           <div class="faq__items">
             {{#each groups.additional}} {{> components/question-item}} {{/each}}
@@ -17,7 +27,7 @@
           type="button"
           class="faq__button button button--secondary"
           data-disclosure-trigger
-          aria-controls="faq-{{name}}-more"
+          aria-controls="faq-{{name}}-preview faq-{{name}}-more"
           aria-expanded="false"
         >
           <span data-disclosure-label>Load All FAQ’s</span>

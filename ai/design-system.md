@@ -142,7 +142,8 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
     texture drawn at 50 % with a screen blend.
   - FAQ fade: the lower row (items 3 and 4) is shown almost whole, 320 / 295 / 689 px high
     (`--faq-preview`; at 390 the items stack), under an overlay at its bottom, 262 / 240 / 235 px
-    (`--faq-fade`), `to bottom` from transparent to `--grey-10`; it disappears when the list is expanded.
+    (`--faq-fade`), `to bottom` from transparent to `--grey-10`; it disappears when the list is expanded,
+    and more questions (not drawn) open under the faded row.
   - Testimonial edge fades: an alpha mask on the track (transparent, opaque from 30 % to 70 %, transparent), off below 1024.
   - Security panel: a dark, grainy backdrop with a faint green tint behind the cards.
 

@@ -1,19 +1,18 @@
 export class Disclosure {
   #options
   #trigger
-  #region
+  #regions
   #label
   #isOpen
 
   constructor(root, options = {}) {
     this.#options = {
-      expandedClass: null,
       heightProperty: '--disclosure-expanded-height',
       labels: null,
       ...options,
     }
     this.#trigger = root.querySelector('[data-disclosure-trigger]')
-    this.#region = root.querySelector('[data-disclosure-region]')
+    this.#regions = [...root.querySelectorAll('[data-disclosure-region]')]
     this.#label = root.querySelector('[data-disclosure-label]')
     this.#isOpen = this.#trigger.getAttribute('aria-expanded') === 'true'
   }
@@ -47,18 +46,18 @@ export class Disclosure {
   }
 
   #renderHeight() {
-    const height = `${this.#region.scrollHeight}px`
+    const { heightProperty } = this.#options
 
-    this.#region.style.setProperty(this.#options.heightProperty, height)
+    for (const region of this.#regions) {
+      region.style.setProperty(heightProperty, `${region.scrollHeight}px`)
+    }
   }
 
   #renderExpanded() {
-    const { expandedClass } = this.#options
-
     this.#trigger.setAttribute('aria-expanded', String(this.#isOpen))
-    this.#region.inert = !this.#isOpen
-    if (expandedClass) {
-      this.#region.classList.toggle(expandedClass, this.#isOpen)
+
+    for (const region of this.#regions) {
+      region.inert = !this.#isOpen
     }
 
     this.#renderLabel()

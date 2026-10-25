@@ -51,7 +51,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `sections/home/products` — the audience switch (For Individuals / For Businesses) and two panels of `product-card`.
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
 - `sections/home/features` — category tabs: `featureGroups` as tabs, panels of `feature-item`.
-- `sections/shared/faq` — the FAQ: `groups` (the default set is `questionGroups`) as `question-item`, the rest under an expander; `name` makes its ids unique.
+- `sections/shared/faq` — the FAQ: `groups` (the default set is `questionGroups`) as `question-item` (`initial`, `preview` under the fade, `additional` under the expander); `name` makes its ids unique.
 - `sections/home/testimonials` — the audience switch and two panels, each a `testimonial-carousel`.
 - `sections/shared/cta` — the call-to-action card of Home and Careers: one context, an entry of `cta` (title parts, text, `button`).
 - `sections/careers/values` — Our Values on Careers. `sections/careers/benefits` — Our Benefits: `benefits` as `icon-card`.
@@ -92,7 +92,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `main.js` — the only entry (the pages load it): finds each section's root, creates its controller, calls `start()`.
 - `constants.js` — the media queries (equal to the CSS breakpoints), key names, button texts, state classes.
 - `components/` — reusable widgets: `Tabs` (ARIA tabs: arrows, `Home`/`End`, orientation by width), `Toggle` (`aria-pressed`
-  buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert`, the height as a custom property), `CurrencyConverter` (reads the rates from the
+  buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert` on each of its regions, their heights as a custom property), `CurrencyConverter` (reads the rates from the
   options' `data-*`; `main.js` creates it directly, no controller), `Carousel` (scroll-snap track: arrows scroll by one card, disabled at the ends), `Reveal` (one observer over `[data-reveal]` in `<main>`; `main.js` creates it directly).
 - `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
   `ProductsController` (`Toggle`; also selects the tab named by a `#products-<key>` address and scrolls to the section), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`), `TestimonialsController` (`Toggle` and a `Carousel` per panel).

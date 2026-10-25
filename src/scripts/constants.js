@@ -32,7 +32,6 @@ export const FEATURES = Object.freeze({
 })
 
 export const FAQ = Object.freeze({
-  expandedClass: 'faq__more--expanded',
   heightProperty: '--faq-expanded-height',
   labels: Object.freeze({ whenOpen: 'Show Less', whenClosed: 'Load All FAQ’s' }),
 })
