@@ -148,7 +148,31 @@
   border-left: 1px solid var(--grey-60);
 }
 
+.footer__credits {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .footer__author {
   font-weight: 300;
   color: var(--grey-60);
+}
+
+.footer__source {
+  display: flex;
+  padding: 10px;
+  color: var(--green-60);
+  border-radius: 50%;
+  transition: color var(--transition-duration);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--green-70);
+    }
+  }
+}
+
+.footer__source-icon {
+  display: block;
 }

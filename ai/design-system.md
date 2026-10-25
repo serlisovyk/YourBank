@@ -249,7 +249,7 @@ The footer is the same on all four: the logo centred, the four links in a row, a
 row of three contacts (envelope, phone, pin icons in `--green-60`), a divider, then a pill bar
 with three social circles at the left, the copyright centred (`--grey-70`) and
 `Privacy Policy | Terms of Service` at the right (plain text) and, under the bar, the muted author
-line (`--grey-60`, weight 300). At 390 these stack into centred rows. The drawn footer is
+line (`--grey-60`, weight 300) with a 44 px GitHub icon link beside it (`--green-60`; not in the design). At 390 these stack into centred rows. The drawn footer is
 578 / 440 / 503 px tall. Total page height: Home 7128 / 5674 / 9290, Careers
 7478 / 6089 / 8819, About 5223 / 4197 / 5870, Security 4025 / 3258 / 4397.
 

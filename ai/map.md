@@ -46,7 +46,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `sections/shared/head` — the `<head>` content of every page, built from `page` and `site`.
 - `sections/shared/header` — the skip link, the logo link, the mobile menu button, navigation (`navigation` as a loop, `aria-current` from `page`).
-- `sections/shared/footer` — the logo link, navigation like the header, `contacts`, the bar with `socials` and legal text, the author line.
+- `sections/shared/footer` — the logo link, navigation like the header, `contacts`, the bar with `socials` and legal text, the author line with the source-code link.
 - `sections/home/hero` — the first screen of home. `sections/shared/page-hero` — the hero of Careers, About and Security: one context, `page.hero`.
 - `sections/home/products` — the audience switch (For Individuals / For Businesses) and two panels of `product-card`.
 - `sections/home/cases` — Use Cases: `caseItems` as `case-item`.
@@ -76,7 +76,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
 - `structured-data.js` → `organizationJsonLd`, the JSON-LD string of Home's `<head>`, built from `site`, `pages`, `contacts`, `socials`.
-- `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name).
+- `contacts.js` → `contacts`, `socials.js` → `socials`, `footer.js` → `footer` (copyright, legal documents, author name, the source-code link).
 - `navigation.js` → `navigation` (the menu links); `pages.js` → `pages`: `path`, `title`, `description`, `navKey`, `hero` (page-hero pages), per page file name.
 - `site.js` → `site` (name, the production origin, theme colour, the preview image: its size and alt).
 
