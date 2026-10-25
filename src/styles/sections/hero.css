@@ -55,20 +55,17 @@
 .hero__content {
   position: relative;
   flex-shrink: 0;
+}
 
-  &::before {
-    --arrows-width: min(418 * var(--hero-unit), (var(--gutter) + 24px) / 0.445);
+.hero__arrows {
+  --arrows-overhang: calc(var(--gutter) + 24px);
+  --arrows-outside-share: 0.445;
 
-    content: '';
-    position: absolute;
-    top: calc(9 * var(--hero-unit));
-    right: calc(var(--arrows-width) * -0.445);
-    width: var(--arrows-width);
-    aspect-ratio: 418 / 383;
-    background-image: url('/assets/images/decor/growth-arrows.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  position: absolute;
+  top: calc(9 * var(--hero-unit));
+  right: calc(-1 * var(--arrows-overhang));
+  width: calc(var(--arrows-overhang) / var(--arrows-outside-share));
+  height: auto;
 }
 
 .hero__money {
