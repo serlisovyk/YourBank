@@ -1,7 +1,9 @@
 .benefits__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-benefits-gap);
+  gap: calc(
+    48px + (60 - 48) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
+  );
 
   @media (width < 768px) {
     grid-template-columns: 1fr;

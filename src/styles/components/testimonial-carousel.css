@@ -1,9 +1,11 @@
 .testimonial-carousel {
+  --space-testimonial-gap: calc(60px + (80 - 60) * var(--ramp-1440-1920));
+
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-areas: 'previous track next';
   align-items: center;
-  column-gap: var(--space-testimonial-arrow);
+  column-gap: calc(40px + (50 - 40) * var(--ramp-1440-1920));
 
   @media (width < 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -57,6 +59,8 @@
 }
 
 .testimonial-carousel__quote {
+  --icon-quote: calc(44px + (60 - 44) * var(--ramp-1440-1920));
+
   width: var(--icon-quote);
   height: var(--icon-quote);
   margin-bottom: var(--space-card-gap);
@@ -70,11 +74,14 @@
 
 .testimonial-carousel__name {
   font-weight: 500;
-  font-size: var(--text-testimonial-name);
+  font-size: calc(16px + (18 - 16) * var(--ramp-1440-1920));
   color: var(--green-60);
 }
 
 .testimonial-carousel__arrow {
+  --testimonial-arrow-size: calc(52px + (62 - 52) * var(--ramp-1440-1920));
+  --icon-testimonial-arrow: calc(28px + (34 - 28) * var(--ramp-1440-1920));
+
   display: grid;
   place-items: center;
   width: var(--testimonial-arrow-size);

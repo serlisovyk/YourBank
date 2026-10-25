@@ -1,7 +1,9 @@
 .values__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-values-gap);
+  gap: calc(
+    50px + (60 - 50) * var(--ramp-390-1440) + (80 - 60) * var(--ramp-1440-1920)
+  );
 
   @media (width < 768px) {
     grid-template-columns: 1fr;
@@ -10,7 +12,9 @@
 
 .values__item {
   border-left: 1px solid var(--green-60);
-  padding-left: var(--space-value-inset);
+  padding-left: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
 }
 
 .values__item-title {

@@ -1,4 +1,8 @@
 .protection__items {
+  --space-protection: calc(
+    24px + (80 - 24) * var(--ramp-768-1440) + (95 - 80) * var(--ramp-1440-1920)
+  );
+
   position: relative;
   isolation: isolate;
   display: grid;

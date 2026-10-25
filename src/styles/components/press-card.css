@@ -1,4 +1,8 @@
 .press-card {
+  --space-press-card: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+
   display: flex;
   flex-direction: column;
   background-color: var(--grey-11);
@@ -10,7 +14,9 @@
 .press-card__image {
   display: block;
   width: 100%;
-  height: var(--press-photo-height);
+  height: calc(
+    208px + (268 - 208) * var(--ramp-390-1440) + (333 - 268) * var(--ramp-1440-1920)
+  );
   object-fit: cover;
   border-radius: var(--border-radius-medium);
   margin-bottom: var(--space-card);
@@ -28,7 +34,9 @@
 
 .press-card__title {
   font-weight: 400;
-  font-size: var(--text-press-title);
+  font-size: calc(
+    18px + (20 - 18) * var(--ramp-390-1440) + (24 - 20) * var(--ramp-1440-1920)
+  );
   line-height: 150%;
   color: var(--white);
   margin-bottom: var(--space-card-gap-sm);

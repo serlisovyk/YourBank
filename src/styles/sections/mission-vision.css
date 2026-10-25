@@ -15,7 +15,13 @@
 }
 
 .mission-vision__row + .mission-vision__row {
-  margin-top: calc(-1 * var(--space-mission-overlap));
+  margin-top: calc(
+    -1 *
+      (
+        clamp(0px, 0.2273 * (100vw - 880px), 84px) + (100 - 84) *
+          var(--ramp-1440-1920)
+      )
+  );
 
   @media (width < 1024px) {
     margin-top: var(--space-heading-block);
@@ -23,6 +29,10 @@
 }
 
 .mission-vision__plate {
+  --space-mission-inset: calc(
+    20px + (48 - 20) * var(--ramp-390-1440) + (60 - 48) * var(--ramp-1440-1920)
+  );
+
   background-image: url('/assets/images/decor/dots-fine.avif');
   background-position: top left;
   background-size: 320px;

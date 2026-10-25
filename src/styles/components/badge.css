@@ -3,5 +3,8 @@
   background-color: var(--grey-10);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-pill);
-  padding: var(--badge-padding-y) var(--badge-padding-x);
+  padding-block: calc(5px + (7 - 5) * var(--ramp-1440-1920));
+  padding-inline: calc(
+    9px + (13 - 9) * var(--ramp-390-1440) + (15 - 13) * var(--ramp-1440-1920)
+  );
 }
