@@ -181,7 +181,8 @@ A pill container (`--grey-11`, 1 px `--grey-15`) holding two default-size button
 active one primary, the other empty. Container padding 14 / 12 / 12; button height 55 / 41 /
 41 (padding 14 × 24 / 10 × 18 / 10 × 18); container height 83 / 65 / 65. It is used in
 Our Products and Our Testimonials. At 1920 and 1440 it sits at the right of the heading block,
-bottom-aligned; at 390 it sits centred under the text with a 20 px gap.
+bottom-aligned; at 390 it sits centred under the text with a 20 px gap. The two buttons never wrap;
+below 370 px their side padding eases from 18 down to 8.
 
 ### Navbar
 
@@ -269,7 +270,7 @@ line (`--grey-60`, weight 300) with a 44 px GitHub icon link beside it (`--green
    separated by 1 px `--grey-15` vertical rules (two panels, one per audience); at 390 stacked.
 3. **Use Cases.** Heading block (no toggle); two rows. Row 1: the plate (2 × 2 cards) on
    the left, the text on the right (h3, paragraph, three stats with a dashed divider between,
-   the secondary **Learn More**). Row 2 mirrors it. The plate is 748 / 610 / 358 wide, the
+   the secondary **Learn More**, centred at its own width when the rows stack). Row 2 mirrors it. The plate is 748 / 610 / 358 wide, the
    text column the same. At 390: the plate first (still 2 × 2), then the text centred, the
    stats stacked.
 4. **Our Features.** Heading block; a panel at the left with three vertical tab buttons
