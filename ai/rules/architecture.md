@@ -25,6 +25,8 @@ it. Each folder has one job:
 - `vite/handlebars/context.js` is the one place that wires `context`: a `data/`
   constant reaches the templates only through it, and the current `page` only from
   `context(pagePath)`.
+- A formula is never in `data/`. What a partial renders before the script runs (the converter's first result) is
+  assembled in `context.js` with the class that owns the formula, never a second copy of it.
 - A new page is an HTML file in `src/`, added to `PAGES` in `vite/paths.js`; it gets an entry in
   `data/pages.js` (`path`, `title`, `description`, `navKey`) and an item in `data/navigation.js` for the `header` links. A page that is not in the navigation needs a reason.
 - Links between pages are clean URLs without `.html` (`/careers`). `dist/404.html` is a build copy of the home

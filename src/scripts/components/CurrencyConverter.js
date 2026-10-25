@@ -47,6 +47,21 @@ export class CurrencyConverter {
     this.#render()
   }
 
+  static convert(
+    amount,
+    from,
+    to,
+    { locale, minFractionDigits } = CURRENCY_CONVERTER,
+  ) {
+    const converted = (amount / from.rate) * to.rate
+    const formatter = new Intl.NumberFormat(locale, {
+      minimumFractionDigits: minFractionDigits,
+      maximumFractionDigits: to.fractionDigits,
+    })
+
+    return formatter.format(converted)
+  }
+
   static #findSide(side) {
     return {
       select: side.querySelector('[data-converter-select]'),
@@ -64,18 +79,12 @@ export class CurrencyConverter {
   }
 
   #readCurrencies() {
-    const { locale, minFractionDigits } = this.#options
     const currencies = new Map()
 
     for (const option of this.#fromSide.select.options) {
-      const maximumFractionDigits = Number(option.dataset.converterDigits)
-
       currencies.set(option.value, {
         rate: Number(option.dataset.converterRate),
-        formatter: new Intl.NumberFormat(locale, {
-          minimumFractionDigits: minFractionDigits,
-          maximumFractionDigits,
-        }),
+        fractionDigits: Number(option.dataset.converterDigits),
       })
     }
 
@@ -118,9 +127,14 @@ export class CurrencyConverter {
     const fromCurrency = this.#currencies.get(this.#fromSide.select.value)
     const toCode = this.#toSide.select.value
     const toCurrency = this.#currencies.get(toCode)
-    const converted = (amount / fromCurrency.rate) * toCurrency.rate
+    const result = CurrencyConverter.convert(
+      amount,
+      fromCurrency,
+      toCurrency,
+      this.#options,
+    )
 
-    this.#renderResultText(toCurrency.formatter.format(converted), ` ${toCode}`)
+    this.#renderResultText(result, ` ${toCode}`)
   }
 
   #renderResultText(value, note) {

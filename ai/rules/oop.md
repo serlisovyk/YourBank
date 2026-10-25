@@ -69,7 +69,8 @@ Each class has one reason to change:
 
 - Composition over inheritance. No class hierarchies, abstract base classes, factories or DI
   containers until a second real implementation needs them.
-- A pure helper that belongs to one class is a private static method (`static #nextIndex`).
+- A pure helper that belongs to one class is a private static method (`static #nextIndex`). One that the build needs
+  too is a public static method (`CurrencyConverter.convert`, called by `vite/handlebars/context.js`), so a formula has one home.
 - A method does one thing and stays short: split it rather than comment its parts.
 
 ## Naming

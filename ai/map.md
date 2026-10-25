@@ -15,7 +15,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   preview: the Home header and hero, the author's name), `robots.txt`, `sitemap.xml`, `llms.txt`, `logo.svg` (for the JSON-LD).
 - `vite.config.js` — only re-exports `vite/config.js` (Vite: `root: 'src'`, output `dist/` at the repo root). `vite/paths.js` — the
   path constants and the pages (`PAGES`, the Rollup inputs); `vite/parts/` — one module per concern (`build`, `plugins`, `handlebars`,
-  `image-optimizer`); `vite/handlebars/` — `helpers.js` (`eq`) and `context.js` (`context(pagePath)`: the current `page` and the `data/` constants).
+  `image-optimizer`); `vite/handlebars/` — `helpers.js` (`eq`) and `context.js` (`context(pagePath)`: the current `page`, the `data/` constants and the converter's first state, built with `CurrencyConverter.convert`).
 - `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`, `lint`, `lint:fix`, `lint:css`, `lint:css:fix`, `size`;
   `package-lock.json` — the lockfile (npm, decision `npm-package-manager`). License: MIT, declared in `package.json` only
   (decision `license-in-package-json`).
@@ -71,7 +71,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
   `products.js` → `products`, `values.js` → `values`, `benefits.js` → `benefits`, `jobs.js` → `jobs`, `mission-vision.js` → `missionVision`, `press-releases.js` → `pressReleases` (`date` ISO),
-  `protection.js` → `protection`, `hero-transactions.js` → `heroTransactions`, `converter.js` → `converter` (the converter's default currencies, amount and result, rendered at build time),
+  `protection.js` → `protection`, `hero-transactions.js` → `heroTransactions`, `converter.js` → `converterDefaults` (the converter's first `from`, `to` and `amount`),
   `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).
@@ -93,7 +93,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `constants.js` — the media queries (equal to the CSS breakpoints), key names, button texts, state classes.
 - `components/` — reusable widgets: `Tabs` (ARIA tabs: arrows, `Home`/`End`, orientation by width), `Toggle` (`aria-pressed`
   buttons and `hidden` panels), `Disclosure` (`aria-expanded`, `inert` on each of its regions, their heights as a custom property), `CurrencyConverter` (reads the rates from the
-  options' `data-*`; `main.js` creates it directly, no controller), `Carousel` (scroll-snap track: arrows scroll by one card, disabled at the ends), `Reveal` (one observer over `[data-reveal]` in `<main>`; `main.js` creates it directly).
+  options' `data-*`; the one home of the formula, `convert`, which the build calls too; `main.js` creates it directly, no controller), `Carousel` (scroll-snap track: arrows scroll by one card, disabled at the ends), `Reveal` (one observer over `[data-reveal]` in `<main>`; `main.js` creates it directly).
 - `controllers/` — one class per section: `HeaderMenuController` (the mobile menu: `inert`, `Escape`, close on a link), `FooterController` (the current year),
   `ProductsController` (`Toggle`; also selects the tab named by a `#products-<key>` address and scrolls to the section), `FeaturesController` (`Tabs`), `FaqController` (`Disclosure`), `TestimonialsController` (`Toggle` and a `Carousel` per panel).
 - Hooks are `data-*`: section roots `data-header`, `data-footer`, `data-products`, `data-features`, `data-faq`, `data-testimonials`, the converter `data-currency-converter`, `<main>` `data-reveal-root` (`ai/rules/oop.md`).

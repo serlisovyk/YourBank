@@ -238,13 +238,13 @@ Decorative backgrounds in `assets/images/decor/`, never content. The dotted ones
 rasters at twice the CSS size, baked over the surface they sit on (`--grey-10` or `--grey-11`); a
 new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 
-| Decor                      | Where                                                                                                |
-| -------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                                              |
-| `growth-arrows.svg`        | behind the Home hero card, 45 % of it sticking out at the right: 418 × 383 at 1920, 234 wide at 1440 |
-| `dots-grid.avif`           | top right of the page-hero panel                                                                     |
-| `dots-fine.avif`           | top left of CTA, Security panel, benefit card: a fine grid fading out, 320 wide (240 at 390).        |
-| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211                                |
+| Decor                      | Where                                                                                                     |
+| -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                                                   |
+| `growth-arrows.svg`        | behind the Home hero card (an `img`), 45 % of it sticking out at the right: 418 wide at 1920, 234 at 1440 |
+| `dots-grid.avif`           | top right of the page-hero panel                                                                          |
+| `dots-fine.avif`           | top left of CTA, Security panel, benefit card: a fine grid fading out, 320 wide (240 at 390).             |
+| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211                                     |
 
 ## Pages
 

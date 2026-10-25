@@ -1,7 +1,7 @@
 import { benefits } from '../../src/data/benefits.js'
 import { caseItems } from '../../src/data/case-items.js'
 import { contacts } from '../../src/data/contacts.js'
-import { converter } from '../../src/data/converter.js'
+import { converterDefaults } from '../../src/data/converter.js'
 import { cta } from '../../src/data/cta.js'
 import { currencies } from '../../src/data/currency-rates.js'
 import { featureGroups } from '../../src/data/feature-groups.js'
@@ -20,6 +20,37 @@ import { socials } from '../../src/data/socials.js'
 import { organizationJsonLd } from '../../src/data/structured-data.js'
 import { testimonials } from '../../src/data/testimonials.js'
 import { values } from '../../src/data/values.js'
+import { CurrencyConverter } from '../../src/scripts/components/CurrencyConverter.js'
+
+function findCurrency(code) {
+  return currencies.find((currency) => currency.code === code)
+}
+
+function createConverterSide(code) {
+  return {
+    code,
+    currencies: currencies.map((currency) => ({
+      ...currency,
+      isSelected: currency.code === code,
+    })),
+  }
+}
+
+function createConverter() {
+  const { from, to, amount } = converterDefaults
+  const result = CurrencyConverter.convert(
+    amount,
+    findCurrency(from),
+    findCurrency(to),
+  )
+
+  return {
+    amount,
+    result,
+    from: createConverterSide(from),
+    to: createConverterSide(to),
+  }
+}
 
 export function createContext(pagePath) {
   const pageName = pagePath.split('/').at(-1).replace('.html', '') || 'index'
@@ -44,7 +75,7 @@ export function createContext(pagePath) {
     testimonials,
     heroTransactions,
     currencies,
-    converter,
+    converter: createConverter(),
     cta,
     organizationJsonLd,
   }
