@@ -131,6 +131,7 @@
 .case-item__button {
   @media (width < 1024px) {
     display: block;
+    width: fit-content;
     margin-inline: auto;
   }
 }
