@@ -45,229 +45,237 @@
 
   --content-width: 1596px;
 
-  --gutter: clamp(80px, calc(17.0833vw - 166px), 162px);
-  --space-section: clamp(120px, calc(6.25vw + 30px), 150px);
-  --space-navbar-top: clamp(30px, calc(4.1667vw - 30px), 50px);
-  --navbar-padding-y: clamp(15px, calc(1.25vw - 3px), 21px);
-  --navbar-padding-x: clamp(28px, calc(1.25vw + 10px), 34px);
-  --logo-width: 156px;
-  --space-nav-gap: clamp(20px, calc(1.25vw + 2px), 26px);
-  --navbar-link-padding-y: clamp(10px, calc(0.4167vw + 4px), 12px);
-  --navbar-link-padding-x: clamp(18px, 1.25vw, 24px);
+  --ramp-390-1440: 1px;
+  --ramp-768-1440: 1px;
+  --ramp-1440-1920: clamp(0px, (100vw - 1440px) / 480, 1px);
 
-  --text-title: clamp(38px, calc(2.0833vw + 8px), 48px);
-  --text-title-hero: clamp(48px, calc(2.0833vw + 18px), 58px);
-  --text-title-lg: clamp(32px, calc(1.25vw + 14px), 38px);
-  --text-title-md: clamp(26px, calc(0.8333vw + 14px), 30px);
-  --text-stat: clamp(40px, calc(3.75vw - 14px), 58px);
-  --text-value: clamp(40px, calc(3.75vw - 14px), 58px);
-  --text-card-title: clamp(20px, calc(0.8333vw + 8px), 24px);
-  --text-card-title-sm: clamp(18px, calc(0.8333vw + 6px), 22px);
-  --text-question: clamp(18px, calc(0.4167vw + 12px), 20px);
-  --text-plate: clamp(16px, calc(0.8333vw + 4px), 20px);
-  --text-body: clamp(16px, calc(0.4167vw + 10px), 18px);
-  --text-page-hero-label: clamp(18px, calc(0.4167vw + 12px), 20px);
-  --text-button: clamp(14px, calc(0.8333vw + 2px), 18px);
+  --gutter: calc(
+    16px + (80 - 16) * var(--ramp-390-1440) + (162 - 80) * var(--ramp-1440-1920)
+  );
+  --space-section: calc(
+    80px + (120 - 80) * var(--ramp-390-1440) + (150 - 120) * var(--ramp-1440-1920)
+  );
+  --space-navbar-top: calc(
+    40px + (30 - 40) * var(--ramp-390-1440) + (50 - 30) * var(--ramp-1440-1920)
+  );
+  --navbar-padding-y: calc(
+    13px + (15 - 13) * var(--ramp-390-1440) + (21 - 15) * var(--ramp-1440-1920)
+  );
+  --navbar-padding-x: calc(
+    24px + (28 - 24) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
+  );
+  --logo-width: calc(101px + (156 - 101) * var(--ramp-390-1440));
+  --space-nav-gap: calc(
+    16px + (20 - 16) * var(--ramp-390-1440) + (26 - 20) * var(--ramp-1440-1920)
+  );
+  --navbar-link-padding-y: calc(10px + (12 - 10) * var(--ramp-1440-1920));
+  --navbar-link-padding-x: calc(18px + (24 - 18) * var(--ramp-1440-1920));
 
-  --button-padding-y: clamp(14px, calc(0.8333vw + 2px), 18px);
-  --button-padding-x: clamp(20px, calc(0.8333vw + 8px), 24px);
-  --button-padding-x-lg: clamp(24px, calc(1.25vw + 6px), 30px);
-  --toggle-padding: clamp(12px, calc(0.4167vw + 6px), 14px);
-  --toggle-button-padding-y: clamp(10px, calc(0.8333vw - 2px), 14px);
-  --toggle-button-padding-x: clamp(18px, 1.25vw, 24px);
+  --text-title: calc(
+    28px + (38 - 28) * var(--ramp-390-1440) + (48 - 38) * var(--ramp-1440-1920)
+  );
+  --text-title-hero: calc(
+    28px + (48 - 28) * var(--ramp-390-1440) + (58 - 48) * var(--ramp-1440-1920)
+  );
+  --text-title-lg: calc(
+    26px + (32 - 26) * var(--ramp-390-1440) + (38 - 32) * var(--ramp-1440-1920)
+  );
+  --text-title-md: calc(
+    20px + (26 - 20) * var(--ramp-390-1440) + (30 - 26) * var(--ramp-1440-1920)
+  );
+  --text-stat: calc(40px + (58 - 40) * var(--ramp-1440-1920));
+  --text-value: calc(
+    30px + (40 - 30) * var(--ramp-390-1440) + (58 - 40) * var(--ramp-1440-1920)
+  );
+  --text-card-title: calc(20px + (24 - 20) * var(--ramp-1440-1920));
+  --text-card-title-sm: calc(18px + (22 - 18) * var(--ramp-1440-1920));
+  --text-question: calc(18px + (20 - 18) * var(--ramp-1440-1920));
+  --text-plate: calc(
+    14px + (16 - 14) * var(--ramp-390-1440) + (20 - 16) * var(--ramp-1440-1920)
+  );
+  --text-body: calc(
+    14px + (16 - 14) * var(--ramp-390-1440) + (18 - 16) * var(--ramp-1440-1920)
+  );
+  --text-page-hero-label: calc(
+    14px + (18 - 14) * var(--ramp-390-1440) + (20 - 18) * var(--ramp-1440-1920)
+  );
+  --text-button: calc(14px + (18 - 14) * var(--ramp-1440-1920));
 
-  --space-footer-top: clamp(60px, calc(8.3333vw - 60px), 100px);
-  --space-footer-bottom: clamp(30px, calc(4.1667vw - 30px), 50px);
-  --space-footer-gap: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --footer-social-size: clamp(44px, calc(1.6667vw + 20px), 52px);
+  --button-padding-y: calc(14px + (18 - 14) * var(--ramp-1440-1920));
+  --button-padding-x: calc(20px + (24 - 20) * var(--ramp-1440-1920));
+  --button-padding-x-lg: calc(24px + (30 - 24) * var(--ramp-1440-1920));
+  --toggle-padding: calc(12px + (14 - 12) * var(--ramp-1440-1920));
+  --toggle-button-padding-y: calc(10px + (14 - 10) * var(--ramp-1440-1920));
+  --toggle-button-padding-x: calc(
+    8px + (18 - 8) * clamp(0px, (100vw - 320px) / 50, 1px) + (24 - 18) *
+      var(--ramp-1440-1920)
+  );
 
-  --space-heading-gap: clamp(10px, calc(0.8333vw - 2px), 14px);
-  --section-text-width: clamp(1157px, calc(30.2083vw + 722px), 1302px);
-  --section-text-width-toggle: clamp(831px, calc(21.6667vw + 519px), 935px);
-  --space-heading-block: clamp(60px, 4.1667vw, 80px);
-  --space-heading-block-toggle: clamp(80px, calc(4.1667vw + 20px), 100px);
-  --space-card: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --space-card-gap: clamp(24px, calc(1.25vw + 6px), 30px);
-  --space-card-gap-sm: clamp(16px, calc(0.8333vw + 4px), 20px);
-  --space-grid-gap: clamp(20px, calc(2.0833vw - 10px), 30px);
-  --space-columns: clamp(80px, calc(4.1667vw + 20px), 100px);
-  --icon-product: clamp(72px, calc(5.4167vw - 6px), 98px);
+  --space-footer-top: calc(
+    50px + (60 - 50) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
+  );
+  --space-footer-bottom: calc(30px + (50 - 30) * var(--ramp-1440-1920));
+  --space-footer-gap: calc(
+    30px + (40 - 30) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
+  --footer-social-size: calc(44px + (52 - 44) * var(--ramp-1440-1920));
 
-  --space-hero-top: clamp(90px, calc(13.125vw - 99px), 153px);
-  --space-hero-bottom: clamp(61px, calc(3.125vw + 16px), 76px);
-  --space-hero-gap: clamp(80px, calc(8.3333vw - 40px), 120px);
-  --hero-card-width: clamp(410px, calc(21.875vw + 95px), 515px);
+  --space-heading-gap: calc(10px + (14 - 10) * var(--ramp-1440-1920));
+  --section-text-width: calc(1157px + (1302 - 1157) * var(--ramp-1440-1920));
+  --section-text-width-toggle: calc(831px + (935 - 831) * var(--ramp-1440-1920));
+  --space-heading-block: calc(60px + (80 - 60) * var(--ramp-1440-1920));
+  --space-heading-block-toggle: calc(
+    60px + (80 - 60) * var(--ramp-390-1440) + (100 - 80) * var(--ramp-1440-1920)
+  );
+  --space-card: calc(
+    30px + (40 - 30) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
+  --space-card-gap: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+  --space-card-gap-sm: calc(
+    12px + (16 - 12) * var(--ramp-390-1440) + (20 - 16) * var(--ramp-1440-1920)
+  );
+  --space-grid-gap: calc(20px + (30 - 20) * var(--ramp-1440-1920));
+  --space-columns: calc(
+    60px + (80 - 60) * var(--ramp-390-1440) + (100 - 80) * var(--ramp-1440-1920)
+  );
+  --icon-product: calc(72px + (98 - 72) * var(--ramp-1440-1920));
+
+  --space-hero-top: calc(
+    50px + (90 - 50) * var(--ramp-390-1440) + (153 - 90) * var(--ramp-1440-1920)
+  );
+  --space-hero-bottom: calc(
+    81px + (61 - 81) * var(--ramp-390-1440) + (76 - 61) * var(--ramp-1440-1920)
+  );
+  --space-hero-gap: calc(80px + (120 - 80) * var(--ramp-1440-1920));
+  --hero-card-width: calc(
+    305px + (410 - 305) * var(--ramp-390-1440) + (515 - 410) * var(--ramp-1440-1920)
+  );
   --hero-unit: calc(var(--hero-card-width) / 515);
-  --hero-card-padding: clamp(28px, calc(1.25vw + 10px), 34px);
+  --hero-card-padding: calc(
+    20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
+  );
   --text-hero-small: max(12px, calc(16 * var(--hero-unit)));
   --text-hero-tiny: max(12px, calc(14 * var(--hero-unit)));
-  --icon-currency: clamp(28px, calc(1.25vw + 10px), 34px);
-  --space-converter-cell: clamp(14px, calc(0.4167vw + 8px), 16px);
+  --icon-currency: calc(
+    20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
+  );
+  --space-converter-cell: calc(
+    10px + (14 - 10) * var(--ramp-390-1440) + (16 - 14) * var(--ramp-1440-1920)
+  );
 
-  --icon-case: clamp(64px, calc(2.9167vw + 22px), 78px);
-  --space-case-rows: clamp(40px, calc(4.1667vw - 20px), 60px);
-  --space-case-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
-  --space-plate: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --space-plate-gap: clamp(10px, calc(2.0833vw - 20px), 20px);
-  --space-plate-card: clamp(20px, calc(2.0833vw - 10px), 30px);
-  --space-case-text: clamp(50px, calc(2.0833vw + 20px), 60px);
-  --space-stats-gap: 100px;
+  --icon-case: calc(64px + (78 - 64) * var(--ramp-1440-1920));
+  --space-case-rows: calc(40px + (60 - 40) * var(--ramp-1440-1920));
+  --space-case-gap: calc(
+    30px + (60 - 30) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
+  );
+  --space-plate: calc(
+    20px + (40 - 20) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
+  --space-plate-gap: calc(10px + (20 - 10) * var(--ramp-1440-1920));
+  --space-plate-card: calc(20px + (30 - 20) * var(--ramp-1440-1920));
+  --space-case-text: calc(50px + (60 - 50) * var(--ramp-1440-1920));
+  --space-stats-gap: calc(60px + (100 - 60) * var(--ramp-390-1440));
 
-  --space-tabs-panel: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --space-tabs-gap: clamp(20px, calc(0.8333vw + 8px), 24px);
-  --space-faq-line: clamp(24px, calc(1.25vw + 6px), 30px);
-  --faq-preview: clamp(295px, calc(5.2083vw + 220px), 320px);
-  --faq-fade: clamp(240px, calc(4.5833vw + 174px), 262px);
-  --space-values-gap: clamp(60px, 4.1667vw, 80px);
-  --space-value-inset: clamp(24px, calc(1.25vw + 6px), 30px);
-  --space-benefits-gap: clamp(60px, calc(8.3333vw - 60px), 100px);
+  --space-tabs-panel: calc(
+    20px + (40 - 20) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
+  --space-tabs-gap: calc(20px + (24 - 20) * var(--ramp-1440-1920));
+  --space-faq-line: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+  --faq-preview: calc(
+    689px + (295 - 689) * var(--ramp-390-1440) + (320 - 295) * var(--ramp-1440-1920)
+  );
+  --faq-fade: calc(
+    235px + (240 - 235) * var(--ramp-390-1440) + (262 - 240) * var(--ramp-1440-1920)
+  );
+  --space-values-gap: calc(
+    50px + (60 - 50) * var(--ramp-390-1440) + (80 - 60) * var(--ramp-1440-1920)
+  );
+  --space-value-inset: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+  --space-benefits-gap: calc(
+    48px + (60 - 48) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
+  );
   --icon-card: var(--icon-product);
-  --space-protection: clamp(80px, calc(3.125vw + 35px), 95px);
+  --space-protection: calc(
+    24px + (80 - 24) * var(--ramp-768-1440) + (95 - 80) * var(--ramp-1440-1920)
+  );
 
-  --space-job-card: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --space-job-block: clamp(32px, calc(1.6667vw + 8px), 40px);
-  --space-job-list: clamp(14px, calc(1.25vw - 4px), 20px);
-  --text-job-title: clamp(24px, calc(1.25vw + 6px), 30px);
-  --text-job-subtitle: clamp(20px, calc(0.8333vw + 8px), 24px);
-  --badge-padding-y: clamp(5px, calc(0.4167vw - 1px), 7px);
-  --badge-padding-x: clamp(13px, calc(0.4167vw + 7px), 15px);
-  --badge-gap: clamp(8px, calc(0.4167vw + 2px), 10px);
-  --button-padding-y-compact: clamp(12px, 0.8333vw, 16px);
-  --button-padding-x-compact: clamp(20px, calc(2.0833vw - 10px), 30px);
+  --space-job-card: calc(
+    24px + (40 - 24) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
+  --space-job-block: calc(
+    24px + (32 - 24) * var(--ramp-390-1440) + (40 - 32) * var(--ramp-1440-1920)
+  );
+  --space-job-list: calc(14px + (20 - 14) * var(--ramp-1440-1920));
+  --text-job-title: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+  --text-job-subtitle: calc(
+    18px + (20 - 18) * var(--ramp-390-1440) + (24 - 20) * var(--ramp-1440-1920)
+  );
+  --badge-padding-y: calc(5px + (7 - 5) * var(--ramp-1440-1920));
+  --badge-padding-x: calc(
+    9px + (13 - 9) * var(--ramp-390-1440) + (15 - 13) * var(--ramp-1440-1920)
+  );
+  --badge-gap: calc(
+    6px + (8 - 6) * var(--ramp-390-1440) + (10 - 8) * var(--ramp-1440-1920)
+  );
+  --button-padding-y-compact: calc(12px + (16 - 12) * var(--ramp-1440-1920));
+  --button-padding-x-compact: calc(20px + (30 - 20) * var(--ramp-1440-1920));
 
-  --space-press-card: clamp(24px, calc(1.25vw + 6px), 30px);
-  --text-press-title: clamp(20px, calc(0.8333vw + 8px), 24px);
-  --press-photo-height: clamp(268px, calc(13.5417vw + 73px), 333px);
+  --space-press-card: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+  --text-press-title: calc(
+    18px + (20 - 18) * var(--ramp-390-1440) + (24 - 20) * var(--ramp-1440-1920)
+  );
+  --press-photo-height: calc(
+    208px + (268 - 208) * var(--ramp-390-1440) + (333 - 268) * var(--ramp-1440-1920)
+  );
 
-  --space-testimonial-gap: clamp(60px, 4.1667vw, 80px);
-  --space-testimonial-arrow: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --testimonial-arrow-size: clamp(52px, calc(2.0833vw + 22px), 62px);
-  --icon-testimonial-arrow: clamp(28px, calc(1.25vw + 10px), 34px);
-  --icon-quote: clamp(44px, calc(3.3333vw - 4px), 60px);
-  --text-testimonial-name: clamp(16px, calc(0.4167vw + 10px), 18px);
+  --space-testimonial-gap: calc(60px + (80 - 60) * var(--ramp-1440-1920));
+  --space-testimonial-arrow: calc(40px + (50 - 40) * var(--ramp-1440-1920));
+  --testimonial-arrow-size: calc(52px + (62 - 52) * var(--ramp-1440-1920));
+  --icon-testimonial-arrow: calc(28px + (34 - 28) * var(--ramp-1440-1920));
+  --icon-quote: calc(44px + (60 - 44) * var(--ramp-1440-1920));
+  --text-testimonial-name: calc(16px + (18 - 16) * var(--ramp-1440-1920));
 
-  --space-page-hero-top: 50px;
-  --space-page-hero-title: 24px;
-  --space-page-hero: clamp(40px, calc(2.0833vw + 10px), 50px);
-  --space-page-hero-card: clamp(60px, 4.1667vw, 80px);
-  --page-hero-card-width: clamp(658px, calc(27.7083vw + 259px), 791px);
-  --page-hero-photo-width: clamp(715px, calc(52.7083vw - 44px), 968px);
-  --page-hero-photo-height: clamp(568px, calc(30.8333vw + 124px), 716px);
+  --space-page-hero-top: calc(30px + (50 - 30) * var(--ramp-390-1440));
+  --space-page-hero-title: calc(15px + (24 - 15) * var(--ramp-390-1440));
+  --space-page-hero: calc(
+    14px + (40 - 14) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
+  --space-page-hero-card: calc(
+    24px + (60 - 24) * var(--ramp-390-1440) + (80 - 60) * var(--ramp-1440-1920)
+  );
+  --page-hero-card-width: calc(658px + (791 - 658) * var(--ramp-1440-1920));
+  --page-hero-photo-width: calc(
+    329px + (715 - 329) * var(--ramp-390-1440) + (968 - 715) * var(--ramp-1440-1920)
+  );
+  --page-hero-photo-height: calc(
+    253px + (568 - 253) * var(--ramp-390-1440) + (716 - 568) * var(--ramp-1440-1920)
+  );
 
-  --space-mission-inset: clamp(48px, calc(2.5vw + 12px), 60px);
-  --space-mission-overlap: clamp(84px, calc(3.3333vw + 36px), 100px);
+  --space-mission-inset: calc(
+    20px + (48 - 20) * var(--ramp-390-1440) + (60 - 48) * var(--ramp-1440-1920)
+  );
+  --space-mission-overlap: calc(
+    clamp(0px, 0.2273 * (100vw - 880px), 84px) + (100 - 84) * var(--ramp-1440-1920)
+  );
 
-  --space-cta: clamp(60px, 4.1667vw, 80px);
+  --space-cta: calc(
+    30px + (60 - 30) * var(--ramp-390-1440) + (80 - 60) * var(--ramp-1440-1920)
+  );
 }
 
 @media (width < 1440px) {
   :root {
-    --gutter: clamp(16px, calc(6.0952vw - 7.77px), 80px);
-    --space-section: clamp(80px, calc(3.8095vw + 65.14px), 120px);
-    --space-navbar-top: clamp(30px, calc(-0.9524vw + 43.71px), 40px);
-    --navbar-padding-y: clamp(13px, calc(0.1905vw + 12.26px), 15px);
-    --navbar-padding-x: clamp(24px, calc(0.381vw + 22.51px), 28px);
-    --logo-width: clamp(101px, calc(5.2381vw + 80.57px), 156px);
-    --space-nav-gap: clamp(16px, calc(0.381vw + 14.51px), 20px);
-    --navbar-link-padding-y: 10px;
-    --navbar-link-padding-x: 18px;
-
-    --text-title: clamp(28px, calc(0.9524vw + 24.29px), 38px);
-    --text-title-hero: clamp(28px, calc(1.9048vw + 20.57px), 48px);
-    --text-title-lg: clamp(26px, calc(0.5714vw + 23.77px), 32px);
-    --text-title-md: clamp(20px, calc(0.5714vw + 17.77px), 26px);
-    --text-stat: 40px;
-    --text-value: clamp(30px, calc(0.9524vw + 26.29px), 40px);
-    --text-card-title: 20px;
-    --text-card-title-sm: 18px;
-    --text-question: 18px;
-    --text-plate: clamp(14px, calc(0.1905vw + 13.26px), 16px);
-    --text-body: clamp(14px, calc(0.1905vw + 13.26px), 16px);
-    --text-page-hero-label: clamp(14px, calc(0.381vw + 12.51px), 18px);
-    --text-button: 14px;
-
-    --button-padding-y: 14px;
-    --button-padding-x: 20px;
-    --button-padding-x-lg: 24px;
-    --toggle-padding: 12px;
-    --toggle-button-padding-y: 10px;
-    --toggle-button-padding-x: clamp(8px, calc(20vw - 56px), 18px);
-
-    --space-footer-top: clamp(50px, calc(0.9524vw + 46.29px), 60px);
-    --space-footer-bottom: 30px;
-    --space-footer-gap: clamp(30px, calc(0.9524vw + 26.29px), 40px);
-    --footer-social-size: 44px;
-
-    --space-heading-gap: 10px;
-    --space-heading-block: 60px;
-    --space-heading-block-toggle: clamp(60px, calc(1.9048vw + 52.57px), 80px);
-    --space-card: clamp(30px, calc(0.9524vw + 26.29px), 40px);
-    --space-card-gap: clamp(20px, calc(0.381vw + 18.51px), 24px);
-    --space-card-gap-sm: clamp(12px, calc(0.381vw + 10.51px), 16px);
-    --space-grid-gap: 20px;
-    --space-columns: clamp(60px, calc(1.9048vw + 52.57px), 80px);
-    --icon-product: 72px;
-
-    --space-hero-top: clamp(50px, calc(3.8095vw + 35.14px), 90px);
-    --space-hero-bottom: clamp(61px, calc(-1.9048vw + 88.43px), 81px);
-    --space-hero-gap: 80px;
-    --hero-card-width: clamp(305px, calc(10vw + 266px), 410px);
-    --hero-card-padding: clamp(20px, calc(0.7619vw + 17.03px), 28px);
-    --icon-currency: clamp(20px, calc(0.7619vw + 17.03px), 28px);
-    --space-converter-cell: clamp(10px, calc(0.381vw + 8.51px), 14px);
-
-    --icon-case: 64px;
-    --space-case-rows: 40px;
-    --space-case-gap: clamp(30px, calc(2.8571vw + 18.86px), 60px);
-    --space-plate: clamp(20px, calc(1.9048vw + 12.57px), 40px);
-    --space-plate-gap: 10px;
-    --space-plate-card: 20px;
-    --space-case-text: 50px;
-    --space-stats-gap: clamp(60px, calc(3.8095vw + 45.14px), 100px);
-
-    --space-tabs-panel: clamp(20px, calc(1.9048vw + 12.57px), 40px);
-    --space-tabs-gap: 20px;
-    --space-faq-line: clamp(20px, calc(0.381vw + 18.51px), 24px);
-    --faq-preview: clamp(295px, calc(-37.5238vw + 835.34px), 689px);
-    --faq-fade: clamp(235px, calc(0.4762vw + 233.14px), 240px);
-    --space-values-gap: clamp(50px, calc(0.9524vw + 46.29px), 60px);
-    --space-value-inset: clamp(20px, calc(0.381vw + 18.51px), 24px);
-    --space-benefits-gap: clamp(48px, calc(1.1429vw + 43.54px), 60px);
-    --space-protection: clamp(24px, calc(8.3333vw - 40px), 80px);
-
-    --space-job-card: clamp(24px, calc(1.5238vw + 18.06px), 40px);
-    --space-job-block: clamp(24px, calc(0.7619vw + 21.03px), 32px);
-    --space-job-list: 14px;
-    --text-job-title: clamp(20px, calc(0.381vw + 18.51px), 24px);
-    --text-job-subtitle: clamp(18px, calc(0.1905vw + 17.26px), 20px);
-    --badge-padding-y: 5px;
-    --badge-padding-x: clamp(9px, calc(0.381vw + 7.51px), 13px);
-    --badge-gap: clamp(6px, calc(0.1905vw + 5.26px), 8px);
-    --button-padding-y-compact: 12px;
-    --button-padding-x-compact: 20px;
-
-    --space-press-card: clamp(20px, calc(0.381vw + 18.51px), 24px);
-    --text-press-title: clamp(18px, calc(0.1905vw + 17.26px), 20px);
-    --press-photo-height: clamp(208px, calc(5.7143vw + 185.71px), 268px);
-
-    --space-testimonial-gap: 60px;
-    --space-testimonial-arrow: 40px;
-    --testimonial-arrow-size: 52px;
-    --icon-testimonial-arrow: 28px;
-    --icon-quote: 44px;
-    --text-testimonial-name: 16px;
-
-    --space-page-hero-top: clamp(30px, calc(1.9048vw + 22.57px), 50px);
-    --space-page-hero-title: clamp(15px, calc(0.8571vw + 11.66px), 24px);
-    --space-page-hero: clamp(14px, calc(2.4762vw + 4.34px), 40px);
-    --space-page-hero-card: clamp(24px, calc(3.4286vw + 10.63px), 60px);
-    --page-hero-card-width: 658px;
-    --page-hero-photo-width: clamp(329px, calc(36.7619vw + 185.63px), 715px);
-    --page-hero-photo-height: clamp(253px, calc(30vw + 136px), 568px);
-
-    --space-mission-inset: clamp(20px, calc(2.6667vw + 9.6px), 48px);
-    --space-mission-overlap: clamp(0px, calc(22.73vw - 200px), 84px);
-
-    --space-cta: clamp(30px, calc(2.8571vw + 18.86px), 60px);
+    --ramp-390-1440: clamp(0px, (100vw - 390px) / 1050, 1px);
+    --ramp-768-1440: clamp(0px, (100vw - 768px) / 672, 1px);
   }
 }
