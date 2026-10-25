@@ -1,6 +1,6 @@
 # Breakpoints: two structural queries, fluid tokens between the three drawn widths
 
-Date: 2026-10-23 · Status: accepted
+Date: 2026-10-23 · Status: superseded by 2026-10-25-fluid-ramps.md
 
 ## Context
 

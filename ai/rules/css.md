@@ -43,14 +43,14 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 
 ## Tokens
 
-- Every value comes from a token in `styles/general/variables.css`: colours (also inside a
-  gradient or a shadow), the font family, radii, durations, and the type and spacing scale
-  listed in `ai/design-system.md`. `#`, `rgb(` and `hsl(` appear nowhere else; `transparent`
-  and `currentColor` stay keywords. Never hard-code a colour, a font size or a section spacing.
-  Stylelint rejects a hex colour outside `variables.css`; `rgb(` and `hsl(` stay a review matter.
-- A value used in more than one place is a token first, named on the existing scale
-  (`--green-60`, `--grey-15`). A one-off layout size (a section's padding, a column's width)
-  need not be a token.
+- Colours (also inside a gradient or a shadow), the font family, radii, the type scale and the
+  spacing and size values that two or more blocks share are tokens in `styles/general/variables.css`
+  (`ai/design-system.md` lists them). `#`, `rgb(` and `hsl(` appear nowhere else; `transparent` and
+  `currentColor` stay keywords. Never hard-code a colour or a step of the type scale. Stylelint
+  rejects a hex colour outside `variables.css`; `rgb(` and `hsl(` stay a review matter.
+- A value one block uses is written in that block's stylesheet, not made a token. A value used
+  twice in one block is a custom property on its root rule (`.press-card { --space-press-card: … }`).
+  When a second block needs it, it becomes a token on the existing scale (`--green-60`, `--space-card`).
 - A token is one exact value: merging near-duplicates changes the look, so it is decided with
   the result in front of you.
 - The font is set once on `body` and inherited; buttons repeat it only because a form control
@@ -58,30 +58,36 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 - Text contrast is at least 4.5:1, large text, icons and control borders at least 3:1, in
   every state, hover and focus included.
 
-## Breakpoints
+## Breakpoints and fluid values
 
 - The design is drawn at 1920, 1440 and 390 px (`ai/design-system.md`). Only structure is a
   media query, and only two: `width < 1024px` (side-by-side compositions stack) and
   `width < 768px` (grids become one column, the header becomes the menu button). Type and
-  spacing are fluid tokens, so a rule has no per-width values and no query at 1440
-  (`ai/decisions/2026-10-23-breakpoint-scheme.md`).
-- A value that changes with the width is a fluid token in `variables.css`: `:root` holds the
-  1440 to 1920 segment of its `clamp()`, the one `@media (width < 1440px)` the 390 to 1440
-  segment; a token that shrinks as the width grows takes its `clamp` bounds the other way round.
-  A new rule takes its value from the `ai/design-system.md` tables and is checked at 1920, 1440
-  and 390 px.
-- The base rule is the widest layout; a narrower screen overrides it.
+  spacing are fluid, so a rule has no per-width values and no query at 1440
+  (`ai/decisions/2026-10-25-fluid-ramps.md`).
+- A fluid value is its size at 390 plus the growth of each segment, written with the design
+  numbers: `calc(28px + (38 - 28) * var(--ramp-390-1440) + (48 - 38) * var(--ramp-1440-1920))` is
+  28 at 390, 38 at 1440, 48 at 1920. A segment that stays flat leaves its term out
+  (`calc(18px + (20 - 18) * var(--ramp-1440-1920))`); a value that shrinks has a negative
+  difference. The ramps in `variables.css` run 0 to 1px over their segment. A value on other anchors
+  writes its own `clamp(0px, (100vw - 880px) / 370, 1px)` the same way. Never a bare `vw` coefficient.
+- A new rule takes its value from the `ai/design-system.md` tables and is checked at 1920, 1440 and
+  390 px. The base rule is the widest layout; a narrower screen overrides it.
+- A block drawn at one size that scales as a whole (the Home hero card) sets `font-size` once on its
+  root and writes its sizes in `em` of the drawn px / 16. An element with its own `font-size` takes
+  its spacing from the container, since its `em` is its own.
 - No horizontal scroll from 390 to 1920 px, and none at 200% zoom.
 
 ## Motion and focus
 
 - Reduced motion is handled once, in `general/reset.css`; a component never adds its own
-  `prefers-reduced-motion` block. A duration comes from a token (`--transition-duration`).
+  `prefers-reduced-motion` block. A duration comes from `--transition-duration`, or is written in
+  the one block that uses it (the reveal).
 - A `transition` names its properties, never `all`.
 - A state that hides content for an animation applies only under a class a script puts on `<html>`
   (`.js-reveal`), so the page is complete without script.
-- One `:focus-visible` rule in `general/main.css` draws the ring for every control, from the
-  token `--focus-ring`; a hover look never sits on `:focus`, and never `outline: none` without a
+- One `:focus-visible` rule in `general/main.css` draws the ring for every control (2px
+  solid `--green-60`); a hover look never sits on `:focus`, and never `outline: none` without a
   replacement; the one exception is `main`, a `tabindex="-1"` skip-link target, not a control.
 - A control drawn under 44 px keeps its drawn size and takes the `hit-area` utility (`ui/`): an
   invisible `::after` that grows the clickable box to `--touch-target`

@@ -6,7 +6,7 @@ it is described here in words and numbers, never linked.
 
 - The design is drawn at three widths: **1920**, **1440** and **390** px. Every table gives
   the values in that order (`1920 / 1440 / 390`). Between and beyond them the values are
-  fluid (`ai/decisions/2026-10-23-breakpoint-scheme.md`).
+  fluid (`ai/decisions/2026-10-25-fluid-ramps.md`).
 - All sizes are px at the drawn width. Text sizes and spacing were measured from the layout
   geometry; weights, radii and hover looks that the layout does not carry were read from the
   built code and the rendered pages. If a value looks wrong against the design on screen, the
@@ -119,11 +119,10 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 
 - Grids are flexible (`fr`, `flex`), not the drawn pixel widths; the widths in the page
   sections below are for checking, not for copying.
-- The text under a section title wraps at 1302 / 1157 px (`--section-text-width`; the 390 container is
-  narrower), beside a toggle at 935 / 831 (`--section-text-width-toggle`).
-- Spacing tokens are `--space-<what>` after the row they implement (`--space-heading-block`,
-  `--space-card`, `--space-grid-gap`, `--space-plate`, …); sizes are `--icon-*`, `--hero-card-*`,
-  `--page-hero-*`, `--navbar-*`, `--button-*`, `--toggle-*`; the page gutter is `--gutter`.
+- The text under a section title wraps at 1302 / 1157 px (the 390 container is narrower), beside a
+  toggle at 935 / 831.
+- `variables.css` keeps the palette, radii, type scale (`--text-*`), the ramps and the values several
+  blocks share (`--space-card`, `--icon-large`, `--gutter`, …); one block's own values sit in its stylesheet.
 
 ## Radii, borders, gradients
 
@@ -141,10 +140,9 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
 - **Gradients (always built from tokens):**
   - Hero card border: `to bottom left`, `--green-20` to `--grey-15` over the first 12 %, back to `--green-20`
     over the last 12 %, drawn on the border box under a flat `--grey-10` fill (the arrows behind stay hidden).
-  - FAQ fade: the lower row (items 3 and 4) is shown almost whole, 320 / 295 / 689 px high
-    (`--faq-preview`; at 390 the items stack), under an overlay at its bottom, 262 / 240 / 235 px
-    (`--faq-fade`), `to bottom` from transparent to `--grey-10`; it disappears when the list is expanded,
-    and more questions (not drawn) open under the faded row.
+  - FAQ fade: the lower row (items 3 and 4) is shown almost whole, 320 / 295 / 689 px high (at 390 the
+    items stack), under an overlay at its bottom, 262 / 240 / 235 px, `to bottom` from transparent to
+    `--grey-10`; it disappears when the list is expanded, and more questions (not drawn) open under it.
   - Testimonial edge fades: an alpha mask on the track (transparent, opaque from 30 % to 70 %, transparent), off below 1024.
   - Security panel: a dark, grainy backdrop with a faint green tint behind the cards.
 
@@ -173,8 +171,7 @@ Pressed: moves down 2 px. Sizes (height, vertical × horizontal padding):
 | Testimonial arrow (round, 1 px `--grey-15`, no fill, glyph `--green-60`) | 62 / 52 / 52             | square, 34 / 28 glyph       |
 | Menu button, 390 only (primary, three lines)                             | n/a / n/a / 40 (56 wide) | n/a                         |
 
-- **Load All FAQ's** is a secondary button with a chevron on its right (22 px at 1920).
-  It starts where the faded row ends.
+- **Load All FAQ's** is a secondary button with a chevron on its right (22 px at 1920), where the faded row ends.
 
 ### Individuals / Businesses toggle
 
@@ -229,7 +226,7 @@ green tint (about 5 %), the inner one stronger (about 10 %) with a 1 px ring (ab
 The circles are drawn inside the icon SVG, so the `<img>` is the whole thing. Outer / inner /
 glyph: product 98 / 74 / 34 at 1920, 72 / 56 / 28 at 1440 and 390; use-case card
 78 / 58 / 30, then 64 / 48 / 24. On Security and Careers Benefits the circle is the product
-size (`--icon-card`) and sits left of the title, on one row. A solid variant (`--green-60` disc, dark glyph, 40 px at 1920) is used
+size (`--icon-large`) and sits left of the title, on one row. A solid variant (`--green-60` disc, dark glyph, 40 px at 1920) is used
 inside the hero card.
 
 ### Dotted decor
@@ -266,11 +263,11 @@ Monthly Income` over its top-left corner; `Supported Currency` with four coin ic
    52 sticking out at the right). The card holds **Your Transactions**: a stack of three 75 px rows,
    the first whole, the 2nd and 3rd 53 px lower, 17 px narrower per side, behind the one above at
    50 % and 20 %; and **Money Exchange**: a 179 px box (flag, code, one-line name; amount and
-   result) and the olive Exchange button. Every size in the card is its 1920 value times
-   `--hero-unit` (card width / 515), so the card scales with its width: 410 wide at 1440, 305 at
-   390 (no design for either); type has a 12 px floor. The currency list of the native select
-   is dark: `color-scheme: dark` and token colours on `option`. Growth arrows behind the card. The columns are 826 and 515 wide with a 120
-   gap at 1920; at 390 all of it is centred and stacked: text, button, card.
+   result) and the olive Exchange button. Every size in the card is in `em`, its 1920 value / 16:
+   the card's font-size is its width / 515 * 16 px, so it scales with its width (410 wide at 1440, 305 at 390,
+   no design for either); type has a 12 px floor. The currency list of the native select is dark:
+   `color-scheme: dark` and token colours on `option`. Growth arrows behind the card. The columns are 826 and
+   515 wide with a 120 gap at 1920; at 390 all of it is centred and stacked: text, button, card.
 2. **Our Products.** Heading block with the toggle; three product cards in columns
    separated by 1 px `--grey-15` vertical rules (two panels, one per audience); at 390 stacked.
 3. **Use Cases.** Heading block (no toggle); two rows. Row 1: the plate (2 × 2 cards) on
@@ -288,7 +285,7 @@ Monthly Income` over its top-left corner; `Supported Currency` with four coin ic
    wide), a round arrow at each side, the outer cards fading into the background; at 390 one
    card, the arrows below it.
 7. **CTA.** A bordered panel (`--grey-11`, 1 px `--grey-15`, `--border-radius-small`, dotted decor
-   at its left, padding `--space-cta` 80 / 60 / 30): a title (`--text-title-lg`, accent words green),
+   at its left, padding 80 / 60 / 30): a title (`--text-title-lg`, accent words green),
    a paragraph (at most 1060 wide) and the hero action at the right; below 1024 stacked and centred.
    The panel is as tall as its content (285 / 228 / 342 built, 288 / 223 / 360 drawn).
 
@@ -306,9 +303,9 @@ Monthly Income` over its top-left corner; `Supported Currency` with four coin ic
 ### About
 
 1. **Hero** (page hero) with the small label "Welcome to YourBank" above the title.
-2. **Mission & Vision.** Heading block; two staggered rows, the second pulled up by 100 / 84 px (`--space-mission-overlap`; below 1250 it eases down to 33 at 1024, so the text never runs under the other plate, and it is not used when the rows stack).
+2. **Mission & Vision.** Heading block; two staggered rows, the second pulled up by 100 / 84 px (below 1250 it eases down to 33 at 1024, so the text never runs under the other plate, and it is not used when the rows stack).
    Row 1: the plate (664 × 621 at 1920, 41.6 % of the row) at the left, Mission right of it; row 2 mirrored. Plate:
-   `--grey-11`, 1 px `--grey-15`, radius 40, the photo inset 60 / 48 / 20 (`--space-mission-inset`) on three sides, flush with
+   `--grey-11`, 1 px `--grey-15`, radius 40, the photo inset 60 / 48 / 20 on three sides, flush with
    the bottom edge (542 × 559). Text: a 1 px `--green-60` line on the plate side, 50 / 40 / 30 from it, title `--text-title-lg`.
    At 390 the photo is first and the line is horizontal over the title.
 3. **Press Releases.** Heading block; a 2 × 2 grid of press cards (783 / 630 wide); one column
@@ -344,12 +341,11 @@ of the two. At 390 the photo is first and the text card, centred, follows it, wi
 - **Approximate values**, read from the rendered pages because the layout data does not carry
   them: the corner radii of the use-case plate, the job, press and security cards; the CTA title
   size (about 38 / 32 / 26) and its inner spacing; the weights of card and badge text; the
-  icon-circle tints. Check them against the design when building that element.
-- **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap
-  and the logo width at 1440 (156); the hero column gap (120 / 80 / 80); the Careers photo height at 1440 and 390; in the footer the author line, the 12 × 8 padding of
-  links (44 px targets, so the footer runs about 45 px taller than drawn), the bar padding
-  (`--toggle-padding`) and the green current link; the testimonial text, its gaps
-  (`--space-card-gap`, `--space-card-gap-sm`) and its width (600 at most), and five cards per audience.
+  icon-circle tints, and every hover and focus look. Check them against the design when building that element.
+- **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap and the
+  logo width at 1440 (156); the hero column gap (120 / 80 / 80); the Careers photo height at 1440 and 390; in
+  the footer the author line, the 12 × 8 link padding (44 px targets, so it runs about 45 px taller than
+  drawn), the bar padding and the green current link; the testimonial text, its gaps and its width (600 at
+  most), and five cards per audience.
 - **Page hero at 390:** the card overlaps the photo by about 42 px on About, not on Security (the
   photo is drawn about 276 high there), so the photo stays 253 and the card follows it.
-- **Hover and focus looks** come from the built code; the layout data carries none.

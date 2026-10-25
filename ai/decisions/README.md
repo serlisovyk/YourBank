@@ -65,7 +65,7 @@ each with the record that replaced it.
 - [The Vite config is split into `vite/`, one module per concern](2026-10-25-vite-config-split.md)
 - [Dotted decor and photos are WebP or AVIF rasters, never a vector per dot](2026-10-23-light-decor-raster.md)
 - [JavaScript in OOP style: a class per component and per section](2026-10-23-oop-javascript.md)
-- [Breakpoints: two structural queries, fluid tokens between 390, 1440 and 1920](2026-10-23-breakpoint-scheme.md)
+- [Breakpoints and fluid values: two queries, ramps between 390, 1440 and 1920](2026-10-25-fluid-ramps.md)
 - [The footer's year is written in the browser](2026-10-24-footer-year-in-browser.md)
 - [Privacy Policy and Terms of Service are text, not links](2026-10-24-footer-legal-text.md)
 - [Currency converter: fixed rates in `data/`, no API, a native select](2026-10-24-fixed-rates-native-select.md)
@@ -85,3 +85,4 @@ each with the record that replaced it.
 - [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md) — superseded by `ci-size-limit-css-room`
 - [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md) — superseded by `font-stack-no-fallback-face`
 - [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md) — superseded by `link-preview-home-hero`
+- [Breakpoints: two structural queries, fluid tokens between the three drawn widths](2026-10-23-breakpoint-scheme.md) — superseded by `fluid-ramps`

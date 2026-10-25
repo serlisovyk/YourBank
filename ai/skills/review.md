@@ -16,7 +16,7 @@ Walk the diff against `ai/rules/definition-of-done.md` and the rules of the area
 font or the metadata). Then check what the rules do not cover:
 
 - **Design**: the change matches the design at 1920, 1440 and 390 px — grid, spacing, type, block
-  order, button states; values come from tokens, not literals tuned by eye.
+  order, button states; values are the design numbers (a token when two blocks share them), not literals tuned by eye.
 - **Responsive**: no horizontal scroll from 390 to 1920 px or at 200% zoom; the in-between
   widths (1024, 768) do not break; the mobile menu opens, closes and is not reachable while closed.
 - **Keyboard and ARIA**: Tab order is logical and the focus is visible; tabs move with the arrows,
@@ -29,7 +29,7 @@ font or the metadata). Then check what the rules do not cover:
 - **Scripts**: listeners are attached by `start()`, `main.js` only creates and starts, a section
   missing from the page breaks nothing; no module-level state, no inline style except a custom
   property.
-- **Motion**: a new animation takes its duration from a token and survives `prefers-reduced-motion`.
+- **Motion**: a new animation takes its duration from `--transition-duration` and survives `prefers-reduced-motion`.
 - **Build and assets**: every page builds; images and the font are referenced as
   `/assets/…` and come out of the build once, hashed; images have size and `alt`; no unused asset left behind.
 - **Scope**: nothing from `ai/rules/scope.md` or the decisions behind it slipped in; no unrelated

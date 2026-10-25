@@ -8,8 +8,8 @@ over for approval.
 - New code follows `ai/rules/architecture.md`, `html.md`, `css.md`, `oop.md` and `style.md`:
   data in `data/`, a partial per section or component, BEM, tokens, classes with
   `constructor(root, options)` and `start()`, `main.js` only creating and starting.
-- Shared values come from one source: texts from `data/`; colours, radii, durations from the
-  tokens; a breakpoint a script reads is one constant.
+- Shared values come from one source: texts from `data/`; colours, radii, the type scale and
+  values two blocks share from the tokens; a breakpoint a script reads is one constant.
 - A change to images, the font, `assets/` or the page metadata follows
   `ai/rules/assets-performance.md`.
 - No comments, no inline styles, no inline event handlers, no state on `window`.
@@ -27,7 +27,7 @@ over for approval.
   meaningful.
 - Text contrast is at least 4.5:1, icons and control borders at least 3:1, in every state,
   hover and focus included.
-- New animation takes its duration from a token and does not break under
+- New animation takes its duration from `--transition-duration` and does not break under
   `prefers-reduced-motion`.
 - Touch targets are at least 44px: a smaller drawn control takes the `hit-area` utility.
 - A new page or section keeps the skip link first and `main#main` as its target, one `h1` and

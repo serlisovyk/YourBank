@@ -22,7 +22,7 @@ order of the work.
    BEM block name. Roles and ARIA go in the markup; the root gets `data-<name>`, the children the
    hooks of the component that drives them (`ai/rules/oop.md`). Cards and rows below the first screen carry `data-reveal` (`ai/rules/html.md`).
 3. **Styles** — `styles/sections/<name>.css` (and `styles/components/<item>.css`): BEM, native
-   nesting, only tokens from `variables.css` (a value that changes with the width is a fluid token); import it in `styles/style.css` beside its kind.
+   nesting, colours and shared values from `variables.css`, the block's own values (fluid ones with the ramps) in the stylesheet (`ai/rules/css.md`); import it in `styles/style.css` beside its kind.
    Compare 1920, 1440 and 390 px with the design.
 4. **Controller** — only when the section has behavior: a class in `scripts/controllers/` with
    `constructor(root, options)` and `start()`. A repeated widget (tabs, expander, menu) is a
