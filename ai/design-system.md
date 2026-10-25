@@ -189,7 +189,8 @@ A pill (`--grey-11`, 1 px `--grey-15`, padding 20 × 34 at 1920): logo at the le
 links centred in the page (not between the logo and the right edge), an empty balancing space
 at the right. Link gap 26 at 1920. The logo is 156 × 40 at 1920, 101 × 26 at 390 (the
 template also shows a 117 × 30 size). At 390 only the logo and the green menu button stay;
-the links open below.
+the links open below, and the open navbar has the 40 px radius
+(`--border-radius`): a pill on a tall box would be a huge arc; closed, 68 px high, it still reads as a pill.
 
 ### Cards
 
