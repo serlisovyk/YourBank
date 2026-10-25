@@ -5,12 +5,15 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-grid-gap);
   margin-top: calc(var(--space-heading-block) + 40px);
-  padding: var(--space-protection) var(--space-protection) 0;
+  padding-top: var(--space-protection);
+  padding-inline: var(--space-protection);
 
   &::before {
     content: '';
     position: absolute;
-    inset: 0 0 20%;
+    inset-inline: 0;
+    top: 0;
+    bottom: 20%;
     z-index: -1;
     background-image: url('/assets/images/decor/dots-fine.avif');
     background-position: top left;

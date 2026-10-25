@@ -14,7 +14,8 @@
 }
 
 .product-card__title {
-  margin: var(--space-card-gap) 0 var(--space-card-gap-sm);
+  margin-top: var(--space-card-gap);
+  margin-bottom: var(--space-card-gap-sm);
   font-weight: 400;
   font-size: var(--text-card-title);
   line-height: 150%;

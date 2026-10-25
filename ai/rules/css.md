@@ -35,6 +35,9 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
   `background-size`, `background-repeat` and `background-color`, each only where it is needed. A
   rule that sets only a colour is `background-color`; one that must drop an image set by another rule
   adds `background-image: none`. A `transition` names `background-color`.
+- Spacing on one side is a longhand: `padding-left: X`, never `padding: 0 0 0 X`; `margin-top` and
+  `margin-bottom`, `border-left`, `inset-inline` with `bottom`, the same way. An axis is
+  `padding-inline` / `padding-block` / `margin-inline`. A `padding: Y X` that sets both axes stays.
 
 ## Tokens
 

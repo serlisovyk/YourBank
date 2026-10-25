@@ -30,7 +30,8 @@
   &::after {
     content: '';
     position: absolute;
-    inset: auto 0 0;
+    inset-inline: 0;
+    bottom: 0;
     height: var(--faq-fade);
     background-image: linear-gradient(to bottom, transparent, var(--grey-10));
     pointer-events: none;
@@ -58,7 +59,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  margin: 0 auto;
+  margin-inline: auto;
   transition:
     background-color var(--transition-duration),
     margin-top 650ms ease-in-out;
