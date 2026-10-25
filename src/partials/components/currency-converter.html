@@ -3,8 +3,8 @@
   role="group"
   aria-labelledby="currency-converter-title"
   data-currency-converter
-  data-converter-from="INR"
-  data-converter-to="USD"
+  data-converter-from="{{converter.from}}"
+  data-converter-to="{{converter.to}}"
 >
   <h2 class="currency-converter__title" id="currency-converter-title">
     Money Exchange
@@ -13,7 +13,17 @@
     <div class="currency-converter__side" data-converter-side>
       <div class="currency-converter__head">
         <div class="currency-converter__picker">
-          {{#each currencies}}
+          {{#each currencies}} {{#if (eq code ../converter.from)}}
+          <img
+            class="currency-converter__icon{{#if isCrypto}} currency-converter__icon--coin{{/if}}"
+            src="{{icon}}"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+            data-converter-currency="{{code}}"
+          />
+          {{else}}
           <img
             class="currency-converter__icon{{#if isCrypto}} currency-converter__icon--coin{{/if}}"
             src="{{icon}}"
@@ -24,7 +34,7 @@
             data-converter-currency="{{code}}"
             hidden
           />
-          {{/each}}
+          {{/if}} {{/each}}
           <label class="visually-hidden" for="currency-converter-from"
             >From currency</label
           >
@@ -34,7 +44,16 @@
             aria-describedby="currency-converter-from-name"
             data-converter-select
           >
-            {{#each currencies}}
+            {{#each currencies}} {{#if (eq code ../converter.from)}}
+            <option
+              value="{{code}}"
+              data-converter-rate="{{rate}}"
+              data-converter-digits="{{fractionDigits}}"
+              selected
+            >
+              {{code}}
+            </option>
+            {{else}}
             <option
               value="{{code}}"
               data-converter-rate="{{rate}}"
@@ -42,13 +61,15 @@
             >
               {{code}}
             </option>
-            {{/each}}
+            {{/if}} {{/each}}
           </select>
         </div>
         <div class="currency-converter__name" id="currency-converter-from-name">
-          {{#each currencies}}
+          {{#each currencies}} {{#if (eq code ../converter.from)}}
+          <span data-converter-currency="{{code}}">{{name}}</span>
+          {{else}}
           <span data-converter-currency="{{code}}" hidden>{{name}}</span>
-          {{/each}}
+          {{/if}} {{/each}}
         </div>
       </div>
       <label class="visually-hidden" for="currency-converter-amount">Amount</label>
@@ -58,14 +79,24 @@
         type="text"
         inputmode="decimal"
         autocomplete="off"
-        value="5000"
+        value="{{converter.amount}}"
         data-converter-amount
       />
     </div>
     <div class="currency-converter__side" data-converter-side>
       <div class="currency-converter__head">
         <div class="currency-converter__picker">
-          {{#each currencies}}
+          {{#each currencies}} {{#if (eq code ../converter.to)}}
+          <img
+            class="currency-converter__icon{{#if isCrypto}} currency-converter__icon--coin{{/if}}"
+            src="{{icon}}"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+            data-converter-currency="{{code}}"
+          />
+          {{else}}
           <img
             class="currency-converter__icon{{#if isCrypto}} currency-converter__icon--coin{{/if}}"
             src="{{icon}}"
@@ -76,7 +107,7 @@
             data-converter-currency="{{code}}"
             hidden
           />
-          {{/each}}
+          {{/if}} {{/each}}
           <label class="visually-hidden" for="currency-converter-to"
             >To currency</label
           >
@@ -86,15 +117,19 @@
             aria-describedby="currency-converter-to-name"
             data-converter-select
           >
-            {{#each currencies}}
+            {{#each currencies}} {{#if (eq code ../converter.to)}}
+            <option value="{{code}}" selected>{{code}}</option>
+            {{else}}
             <option value="{{code}}">{{code}}</option>
-            {{/each}}
+            {{/if}} {{/each}}
           </select>
         </div>
         <div class="currency-converter__name" id="currency-converter-to-name">
-          {{#each currencies}}
+          {{#each currencies}} {{#if (eq code ../converter.to)}}
+          <span data-converter-currency="{{code}}">{{name}}</span>
+          {{else}}
           <span data-converter-currency="{{code}}" hidden>{{name}}</span>
-          {{/each}}
+          {{/if}} {{/each}}
         </div>
       </div>
       <label class="visually-hidden" for="currency-converter-result"
@@ -106,8 +141,10 @@
         aria-live="polite"
         data-converter-result
       >
-        <span data-converter-result-value></span>
-        <span class="visually-hidden" data-converter-result-note></span>
+        <span data-converter-result-value>{{converter.result}}</span>
+        <span class="visually-hidden" data-converter-result-note
+          >{{converter.to}}</span
+        >
       </output>
     </div>
   </div>

@@ -1,6 +1,7 @@
 import { benefits } from '../../src/data/benefits.js'
 import { caseItems } from '../../src/data/case-items.js'
 import { contacts } from '../../src/data/contacts.js'
+import { converter } from '../../src/data/converter.js'
 import { cta } from '../../src/data/cta.js'
 import { currencies } from '../../src/data/currency-rates.js'
 import { featureGroups } from '../../src/data/feature-groups.js'
@@ -43,6 +44,7 @@ export function createContext(pagePath) {
     testimonials,
     heroTransactions,
     currencies,
+    converter,
     cta,
     organizationJsonLd,
   }
