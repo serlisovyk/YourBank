@@ -3,6 +3,7 @@
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-pill);
   padding: var(--toggle-padding);
+  white-space: nowrap;
 }
 
 .toggle__button {

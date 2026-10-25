@@ -188,7 +188,7 @@
     --button-padding-x-lg: 24px;
     --toggle-padding: 12px;
     --toggle-button-padding-y: 10px;
-    --toggle-button-padding-x: 18px;
+    --toggle-button-padding-x: clamp(8px, calc(20vw - 56px), 18px);
 
     --space-footer-top: clamp(50px, calc(0.9524vw + 46.29px), 60px);
     --space-footer-bottom: 30px;

@@ -17,6 +17,10 @@
   margin-bottom: var(--space-heading-block-toggle);
 }
 
+.section-heading__actions {
+  flex: none;
+}
+
 .section-heading__title {
   font-weight: 500;
   font-size: var(--text-title);
