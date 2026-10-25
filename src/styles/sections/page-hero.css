@@ -3,10 +3,11 @@
 }
 
 .page-hero__inner {
-  background: url('/assets/images/decor/dots-grid.avif'), var(--grey-11);
-  background-repeat: no-repeat;
+  background-image: url('/assets/images/decor/dots-grid.avif');
   background-position: top right;
   background-size: 480px;
+  background-repeat: no-repeat;
+  background-color: var(--grey-11);
   display: grid;
   padding: var(--space-page-hero);
   border-radius: var(--border-radius-large);
@@ -26,7 +27,7 @@
   grid-area: 1 / 1;
   place-self: start;
   position: relative;
-  background: var(--grey-10);
+  background-color: var(--grey-10);
   max-width: var(--page-hero-card-width);
   padding: var(--space-page-hero-card);
   border-radius: var(--border-radius-large) 0 80px var(--border-radius-large);

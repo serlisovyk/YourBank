@@ -15,5 +15,5 @@
 .products__content-divider {
   flex: 0 0 1px;
   align-self: stretch;
-  background: var(--grey-15);
+  background-color: var(--grey-15);
 }

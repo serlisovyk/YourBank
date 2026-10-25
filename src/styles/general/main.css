@@ -8,16 +8,16 @@ html {
 
 body {
   font-family: var(--font-family);
-  background: var(--grey-10);
   font-weight: 300;
   font-size: var(--text-body);
   line-height: 150%;
   color: var(--grey-70);
 
   background-image: url('/assets/images/decor/dots.avif');
-  background-repeat: no-repeat;
   background-position: -20px -20px;
   background-size: 600px;
+  background-repeat: no-repeat;
+  background-color: var(--grey-10);
 }
 
 :focus-visible {

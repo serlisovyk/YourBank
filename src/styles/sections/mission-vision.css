@@ -23,10 +23,11 @@
 }
 
 .mission-vision__plate {
-  background: url('/assets/images/decor/dots-fine.avif'), var(--grey-11);
-  background-repeat: no-repeat;
+  background-image: url('/assets/images/decor/dots-fine.avif');
   background-position: top left;
   background-size: 320px;
+  background-repeat: no-repeat;
+  background-color: var(--grey-11);
   width: 100%;
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius);

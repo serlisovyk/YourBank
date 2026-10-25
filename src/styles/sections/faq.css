@@ -32,7 +32,7 @@
     position: absolute;
     inset: auto 0 0;
     height: var(--faq-fade);
-    background: linear-gradient(to bottom, transparent, var(--grey-10));
+    background-image: linear-gradient(to bottom, transparent, var(--grey-10));
     pointer-events: none;
     opacity: 0;
     transition: opacity var(--faq-more-animation-duration)
@@ -60,7 +60,7 @@
   gap: 4px;
   margin: 0 auto;
   transition:
-    background var(--transition-duration),
+    background-color var(--transition-duration),
     margin-top 650ms ease-in-out;
 
   img {

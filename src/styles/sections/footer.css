@@ -81,7 +81,7 @@
   align-self: stretch;
   gap: var(--footer-bar-gap);
   padding: var(--toggle-padding);
-  background: var(--grey-11);
+  background-color: var(--grey-11);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-pill);
 
@@ -103,13 +103,13 @@
   justify-content: center;
   width: var(--footer-social-size);
   height: var(--footer-social-size);
-  background: var(--green-60);
+  background-color: var(--green-60);
   border-radius: 50%;
-  transition: background var(--transition-duration);
+  transition: background-color var(--transition-duration);
 
   @media (hover: hover) {
     &:hover {
-      background: var(--green-70);
+      background-color: var(--green-70);
     }
   }
 

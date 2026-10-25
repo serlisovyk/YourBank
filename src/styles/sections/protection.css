@@ -12,8 +12,11 @@
     position: absolute;
     inset: 0 0 20%;
     z-index: -1;
-    background: url('/assets/images/decor/dots-fine.avif') top left / 320px no-repeat
-      var(--grey-11);
+    background-image: url('/assets/images/decor/dots-fine.avif');
+    background-position: top left;
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-color: var(--grey-11);
     border-radius: var(--border-radius);
   }
 

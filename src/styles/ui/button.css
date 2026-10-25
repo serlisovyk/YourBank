@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  background: var(--green-60);
+  background-color: var(--green-60);
   border-radius: var(--border-radius-pill);
   font-family: var(--font-family);
   padding: var(--button-padding-y) var(--button-padding-x);
@@ -10,11 +10,11 @@
   white-space: nowrap;
   text-decoration: none;
   color: var(--grey-11);
-  transition: background var(--transition-duration);
+  transition: background-color var(--transition-duration);
 
   @media (hover: hover) {
     &:hover {
-      background: var(--green-70);
+      background-color: var(--green-70);
     }
   }
 
@@ -33,24 +33,24 @@
 }
 
 .button--empty {
-  background: transparent;
+  background-color: transparent;
   color: var(--white);
 
   @media (hover: hover) {
     &:hover {
-      background: var(--grey-15);
+      background-color: var(--grey-15);
     }
   }
 }
 
 .button--secondary {
-  background: var(--grey-11);
+  background-color: var(--grey-11);
   border: 1px solid var(--grey-15);
   color: var(--white);
 
   @media (hover: hover) {
     &:hover {
-      background: var(--grey-15);
+      background-color: var(--grey-15);
       border-color: var(--grey-11);
     }
   }

@@ -1,6 +1,6 @@
 .badge {
   display: inline-block;
-  background: var(--grey-10);
+  background-color: var(--grey-10);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-pill);
   padding: var(--badge-padding-y) var(--badge-padding-x);

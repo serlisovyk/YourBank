@@ -29,6 +29,13 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
   specific selector win, never `!important`.
 - `:hover` only inside `@media (hover: hover)`, so a tap leaves no hover look.
 
+## Longhands
+
+- `background` is never the shorthand: write `background-image`, `background-position`,
+  `background-size`, `background-repeat` and `background-color`, each only where it is needed. A
+  rule that sets only a colour is `background-color`; one that must drop an image set by another rule
+  adds `background-image: none`. A `transition` names `background-color`.
+
 ## Tokens
 
 - Every value comes from a token in `styles/general/variables.css`: colours (also inside a
