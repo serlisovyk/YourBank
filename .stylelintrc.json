@@ -10,6 +10,7 @@
       }
     ],
     "color-no-hex": true,
+    "value-keyword-case": ["lower", { "ignoreKeywords": ["Arial"] }],
     "custom-property-empty-line-before": null,
     "declaration-empty-line-before": null
   },

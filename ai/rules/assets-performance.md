@@ -10,7 +10,7 @@ decision `vanilla-js-vite-handlebars`.
   `src/styles/general/fonts.css` with `font-display: swap`. No font CDN.
 - The head preloads the font (`<link rel="preload" as="font" crossorigin>` with the source path,
   which Vite rewrites to the hashed file). The fallback is a plain stack in `--font-family`
-  (`'Lexend', arial, sans-serif`), with no metrics-matched face: the small swap shift is accepted
+  (`'Lexend', Arial, sans-serif`), with no metrics-matched face: the small swap shift is accepted
   (decision `font-stack-no-fallback-face`). The file is named in lower case, `lexend.woff2`.
 - A new weight, style or face is a decision for the author, not a drive-by edit; a variable
   file already covers the weights in use.
