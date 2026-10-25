@@ -73,7 +73,7 @@ each with the record that replaced it.
 - [Touch targets: the drawn size stays, the hit area grows to 44 px](2026-10-24-touch-targets-hit-area.md)
 - [Reveal on scroll: opt-in, hidden only behind a script class, never the first screen](2026-10-24-reveal-on-scroll.md)
 - [Open Account leads to Our Products, the tab in the address](2026-10-24-open-account-to-products.md)
-- [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md)
+- [Link previews: the Home header and hero as the one image, the origin, fixed by hand in `public/` and `data/site.js`](2026-10-25-link-preview-home-hero.md)
 - [Search files are hand-written in `public/`; the JSON-LD comes from `data/`](2026-10-24-seo-files-in-public.md)
 - [Font: preloaded, a plain fallback stack, a small swap shift accepted](2026-10-25-font-stack-no-fallback-face.md)
 
@@ -83,3 +83,4 @@ each with the record that replaced it.
 - [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md) — superseded by `ci-size-limit-photos`
 - [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md) — superseded by `ci-size-limit-css-room`
 - [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md) — superseded by `font-stack-no-fallback-face`
+- [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md) — superseded by `link-preview-home-hero`

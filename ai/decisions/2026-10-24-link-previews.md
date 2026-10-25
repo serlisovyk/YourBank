@@ -1,6 +1,6 @@
 # Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`
 
-Date: 2026-10-24 · Status: accepted
+Date: 2026-10-24 · Status: superseded by `link-preview-home-hero`
 
 ## Context
 

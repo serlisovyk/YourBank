@@ -49,7 +49,8 @@ decision `vanilla-js-vite-handlebars`.
   equal to the language of its content.
 - Absolute URLs (canonical, `og:url`, `og:image`) are built from `site.url`, never written out. The
   link preview is one 1200×630 PNG under 300 kB in `public/` (a fixed name: crawlers cache the
-  URL), with `og:image:alt`.
+  URL), with `og:image:alt`: the Home header and hero scaled to fit and the author's name at the
+  bottom centre, made once from the real page (decision `link-preview-home-hero`).
 - The head holds only what the page needs: the stylesheet, the one script entry, the
   metadata.
 

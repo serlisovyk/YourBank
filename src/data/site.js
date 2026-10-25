@@ -6,6 +6,6 @@ export const site = {
     src: '/og-image.png',
     width: 1200,
     height: 630,
-    alt: 'The YourBank logo next to the Home transactions and money exchange card, with the name Serhii Lisovyk',
+    alt: 'The YourBank home page header and hero: Welcome to YourBank, Empowering Your Financial Journey, the Open Account button and the transactions and money exchange card, with the name Serhii Lisovyk',
   },
 }
