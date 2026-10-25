@@ -14,7 +14,7 @@ order of the work.
 ## Path of a section
 
 1. **Data** — if the section has a list or repeated text: a named export in `data/<name>.js`, wired
-   in `context` of `vite.config.js`. No markup, classes or styles in the data.
+   in `context` in `vite/handlebars/context.js`. No markup, classes or styles in the data.
 2. **Partial** — `partials/sections/<page>/<name>.html` (`shared/` when two pages use it): a root
    `<section class="<name> section">` with a `.container` inside. A repeated part is
    `partials/components/<item>.html` with one root and parameters (a hash, or the context of

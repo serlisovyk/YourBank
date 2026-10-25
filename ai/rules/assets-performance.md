@@ -59,7 +59,7 @@ decision `vanilla-js-vite-handlebars`.
   `scripts/main.js`.
 - No web app manifest unless the author asks. `robots.txt`, `sitemap.xml` and `llms.txt` are
   hand-written in `public/` (decision `seo-files-in-public`).
-- No source maps in the production build: `vite.config.js` sets no `build.sourcemap`.
+- No source maps in the production build: `vite/parts/build.js` sets no `build.sourcemap`.
 - A dependency is added only with the author's yes; the runtime has none today.
 - `npm run size` holds the built JS, CSS, font and images to the limits in `.size-limit.json`
   (decision `ci-size-limit-css-room`). A change that comes near them is questioned first: a lighter way,

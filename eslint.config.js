@@ -10,7 +10,7 @@ export default [
     languageOptions: { globals: globals.browser },
   },
   {
-    files: ['vite.config.js', 'eslint.config.js'],
+    files: ['vite.config.js', 'vite/**/*.js', 'eslint.config.js'],
     languageOptions: { globals: globals.node },
   },
   prettier,

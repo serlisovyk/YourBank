@@ -62,6 +62,7 @@ each with the record that replaced it.
 
 - [Sources in `src/`: partials by page, every asset bundled and hashed](2026-10-23-sources-in-src.md)
 - [Production build: Vite's CSS defaults, minified HTML, optimized images](2026-10-23-build-pipeline.md)
+- [The Vite config is split into `vite/`, one module per concern](2026-10-25-vite-config-split.md)
 - [Dotted decor and photos are WebP or AVIF rasters, never a vector per dot](2026-10-23-light-decor-raster.md)
 - [JavaScript in OOP style: a class per component and per section](2026-10-23-oop-javascript.md)
 - [Breakpoints: two structural queries, fluid tokens between 390, 1440 and 1920](2026-10-23-breakpoint-scheme.md)

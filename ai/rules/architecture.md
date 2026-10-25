@@ -22,10 +22,10 @@ it. Each folder has one job:
 
 - A page lists `{{> section }}` calls and nothing else in `<body>`. The same section on two
   pages is one partial, not a copy.
-- `vite.config.js` is the one place that wires partial folders and `context`: a `data/`
+- `vite/handlebars/context.js` is the one place that wires `context`: a `data/`
   constant reaches the templates only through it, and the current `page` only from
   `context(pagePath)`.
-- A new page is an HTML file in `src/`, added to `build.rollupOptions.input`; it gets an entry in
+- A new page is an HTML file in `src/`, added to `PAGES` in `vite/paths.js`; it gets an entry in
   `data/pages.js` (`path`, `title`, `description`, `navKey`) and an item in `data/navigation.js` for the `header` links. A page that is not in the navigation needs a reason.
 - Links between pages are clean URLs without `.html` (`/careers`). `dist/404.html` is a build copy of the home
   page, not a source page (`ai/decisions/2026-10-23-clean-urls-vercel-json.md`).

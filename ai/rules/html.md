@@ -1,6 +1,6 @@
 # HTML Rules
 
-Pages are assembled from partials by `vite-plugin-handlebars` (`vite.config.js`). Where
+Pages are assembled from partials by `vite-plugin-handlebars` (`vite/`). Where
 everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`.
 
 ## Pages and partials
@@ -37,13 +37,13 @@ everything lives: `ai/map.md`; how the layers relate: `ai/rules/architecture.md`
   the current one and `false` on the rest. The condition sits inside the value
   (`aria-current="{{#if (eq key ../page.navKey)}}page{{else}}false{{/if}}"`), never around the
   attribute: Prettier cannot parse a tag with a conditional attribute.
-- Template logic stays at `if` / `unless` / `each` and the `eq` helper (registered in `vite.config.js`):
+- Template logic stays at `if` / `unless` / `each` and the `eq` helper (registered in `vite/handlebars/helpers.js`):
   anything more is computed in `data/`.
 
 ## Data
 
 - Texts and lists that repeat or are rendered by a loop live **only** in `data/*.js`, reach
-  the templates through `context` in `vite.config.js`, and are never copied into a partial.
+  the templates through `context` in `vite/handlebars/context.js`, and are never copied into a partial.
   A literal in a partial is for markup unique to that section.
 - A `data/` file exports a named constant of plain values; it holds no markup, class names or
   styles. A new file is wired into `context`.
