@@ -71,7 +71,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 
 - `case-items.js` → `caseItems`, `feature-groups.js` → `featureGroups`, `question-items.js` → `questionGroups`,
   `products.js` → `products`, `values.js` → `values`, `benefits.js` → `benefits`, `jobs.js` → `jobs`, `mission-vision.js` → `missionVision`, `press-releases.js` → `pressReleases` (`date` ISO),
-  `protection.js` → `protection`, `hero-transactions.js` → `heroTransactions`,
+  `protection.js` → `protection`, `hero-transactions.js` → `heroTransactions`, `converter.js` → `converter` (the converter's default currencies, amount and result, rendered at build time),
   `testimonials.js` → `testimonials` (text, name and the "N of M" `position` per audience),
   `currency-rates.js` → `currencies` (code, name, icons, rate per 1 USD, decimals; the fixed rates, decision `fixed-rates-native-select`).
 - `cta.js` → `cta` (the `home` and `careers` entries of the CTA).

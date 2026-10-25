@@ -49,7 +49,7 @@ The palette is the template's; every swatch is a token already.
 | `--white-90`                     | `#e4e4e7`                               | hero paragraph and small text inside the hero card                                        |
 | `--white-95` … `-99`             | `#f1f1f3` … `#fcfcfd`                   | palette only                                                                              |
 | `--grey-10`                      | `#1a1a1a`                               | page background; inset surfaces (small cards inside a panel, page-hero text card, badges) |
-| `--grey-11`                      | `#1c1c1c`                               | surfaces: navbar, panels, cards, toggle container, secondary button                       |
+| `--grey-11`                      | `#1c1c1c`                               | surfaces: navbar, panels, cards, toggle container, secondary button, hero card rows       |
 | `--grey-15`                      | `#262626`                               | every 1 px border and divider; the active nav pill; hero badge; hover fill                |
 | `--grey-20`                      | `#333`                                  | palette only (the template's swatch frames)                                               |
 | `--grey-30`                      | `#4c4c4d`                               | palette only (the template's Values title, under 3:1)                                     |
@@ -57,6 +57,7 @@ The palette is the template's; every swatch is a token already.
 | `--grey-45`                      | `#737375`                               | the big titles of Our Values (3.7:1, lightened from `--grey-30`)                          |
 | `--grey-70`                      | `#b3b3b3`                               | body text (weight 300), badge text, footer legal links                                    |
 | `--green-10`                     | `#22251b`                               | dark olive: the two floating pills of the hero card and its Exchange button               |
+| `--green-20`                     | `#3d4428`                               | the olive corners of the hero card border                                                 |
 
 - Opacity is part of the look: the three transaction rows of the hero card are 100 % / 50 % /
   20 %; the green tints of the icon circles are baked into their SVGs.
@@ -134,12 +135,12 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
   `20 0 80 20`).
   Round: icon circles, social and arrow buttons.
 - **Borders:** always 1 px. `--grey-15` for cards, panels, FAQ items, dividers, footer lines
-  and the bottom bar. `--green-60` for the left rule of a value item and for the hero card
-  (see "Known inconsistencies"). The stat divider is 1 px dashed `--grey-15`.
+  and the bottom bar; the hero card border turns `--green-20` at its top-right and bottom-left
+  corners. `--green-60` for the left rule of a value item. The stat divider is 1 px dashed `--grey-15`.
 - **Shadows:** none.
 - **Gradients (always built from tokens):**
-  - Hero card: `linear-gradient(215deg, transparent 0%, var(--grey-10) 40%)` over a dotted
-    texture drawn at 50 % with a screen blend.
+  - Hero card border: `to bottom left`, `--green-20` to `--grey-15` over the first 12 %, back to `--green-20`
+    over the last 12 %, drawn on the border box under a flat `--grey-10` fill (the arrows behind stay hidden).
   - FAQ fade: the lower row (items 3 and 4) is shown almost whole, 320 / 295 / 689 px high
     (`--faq-preview`; at 390 the items stack), under an overlay at its bottom, 262 / 240 / 235 px
     (`--faq-fade`), `to bottom` from transparent to `--grey-10`; it disappears when the list is expanded,
@@ -237,13 +238,13 @@ Decorative backgrounds in `assets/images/decor/`, never content. The dotted ones
 rasters at twice the CSS size, baked over the surface they sit on (`--grey-10` or `--grey-11`); a
 new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 
-| Decor                      | Where                                                                                         |
-| -------------------------- | --------------------------------------------------------------------------------------------- |
-| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                                       |
-| `growth-arrows.svg`        | top right of the Home hero, 418 × 383 at 1920, 300 × 275 at 1440                              |
-| `dots-grid.avif`           | top right of the page-hero panel                                                              |
-| `dots-fine.avif`           | top left of CTA, Security panel, benefit card: a fine grid fading out, 320 wide (240 at 390). |
-| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211                         |
+| Decor                      | Where                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `dots.avif`                | the top-left of every page, behind the navbar, 600 wide                                              |
+| `growth-arrows.svg`        | behind the Home hero card, 45 % of it sticking out at the right: 418 × 383 at 1920, 234 wide at 1440 |
+| `dots-grid.avif`           | top right of the page-hero panel                                                                     |
+| `dots-fine.avif`           | top left of CTA, Security panel, benefit card: a fine grid fading out, 320 wide (240 at 390).        |
+| `dot-wave-left/right.avif` | a corner of the use-case plate, mirrored on the second row, 200 × 211                                |
 
 ## Pages
 
@@ -260,11 +261,15 @@ line (`--grey-60`, weight 300) with a 44 px GitHub icon link beside it (`--green
 
 1. **Hero.** Left: a `--grey-15` badge (check icon, "No LLC Required, No Credit Check."), the
    title (three lines, accent words `--green-60`), a paragraph, the hero action. Right: the
-   hero card, 515 × 624 at 1920, 410 × 501 at 1440, 305 × 368 at 390, with two olive pills
-   overhanging (`+ $5000,00 Monthly Income` at its top left; `Supported Currency` with four coin
-   icons at its bottom right). The card holds **Your Transactions** (three rows, fading) and **Money
-   Exchange** (two currency boxes INR and USD with flags, two amounts, the olive Exchange
-   button). Growth arrows behind its top right. The columns are 826 and 515 wide with a 120
+   hero card, 515 × 624 at 1920, padding 34, with two olive pills overhanging (`+ $5000,00
+Monthly Income` over its top-left corner; `Supported Currency` with four coin icons below it,
+   52 sticking out at the right). The card holds **Your Transactions**: a stack of three 75 px rows,
+   the first whole, the 2nd and 3rd 53 px lower, 17 px narrower per side, behind the one above at
+   50 % and 20 %; and **Money Exchange**: a 179 px box (flag, code, one-line name; amount and
+   result) and the olive Exchange button. Every size in the card is its 1920 value times
+   `--hero-unit` (card width / 515), so the card scales with its width: 410 wide at 1440, 305 at
+   390 (no design for either); type has a 12 px floor. The currency list of the native select
+   is dark: `color-scheme: dark` and token colours on `option`. Growth arrows behind the card. The columns are 826 and 515 wide with a 120
    gap at 1920; at 390 all of it is centred and stacked: text, button, card.
 2. **Our Products.** Heading block with the toggle; three product cards in columns
    separated by 1 px `--grey-15` vertical rules (two panels, one per audience); at 390 stacked.
@@ -331,8 +336,6 @@ of the two. At 390 the photo is first and the text card, centred, follows it, wi
 
 ## Known inconsistencies
 
-- **Hero card border:** the design draws it in `--green-60`, unlike every other card
-  (`--grey-15`).
 - **Title sizes:** the home h1 is a section title (`--text-title`); the page-hero title is
   larger (58 / 48 / 28, line 1.3). Both are intended.
 - **Heading block gap** to the content is 80 / 60 / 60, or 100 / 80 / 60 with a toggle;
@@ -343,8 +346,7 @@ of the two. At 390 the photo is first and the text card, centred, follows it, wi
   size (about 38 / 32 / 26) and its inner spacing; the weights of card and badge text; the
   icon-circle tints. Check them against the design when building that element.
 - **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap
-  and the logo width at 1440 (156); the hero column gap (120 / 80 / 80), the hero card padding
-  and the type inside it (`--text-body`); the Careers photo height at 1440 and 390; in the footer the author line, the 12 × 8 padding of
+  and the logo width at 1440 (156); the hero column gap (120 / 80 / 80); the Careers photo height at 1440 and 390; in the footer the author line, the 12 × 8 padding of
   links (44 px targets, so the footer runs about 45 px taller than drawn), the bar padding
   (`--toggle-padding`) and the green current link; the testimonial text, its gaps
   (`--space-card-gap`, `--space-card-gap-sm`) and its width (600 at most), and five cards per audience.
