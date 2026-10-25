@@ -1,12 +1,16 @@
 .hero {
-  padding-top: var(--space-hero-top);
-  padding-bottom: var(--space-hero-bottom);
+  padding-top: calc(
+    50px + (90 - 50) * var(--ramp-390-1440) + (153 - 90) * var(--ramp-1440-1920)
+  );
+  padding-bottom: calc(
+    81px + (61 - 81) * var(--ramp-390-1440) + (76 - 61) * var(--ramp-1440-1920)
+  );
   overflow-x: clip;
 }
 
 .hero__inner {
   display: flex;
-  gap: var(--space-hero-gap);
+  gap: calc(80px + (120 - 80) * var(--ramp-1440-1920));
 
   @media (width < 1024px) {
     align-items: center;
@@ -108,7 +112,9 @@
 .hero__card {
   position: relative;
   width: var(--hero-card-width);
-  padding: var(--hero-card-padding);
+  padding: calc(
+    20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
+  );
   border: 1px solid transparent;
   border-radius: var(--border-radius-small);
   background-image:

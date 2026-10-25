@@ -108,27 +108,14 @@
   );
   --icon-product: calc(72px + (98 - 72) * var(--ramp-1440-1920));
 
-  --space-hero-top: calc(
-    50px + (90 - 50) * var(--ramp-390-1440) + (153 - 90) * var(--ramp-1440-1920)
-  );
-  --space-hero-bottom: calc(
-    81px + (61 - 81) * var(--ramp-390-1440) + (76 - 61) * var(--ramp-1440-1920)
-  );
-  --space-hero-gap: calc(80px + (120 - 80) * var(--ramp-1440-1920));
   --hero-card-width: calc(
     305px + (410 - 305) * var(--ramp-390-1440) + (515 - 410) * var(--ramp-1440-1920)
   );
   --hero-unit: calc(var(--hero-card-width) / 515);
-  --hero-card-padding: calc(
-    20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
-  );
   --text-hero-small: max(12px, calc(16 * var(--hero-unit)));
   --text-hero-tiny: max(12px, calc(14 * var(--hero-unit)));
   --icon-currency: calc(
     20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
-  );
-  --space-converter-cell: calc(
-    10px + (14 - 10) * var(--ramp-390-1440) + (16 - 14) * var(--ramp-1440-1920)
   );
 
   --icon-case: calc(64px + (78 - 64) * var(--ramp-1440-1920));

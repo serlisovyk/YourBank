@@ -1,3 +1,9 @@
+.currency-converter {
+  --space-converter-cell: calc(
+    10px + (14 - 10) * var(--ramp-390-1440) + (16 - 14) * var(--ramp-1440-1920)
+  );
+}
+
 .currency-converter__title {
   font-size: var(--text-body);
   font-weight: 500;
