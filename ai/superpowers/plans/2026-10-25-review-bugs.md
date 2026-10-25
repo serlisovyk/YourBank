@@ -15,8 +15,8 @@ bug 1 needs the author's eye (the new questions are text I wrote).
 - Fix: four more questions in `questionGroups.additional`, and a layout that keeps the preview to
   exactly the first two of them. A single region with `max-height: --faq-preview` would show a
   strip of the next row between the drawn widths (the token is exact only at 1920, 1440 and 390),
-  so the expander gets two regions: `faq__more` (the two faded questions, as now) and `faq__rest`
-  (the new ones, closed to 0). `Disclosure` controls every `[data-disclosure-region]` in its root.
+  so the expander gets two regions: `faq__preview` (the two faded questions, as now) and `faq__more`
+  (the new ones, closed to 0); the data has the groups `initial`, `preview` and `additional`. `Disclosure` controls every `[data-disclosure-region]` in its root.
   The CSS keys on `[inert]` instead of a state class, so the `expandedClass` option and the
   `FAQ.expandedClass` constant go.
 - Kept: focus stays on the button, labels, `aria-expanded`/`aria-controls` (both ids), reduced
@@ -26,8 +26,8 @@ bug 1 needs the author's eye (the new questions are text I wrote).
 
 - The heading's actions column shrinks to the width of one button when the text is wide, so the
   two buttons wrap onto two lines. Fix in `section-heading.css` (the actions do not shrink) and
-  `toggle.css` (a flex row that does not wrap; padding eases down only where a phone is too
-  narrow for the drawn padding).
+  `toggle.css` (`white-space: nowrap`; the inline buttons keep their drawn gap). Below 370 px the
+  token `--toggle-button-padding-x` eases from 18 down to 8 so the row still fits at 320.
 
 ## 3. Learn More at 768
 
@@ -38,13 +38,14 @@ bug 1 needs the author's eye (the new questions are text I wrote).
 
 ## 4. Header menu at 425
 
-- The open menu keeps the pill radius (100px) on a tall box. Fix in `header.css`: the
-  radius of `.header__inner` follows the menu state; closed look unchanged.
+- The open menu keeps the pill radius (100px) on a tall box. Fix in `header.css`: below 768 px
+  `.header__inner` takes `--border-radius` (40): at its closed 68 px height that is still a full pill.
 
 ## 5. About at 1024
 
 - Mission & Vision rows overlap by `--space-mission-overlap` while the text column is narrower
-  than the plate. Fix in `mission-vision.css` for 1024 to 1439; 1440, 1920 and 390 unchanged.
+  than the plate. Fix: the token `--space-mission-overlap` below 1440 eases from 84 (at 1250) down to 33 (at 1024);
+  1440, 1920 and the stacked layout are unchanged.
 
 ## Docs
 
