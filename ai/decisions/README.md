@@ -75,10 +75,11 @@ each with the record that replaced it.
 - [Open Account leads to Our Products, the tab in the address](2026-10-24-open-account-to-products.md)
 - [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md)
 - [Search files are hand-written in `public/`; the JSON-LD comes from `data/`](2026-10-24-seo-files-in-public.md)
-- [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md)
+- [Font: preloaded, a plain fallback stack, a small swap shift accepted](2026-10-25-font-stack-no-fallback-face.md)
 
 ### Superseded
 
 - [Deployed on Vercel through its Git integration](2026-10-23-vercel-deploy.md) — superseded by `clean-urls-vercel-json`
 - [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md) — superseded by `ci-size-limit-photos`
 - [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md) — superseded by `ci-size-limit-css-room`
+- [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md) — superseded by `font-stack-no-fallback-face`

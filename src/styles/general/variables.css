@@ -26,7 +26,7 @@
   --grey-70: #b3b3b3;
   --grey-75: #bfbfbf;
 
-  --font-family: 'Lexend', 'Lexend Fallback';
+  --font-family: 'Lexend', arial, sans-serif;
 
   --border-radius: 40px;
   --border-radius-pill: 100px;
