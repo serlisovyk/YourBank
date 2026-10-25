@@ -14,7 +14,9 @@
 }
 
 .section-heading--with-actions {
-  margin-bottom: var(--space-heading-block-toggle);
+  margin-bottom: calc(
+    60px + (80 - 60) * var(--ramp-390-1440) + (100 - 80) * var(--ramp-1440-1920)
+  );
 }
 
 .section-heading__actions {
@@ -34,11 +36,11 @@
 }
 
 .section-heading__text {
-  max-width: var(--section-text-width);
+  max-width: calc(1157px + (1302 - 1157) * var(--ramp-1440-1920));
 }
 
 .section-heading--with-actions .section-heading__text {
-  max-width: var(--section-text-width-toggle);
+  max-width: calc(831px + (935 - 831) * var(--ramp-1440-1920));
 }
 
 .section-heading__link {

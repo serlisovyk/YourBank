@@ -1,4 +1,8 @@
 .question-item {
+  --space-faq-line: calc(
+    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
+  );
+
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
   padding: var(--space-card);

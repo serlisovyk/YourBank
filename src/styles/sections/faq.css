@@ -32,7 +32,10 @@
     position: absolute;
     inset-inline: 0;
     bottom: 0;
-    height: var(--faq-fade);
+    height: calc(
+      235px + (240 - 235) * var(--ramp-390-1440) + (262 - 240) *
+        var(--ramp-1440-1920)
+    );
     background-image: linear-gradient(to bottom, transparent, var(--grey-10));
     pointer-events: none;
     opacity: 0;
@@ -41,7 +44,10 @@
   }
 
   &[inert] {
-    max-height: var(--faq-preview);
+    max-height: calc(
+      689px + (295 - 689) * var(--ramp-390-1440) + (320 - 295) *
+        var(--ramp-1440-1920)
+    );
 
     &::after {
       opacity: 1;

@@ -12,10 +12,12 @@
 .features__buttons {
   display: flex;
   flex-direction: column;
-  gap: var(--space-tabs-gap);
+  gap: calc(20px + (24 - 20) * var(--ramp-1440-1920));
   background-color: var(--grey-11);
   border-radius: var(--border-radius-small);
-  padding: var(--space-tabs-panel);
+  padding: calc(
+    20px + (40 - 20) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
+  );
 
   @media (width < 1024px) {
     flex-direction: row;

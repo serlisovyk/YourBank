@@ -87,12 +87,7 @@
   --toggle-padding: calc(12px + (14 - 12) * var(--ramp-1440-1920));
 
   --space-heading-gap: calc(10px + (14 - 10) * var(--ramp-1440-1920));
-  --section-text-width: calc(1157px + (1302 - 1157) * var(--ramp-1440-1920));
-  --section-text-width-toggle: calc(831px + (935 - 831) * var(--ramp-1440-1920));
   --space-heading-block: calc(60px + (80 - 60) * var(--ramp-1440-1920));
-  --space-heading-block-toggle: calc(
-    60px + (80 - 60) * var(--ramp-390-1440) + (100 - 80) * var(--ramp-1440-1920)
-  );
   --space-card: calc(
     30px + (40 - 30) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
   );
@@ -106,7 +101,7 @@
   --space-columns: calc(
     60px + (80 - 60) * var(--ramp-390-1440) + (100 - 80) * var(--ramp-1440-1920)
   );
-  --icon-product: calc(72px + (98 - 72) * var(--ramp-1440-1920));
+  --icon-large: calc(72px + (98 - 72) * var(--ramp-1440-1920));
 
   --hero-card-width: calc(
     305px + (410 - 305) * var(--ramp-390-1440) + (515 - 410) * var(--ramp-1440-1920)
@@ -118,32 +113,6 @@
     20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
   );
 
-  --icon-case: calc(64px + (78 - 64) * var(--ramp-1440-1920));
-  --space-case-rows: calc(40px + (60 - 40) * var(--ramp-1440-1920));
-  --space-case-gap: calc(
-    30px + (60 - 30) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
-  );
-  --space-plate: calc(
-    20px + (40 - 20) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
-  );
-  --space-plate-gap: calc(10px + (20 - 10) * var(--ramp-1440-1920));
-  --space-plate-card: calc(20px + (30 - 20) * var(--ramp-1440-1920));
-  --space-case-text: calc(50px + (60 - 50) * var(--ramp-1440-1920));
-  --space-stats-gap: calc(60px + (100 - 60) * var(--ramp-390-1440));
-
-  --space-tabs-panel: calc(
-    20px + (40 - 20) * var(--ramp-390-1440) + (50 - 40) * var(--ramp-1440-1920)
-  );
-  --space-tabs-gap: calc(20px + (24 - 20) * var(--ramp-1440-1920));
-  --space-faq-line: calc(
-    20px + (24 - 20) * var(--ramp-390-1440) + (30 - 24) * var(--ramp-1440-1920)
-  );
-  --faq-preview: calc(
-    689px + (295 - 689) * var(--ramp-390-1440) + (320 - 295) * var(--ramp-1440-1920)
-  );
-  --faq-fade: calc(
-    235px + (240 - 235) * var(--ramp-390-1440) + (262 - 240) * var(--ramp-1440-1920)
-  );
   --space-values-gap: calc(
     50px + (60 - 50) * var(--ramp-390-1440) + (80 - 60) * var(--ramp-1440-1920)
   );
@@ -153,7 +122,6 @@
   --space-benefits-gap: calc(
     48px + (60 - 48) * var(--ramp-390-1440) + (100 - 60) * var(--ramp-1440-1920)
   );
-  --icon-card: var(--icon-product);
   --space-protection: calc(
     24px + (80 - 24) * var(--ramp-768-1440) + (95 - 80) * var(--ramp-1440-1920)
   );

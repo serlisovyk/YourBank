@@ -29,7 +29,7 @@
 
 .icon-card__image {
   flex-shrink: 0;
-  width: var(--icon-card);
+  width: var(--icon-large);
   height: auto;
 }
 

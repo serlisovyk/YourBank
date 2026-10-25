@@ -10,7 +10,7 @@
 }
 
 .product-card__image {
-  width: var(--icon-product);
+  width: var(--icon-large);
 }
 
 .product-card__title {
