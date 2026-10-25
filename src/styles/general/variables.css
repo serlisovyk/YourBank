@@ -2,6 +2,7 @@
   --white: #fff;
   --black: #000;
   --green-10: #22251b;
+  --green-20: #3d4428;
   --green-60: #caff33;
   --green-65: #d1ff4d;
   --green-70: #d8ff66;
@@ -96,8 +97,10 @@
   --space-hero-bottom: clamp(61px, calc(3.125vw + 16px), 76px);
   --space-hero-gap: clamp(80px, calc(8.3333vw - 40px), 120px);
   --hero-card-width: clamp(410px, calc(21.875vw + 95px), 515px);
-  --hero-card-height: clamp(501px, calc(25.625vw + 132px), 624px);
+  --hero-unit: calc(var(--hero-card-width) / 515);
   --hero-card-padding: clamp(28px, calc(1.25vw + 10px), 34px);
+  --text-hero-small: max(12px, calc(16 * var(--hero-unit)));
+  --text-hero-tiny: max(12px, calc(14 * var(--hero-unit)));
   --icon-currency: clamp(28px, calc(1.25vw + 10px), 34px);
   --space-converter-cell: clamp(14px, calc(0.4167vw + 8px), 16px);
 
@@ -209,7 +212,6 @@
     --space-hero-bottom: clamp(61px, calc(-1.9048vw + 88.43px), 81px);
     --space-hero-gap: 80px;
     --hero-card-width: clamp(305px, calc(10vw + 266px), 410px);
-    --hero-card-height: clamp(368px, calc(12.6667vw + 318.6px), 501px);
     --hero-card-padding: clamp(20px, calc(0.7619vw + 17.03px), 28px);
     --icon-currency: clamp(20px, calc(0.7619vw + 17.03px), 28px);
     --space-converter-cell: clamp(10px, calc(0.381vw + 8.51px), 14px);

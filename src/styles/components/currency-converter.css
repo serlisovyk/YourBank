@@ -2,16 +2,17 @@
   font-size: var(--text-body);
   font-weight: 500;
   color: var(--white);
-  margin-bottom: 18px;
+  margin-bottom: calc(23 * var(--hero-unit));
 }
 
 .currency-converter__box {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto auto;
+  background-color: var(--grey-11);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
-  margin-bottom: 20px;
+  margin-bottom: calc(24 * var(--hero-unit));
 }
 
 .currency-converter__side {
@@ -28,7 +29,7 @@
 .currency-converter__head {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: calc(10 * var(--hero-unit));
   padding: var(--space-converter-cell);
 }
 
@@ -46,7 +47,7 @@
 }
 
 .currency-converter__icon--coin {
-  background: var(--grey-15);
+  background-color: var(--grey-15);
   padding: calc(var(--icon-currency) * 0.28);
   object-fit: contain;
 }
@@ -57,14 +58,17 @@
   min-height: 44px;
   margin-block: calc((var(--icon-currency) - 44px) / 2);
   font: inherit;
+  font-size: var(--text-hero-small);
   color: var(--white);
-  background: transparent;
+  background-color: transparent;
   border: none;
   color-scheme: dark;
   cursor: pointer;
 }
 
 .currency-converter__name {
+  font-size: var(--text-hero-tiny);
+  line-height: 1.5;
   color: var(--white-90);
 }
 
@@ -74,11 +78,12 @@
   min-width: 0;
   min-height: 44px;
   font: inherit;
+  font-weight: 500;
   color: var(--white);
-  background: transparent;
+  background-color: transparent;
   border: none;
   border-top: 1px solid var(--grey-15);
-  padding: var(--space-converter-cell);
+  padding: calc(26 * var(--hero-unit)) var(--space-converter-cell);
   overflow-wrap: anywhere;
 
   &[aria-invalid='true'] {
@@ -92,12 +97,13 @@
 
 .currency-converter__button {
   font-family: var(--font-family);
-  background: var(--green-10);
+  background-color: var(--green-10);
   border-radius: var(--border-radius-pill);
   font-weight: 400;
-  font-size: var(--text-button);
+  font-size: var(--text-hero-small);
   line-height: 150%;
-  padding: var(--button-padding-y) var(--button-padding-x);
+  padding: calc(13 * var(--hero-unit)) var(--button-padding-x);
+  min-height: var(--touch-target);
   color: var(--green-65);
   width: 100%;
 }
