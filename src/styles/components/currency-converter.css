@@ -8,7 +8,6 @@
   font-size: var(--text-body);
   font-weight: 500;
   color: var(--white);
-  margin-bottom: calc(23 * var(--hero-unit));
 }
 
 .currency-converter__box {
@@ -18,7 +17,8 @@
   background-color: var(--grey-11);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
-  margin-bottom: calc(24 * var(--hero-unit));
+  margin-top: 1.4375em;
+  margin-bottom: 1.5em;
 }
 
 .currency-converter__side {
@@ -35,7 +35,7 @@
 .currency-converter__head {
   display: flex;
   flex-direction: column;
-  gap: calc(10 * var(--hero-unit));
+  gap: 0.625em;
   padding: var(--space-converter-cell);
 }
 
@@ -89,12 +89,14 @@
   min-width: 0;
   min-height: 44px;
   font: inherit;
+  font-size: var(--text-body);
   font-weight: 500;
   color: var(--white);
   background-color: transparent;
   border: none;
   border-top: 1px solid var(--grey-15);
-  padding: calc(26 * var(--hero-unit)) var(--space-converter-cell);
+  padding-block: calc(var(--hero-card-width) / 515 * 26);
+  padding-inline: var(--space-converter-cell);
   overflow-wrap: anywhere;
 
   &[aria-invalid='true'] {
@@ -113,7 +115,8 @@
   font-weight: 400;
   font-size: var(--text-hero-small);
   line-height: 150%;
-  padding: calc(13 * var(--hero-unit)) var(--button-padding-x);
+  padding-block: 0.8125em;
+  padding-inline: var(--button-padding-x);
   min-height: var(--touch-target);
   color: var(--green-65);
   width: 100%;

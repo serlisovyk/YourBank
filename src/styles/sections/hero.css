@@ -59,6 +59,7 @@
 .hero__content {
   position: relative;
   flex-shrink: 0;
+  font-size: calc(var(--hero-card-width) / 515 * 16);
 }
 
 .hero__arrows {
@@ -66,7 +67,7 @@
   --arrows-outside-share: 0.445;
 
   position: absolute;
-  top: calc(9 * var(--hero-unit));
+  top: 0.5625em;
   right: calc(-1 * var(--arrows-overhang));
   width: calc(var(--arrows-overhang) / var(--arrows-outside-share));
   height: auto;
@@ -75,14 +76,14 @@
 .hero__money {
   position: absolute;
   z-index: 1;
-  bottom: calc(100% - 32 * var(--hero-unit));
-  left: calc(-60 * var(--hero-unit));
+  bottom: calc(100% - 2em);
+  left: -3.75em;
   display: inline-flex;
   align-items: center;
-  gap: calc(8 * var(--hero-unit));
+  gap: 0.5em;
   background-color: var(--green-10);
   border-radius: var(--border-radius-small);
-  padding: calc(14 * var(--hero-unit)) calc(16 * var(--hero-unit));
+  padding: 0.875em 1em;
 
   @media (width < 1024px) {
     left: -20px;
@@ -92,9 +93,9 @@
 .hero__money-image img {
   background-color: var(--green-60);
   border-radius: 50%;
-  width: calc(40 * var(--hero-unit));
-  height: calc(40 * var(--hero-unit));
-  padding: calc(8 * var(--hero-unit));
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em;
 }
 
 .hero__money-amount {
@@ -131,14 +132,13 @@
 }
 
 .hero__transactions {
-  margin-bottom: calc(27 * var(--hero-unit));
+  margin-bottom: 1.6875em;
 }
 
 .hero__transactions-title {
   font-size: var(--text-body);
   font-weight: 500;
   color: var(--white);
-  margin-bottom: calc(16 * var(--hero-unit));
 }
 
 .hero__transactions-card {
@@ -150,37 +150,41 @@
   background-color: var(--grey-11);
   border: 1px solid var(--grey-15);
   border-radius: var(--border-radius-small);
-  padding: calc(11 * var(--hero-unit)) calc(19 * var(--hero-unit));
+  padding: 0.6875em 1.1875em;
+
+  &:first-of-type {
+    margin-top: 1em;
+  }
 
   &:nth-of-type(n + 2) {
-    margin-top: calc(-22 * var(--hero-unit));
+    margin-top: -1.375em;
   }
 
   &:nth-of-type(2) {
     z-index: 2;
     opacity: 0.5;
-    margin-inline: calc(17 * var(--hero-unit));
+    margin-inline: 1.0625em;
   }
 
   &:nth-of-type(3) {
     z-index: 1;
     opacity: 0.2;
-    margin-inline: calc(34 * var(--hero-unit));
+    margin-inline: 2.125em;
   }
 }
 
 .hero__transactions-card-left {
   display: flex;
   align-items: center;
-  gap: calc(10 * var(--hero-unit));
+  gap: 0.625em;
 }
 
 .hero__transactions-card-image {
   background-color: var(--green-60);
   border-radius: 50%;
-  padding: calc(8 * var(--hero-unit));
-  width: calc(38 * var(--hero-unit));
-  height: calc(38 * var(--hero-unit));
+  padding: 0.5em;
+  width: 2.375em;
+  height: 2.375em;
 
   img {
     width: 100%;
@@ -209,15 +213,16 @@
 .hero__currencies {
   position: absolute;
   z-index: 1;
-  top: calc(100% + 13 * var(--hero-unit));
-  right: calc(-52 * var(--hero-unit));
+  top: calc(100% + 0.8125em);
+  right: -3.25em;
   display: inline-flex;
   align-items: center;
-  gap: calc(12 * var(--hero-unit));
+  gap: 0.75em;
   background-color: var(--green-10);
   border-radius: var(--border-radius-pill);
-  padding: calc(10 * var(--hero-unit)) calc(12 * var(--hero-unit))
-    calc(10 * var(--hero-unit)) calc(20 * var(--hero-unit));
+  padding-block: 0.625em;
+  padding-left: 1.25em;
+  padding-right: 0.75em;
 
   @media (width < 1024px) {
     right: -20px;
@@ -237,11 +242,11 @@
 
 .hero__currencies-list {
   display: flex;
-  gap: calc(8 * var(--hero-unit));
+  gap: 0.5em;
   list-style: none;
   background-color: var(--grey-10);
   border-radius: var(--border-radius-pill);
-  padding: calc(7 * var(--hero-unit));
+  padding: 0.4375em;
 }
 
 .hero__currencies-item {

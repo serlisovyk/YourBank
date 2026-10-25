@@ -106,9 +106,8 @@
   --hero-card-width: calc(
     305px + (410 - 305) * var(--ramp-390-1440) + (515 - 410) * var(--ramp-1440-1920)
   );
-  --hero-unit: calc(var(--hero-card-width) / 515);
-  --text-hero-small: max(12px, calc(16 * var(--hero-unit)));
-  --text-hero-tiny: max(12px, calc(14 * var(--hero-unit)));
+  --text-hero-small: max(12px, 1em);
+  --text-hero-tiny: max(12px, 0.875em);
   --icon-currency: calc(
     20px + (28 - 20) * var(--ramp-390-1440) + (34 - 28) * var(--ramp-1440-1920)
   );
