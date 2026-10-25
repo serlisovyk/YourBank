@@ -41,3 +41,13 @@ Goal: the author's review items. No open questions.
   four pages at 1920, 1440 and 390 px, the link visible, focusable by keyboard, not overlapping; axe-core
   reports 0 violations.
 - Home mobile CLS with the font held back is measured after item 4 only to report the accepted cost.
+
+## Result
+
+- `dist/` after item 1 is identical to `main`'s. After items 3 and 4 only the font file name, the
+  stylesheet and the preload differ; the CSS is 7.97 kB gzip (limit 8.5 kB), 8.02 kB with the link.
+- Stylelint writes the stack as `'Lexend', arial, sans-serif` (keyword case).
+- The preview is 68 kB; the name sits at the bottom centre, the header and hero are the real page at its
+  1920 px layout, scaled by 0.54.
+- axe-core: 0 violations on the four pages and the 404 page at 1440 px; the link is 44x44, reachable by
+  Tab with the green focus ring, and overlaps nothing from 390 to 1920 px.
