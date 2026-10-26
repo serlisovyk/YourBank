@@ -19,7 +19,9 @@
 
 .values__item-title {
   font-weight: 500;
-  font-size: var(--text-value);
+  font-size: calc(
+    30px + (40 - 30) * var(--ramp-390-1440) + (58 - 40) * var(--ramp-1440-1920)
+  );
   line-height: 150%;
   color: var(--grey-45);
   margin-bottom: var(--space-card-gap);

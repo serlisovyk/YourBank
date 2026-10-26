@@ -70,7 +70,9 @@
 
 .case-item__icon-title {
   font-weight: 400;
-  font-size: var(--text-plate);
+  font-size: calc(
+    14px + (16 - 14) * var(--ramp-390-1440) + (20 - 16) * var(--ramp-1440-1920)
+  );
   line-height: 150%;
   text-align: center;
   color: var(--white);
@@ -80,7 +82,9 @@
 
 .case-item__info-title {
   font-weight: 500;
-  font-size: var(--text-title-md);
+  font-size: calc(
+    20px + (26 - 20) * var(--ramp-390-1440) + (30 - 26) * var(--ramp-1440-1920)
+  );
   line-height: 150%;
   color: var(--white);
   margin-bottom: var(--space-heading-gap);
@@ -120,7 +124,7 @@
 
 .case-item__stat-number {
   font-weight: 500;
-  font-size: var(--text-stat);
+  font-size: calc(40px + (58 - 40) * var(--ramp-1440-1920));
   line-height: 150%;
   color: var(--green-60);
 

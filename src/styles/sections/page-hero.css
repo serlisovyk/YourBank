@@ -46,7 +46,9 @@
 
 .page-hero__eyebrow {
   font-weight: 400;
-  font-size: var(--text-page-hero-label);
+  font-size: calc(
+    14px + (18 - 14) * var(--ramp-390-1440) + (20 - 18) * var(--ramp-1440-1920)
+  );
   line-height: 150%;
   margin-bottom: 8px;
   color: var(--white);
@@ -54,7 +56,9 @@
 
 .page-hero__title {
   font-weight: 500;
-  font-size: var(--text-title-hero);
+  font-size: calc(
+    28px + (48 - 28) * var(--ramp-390-1440) + (58 - 48) * var(--ramp-1440-1920)
+  );
   line-height: 130%;
   margin-bottom: calc(15px + (24 - 15) * var(--ramp-390-1440));
   color: var(--white);

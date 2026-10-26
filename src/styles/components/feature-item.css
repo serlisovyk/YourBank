@@ -16,7 +16,7 @@
 
 .feature-item__title {
   font-weight: 400;
-  font-size: var(--text-card-title-sm);
+  font-size: calc(18px + (22 - 18) * var(--ramp-1440-1920));
   line-height: 150%;
   color: var(--white);
 }
