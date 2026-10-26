@@ -43,8 +43,8 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 
 ## Tokens
 
-- Colours (also inside a gradient or a shadow), the font family, radii, the type scale and the
-  spacing and size values that two or more blocks share are tokens in `styles/general/variables.css`
+- Colours (also inside a gradient or a shadow), the font family, radii and the type steps, spacing and
+  size values that two or more blocks share are tokens in `styles/general/variables.css`
   (`ai/design-system.md` lists them). `#`, `rgb(` and `hsl(` appear nowhere else; `transparent` and
   `currentColor` stay keywords. Never hard-code a colour or a step of the type scale. Stylelint
   rejects a hex colour outside `variables.css`; `rgb(` and `hsl(` stay a review matter.

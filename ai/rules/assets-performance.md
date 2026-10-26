@@ -32,12 +32,12 @@ decision `vanilla-js-vite-handlebars`.
   sits on and drawn at twice its CSS size, with a `background-size` in CSS px. It is never an SVG
   with a path per dot (decision `light-decor-raster`).
 - The build recompresses every emitted image (SVGO keeping `viewBox`, jpg and webp at quality
-  80), but that does not replace the clean-up and the sizing above: it only trims what is left.
+  80, avif at 75), but that does not replace the clean-up and the sizing above: it only trims what is left.
 - Every image and the font sits in `src/assets/` and is referenced by one scheme, the root path
   `/assets/images/…` or `/assets/fonts/…`, in HTML, partial parameters, `data/*.js` and CSS.
   The bundler emits each file once, with a hash in its name, and never inlines it
   (`build.assetsInlineLimit: 0`). Do not import images in JS and do not put them in `public/`.
-- `public/` is only for a file that needs a fixed URL (`favicon.ico`, `robots.txt`); it is
+- `public/` is only for a file that needs a fixed URL (`favicon.svg`, `robots.txt`); it is
   copied as it is.
 - Asset files are named in lowercase with hyphens, by what they show (`growth-arrows.svg`),
   not by their place in the design.

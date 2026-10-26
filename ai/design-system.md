@@ -5,20 +5,18 @@ opened "by eye". The design is a third-party template (`ai/decisions/2026-10-23-
 it is described here in words and numbers, never linked.
 
 - The design is drawn at three widths: **1920**, **1440** and **390** px. Every table gives
-  the values in that order (`1920 / 1440 / 390`). Between and beyond them the values are
+  the values in that order (`1920 / 1440 / 390`); between and beyond them the values are
   fluid (`ai/decisions/2026-10-25-fluid-ramps.md`).
-- All sizes are px at the drawn width. Text sizes and spacing were measured from the layout
-  geometry; weights, radii and hover looks that the layout does not carry were read from the
-  built code and the rendered pages. If a value looks wrong against the design on screen, the
-  design wins: fix this document in the same change.
-- **Tokens** below are in `styles/general/variables.css`; a value that has a token names it.
+- All sizes are px at the drawn width, measured from the layout geometry; weights, radii and
+  hover looks that the layout does not carry were read from the rendered pages. If a value looks
+  wrong against the design on screen, the design wins: fix this document in the same change.
+- **Tokens** are in `styles/general/variables.css`; a value that has a token names it. A value
+  one block uses is written in that block's stylesheet (`ai/rules/css.md`).
 
 ## How to use
 
-- A colour, radius, font size or spacing from the scale is written as `var(--token)`. A hex,
-  `rgb(` or an invented px value for type or section spacing does not appear in a stylesheet
-  (`ai/rules/css.md`). A one-off layout size (a column's width, an icon box) stays a plain
-  value.
+- A colour, radius, font size or spacing from the scale is written as `var(--token)`; a one-off
+  layout size (a column's width, an icon box) stays a plain value (`ai/rules/css.md`).
 - A new section takes its numbers from these tables: the section gap, the heading block, the
   card padding and the grid gap are the same everywhere; copy a neighbouring section, not
   a new rhythm (`ai/skills/section.md`).
@@ -36,28 +34,24 @@ it is described here in words and numbers, never linked.
 
 ## Colours
 
-The palette is the template's; every swatch is a token already.
+The palette is the template's; only the swatches a page uses are tokens.
 
-| Token                            | Hex                                     | Use                                                                                       |
-| -------------------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `--white`                        | `#fff`                                  | headings, button labels on dark, nav links, card titles                                   |
-| `--black`                        | `#000`                                  | not used by the pages                                                                     |
-| `--green-60`                     | `#caff33`                               | the accent: primary button, accent words in titles, stat numbers, icons                   |
-| `--green-65`                     | `#d1ff4d`                               | the label of the olive Exchange button in the hero card                                   |
-| `--green-70`                     | `#d8ff66`                               | primary button hover                                                                      |
-| `--green-80` … `-99`             | `#e5ff99` … `#fefffa`                   | palette only, no page uses them                                                           |
-| `--white-90`                     | `#e4e4e7`                               | hero paragraph and small text inside the hero card                                        |
-| `--white-95` … `-99`             | `#f1f1f3` … `#fcfcfd`                   | palette only                                                                              |
-| `--grey-10`                      | `#1a1a1a`                               | page background; inset surfaces (small cards inside a panel, page-hero text card, badges) |
-| `--grey-11`                      | `#1c1c1c`                               | surfaces: navbar, panels, cards, toggle container, secondary button, hero card rows       |
-| `--grey-15`                      | `#262626`                               | every 1 px border and divider; the active nav pill; hero badge; hover fill                |
-| `--grey-20`                      | `#333`                                  | palette only (the template's swatch frames)                                               |
-| `--grey-30`                      | `#4c4c4d`                               | palette only (the template's Values title, under 3:1)                                     |
-| `--grey-35`, `-40`, `-60`, `-75` | `#59595a` `#656567` `#98989a` `#bfbfbf` | palette only                                                                              |
-| `--grey-45`                      | `#737375`                               | the big titles of Our Values (3.7:1, lightened from `--grey-30`)                          |
-| `--grey-70`                      | `#b3b3b3`                               | body text (weight 300), badge text, footer legal links                                    |
-| `--green-10`                     | `#22251b`                               | dark olive: the two floating pills of the hero card and its Exchange button               |
-| `--green-20`                     | `#3d4428`                               | the olive corners of the hero card border                                                 |
+| Token        | Hex       | Use                                                                                       |
+| ------------ | --------- | ----------------------------------------------------------------------------------------- |
+| `--white`    | `#fff`    | headings, button labels on dark, nav links, card titles                                   |
+| `--black`    | `#000`    | the opaque stops of the testimonial edge fade mask                                        |
+| `--green-60` | `#caff33` | the accent: primary button, accent words in titles, stat numbers, icons                   |
+| `--green-65` | `#d1ff4d` | the label of the olive Exchange button in the hero card                                   |
+| `--green-70` | `#d8ff66` | primary button hover                                                                      |
+| `--white-90` | `#e4e4e7` | hero paragraph and small text inside the hero card                                        |
+| `--grey-10`  | `#1a1a1a` | page background; inset surfaces (small cards inside a panel, page-hero text card, badges) |
+| `--grey-11`  | `#1c1c1c` | surfaces: navbar, panels, cards, toggle container, secondary button, hero card rows       |
+| `--grey-15`  | `#262626` | every 1 px border and divider; the active nav pill; hero badge; hover fill                |
+| `--grey-60`  | `#98989a` | the footer author line and the divider of the legal links                                 |
+| `--grey-45`  | `#737375` | the big titles of Our Values (3.7:1, lightened from the drawn `#4c4c4d`)                  |
+| `--grey-70`  | `#b3b3b3` | body text (weight 300), badge text, footer legal links                                    |
+| `--green-10` | `#22251b` | dark olive: the two floating pills of the hero card and its Exchange button               |
+| `--green-20` | `#3d4428` | the olive corners of the hero card border                                                 |
 
 - Opacity is part of the look: the three transaction rows of the hero card are 100 % / 50 % /
   20 %; the green tints of the icon circles are baked into their SVGs.
@@ -66,28 +60,27 @@ The palette is the template's; every swatch is a token already.
 
 ## Typography
 
-Font **Lexend**, one family everywhere (the template's guide page set in another face is
-documentation, not the site). Weights: **300** body, **400** buttons, nav, card titles,
+Font **Lexend**, one family everywhere. Weights: **300** body, **400** buttons, nav, card titles,
 **500** headings and numbers. Line height is `1.5` unless the table says otherwise.
 
-| Role (token)                                                    | 1920 / 1440 / 390                  | Weight | Line                | Colour                                    |
-| --------------------------------------------------------------- | ---------------------------------- | ------ | ------------------- | ----------------------------------------- |
-| Title: home hero h1, every section h2 (`--text-title`)          | 48 / 38 / 28                       | 500    | 1.5                 | white, accent words `--green-60`          |
-| Page-hero title: Careers, About, Security (`--text-title-hero`) | 58 / 48 / 28                       | 500    | 1.3                 | same                                      |
-| Large title: Mission, Vision, CTA (`--text-title-lg`)           | 38 / 32 / 26                       | 500    | 1.5                 | white, CTA accent words green             |
-| Block title: use-case title, job title (`--text-title-md`)      | 30 / 26 / 20 (job: 30 / 24 / 20)   | 500    | 1.5                 | white                                     |
-| Stat number (`--text-stat`)                                     | 58 / 40 / 40                       | 500    | 1.5                 | `--green-60`                              |
-| Value title (`--text-value`)                                    | 58 / 40 / 30                       | 500    | 1.5                 | `--grey-45`                               |
-| Card title: product, press (`--text-card-title`)                | 24 / 20 / 20 (press: 24 / 20 / 18) | 400    | 1.5                 | white                                     |
-| Sub-heading in a job card (About This Job…)                     | 24 / 20 / 18                       | 500    | 1.5                 | white                                     |
-| Feature card title (`--text-card-title-sm`)                     | 22 / 18 / 18                       | 400    | 1.5                 | white                                     |
-| FAQ question (`--text-question`)                                | 20 / 18 / 18                       | 500    | normal (about 1.25) | white                                     |
-| Use-case plate card label (`--text-plate`)                      | 20 / 16 / 14                       | 400    | 1.5                 | white, centred                            |
-| Body, badge, hero label (`--text-body`)                         | 18 / 16 / 14                       | 300    | 1.5                 | `--grey-70` (hero paragraph `--white-90`) |
-| Button, nav link (`--text-button`)                              | 18 / 14 / 14                       | 400    | 1.5                 | see Buttons                               |
-| Footer text                                                     | 18 / 16 / 14                       | 400    | 1.5                 | white                                     |
-| Testimonial name                                                | 18 / 16 / 16                       | 500    | 1.5                 | `--green-60`                              |
-| About hero label (`--text-page-hero-label`)                     | 20 / 18 / 14                       | 400    | 1.5                 | white                                     |
+| Role (token)                                                      | 1920 / 1440 / 390                  | Weight | Line                | Colour                                    |
+| ----------------------------------------------------------------- | ---------------------------------- | ------ | ------------------- | ----------------------------------------- |
+| Title: home hero h1, every section h2 (`--text-title`)            | 48 / 38 / 28                       | 500    | 1.5                 | white, accent words `--green-60`          |
+| Page-hero title: Careers, About, Security (`.page-hero__title`)   | 58 / 48 / 28                       | 500    | 1.3                 | same                                      |
+| Large title: Mission, Vision, CTA (`--text-title-lg`)             | 38 / 32 / 26                       | 500    | 1.5                 | white, CTA accent words green             |
+| Block title: use-case title, job title (`.case-item__info-title`) | 30 / 26 / 20 (job: 30 / 24 / 20)   | 500    | 1.5                 | white                                     |
+| Stat number (`.case-item__stat-number`)                           | 58 / 40 / 40                       | 500    | 1.5                 | `--green-60`                              |
+| Value title (`.values__item-title`)                               | 58 / 40 / 30                       | 500    | 1.5                 | `--grey-45`                               |
+| Card title: product, press (`--text-card-title`)                  | 24 / 20 / 20 (press: 24 / 20 / 18) | 400    | 1.5                 | white                                     |
+| Sub-heading in a job card (About This Job…)                       | 24 / 20 / 18                       | 500    | 1.5                 | white                                     |
+| Feature card title (`.feature-item__title`)                       | 22 / 18 / 18                       | 400    | 1.5                 | white                                     |
+| FAQ question (`--text-question`)                                  | 20 / 18 / 18                       | 500    | normal (about 1.25) | white                                     |
+| Use-case plate card label (`.case-item__icon-title`)              | 20 / 16 / 14                       | 400    | 1.5                 | white, centred                            |
+| Body, badge, hero label (`--text-body`)                           | 18 / 16 / 14                       | 300    | 1.5                 | `--grey-70` (hero paragraph `--white-90`) |
+| Button, nav link (`--text-button`)                                | 18 / 14 / 14                       | 400    | 1.5                 | see Buttons                               |
+| Footer text                                                       | 18 / 16 / 14                       | 400    | 1.5                 | white                                     |
+| Testimonial name                                                  | 18 / 16 / 16                       | 500    | 1.5                 | `--green-60`                              |
+| About hero label (`.page-hero__eyebrow`)                          | 20 / 18 / 14                       | 400    | 1.5                 | white                                     |
 
 ## Spacing and layout
 
@@ -121,8 +114,9 @@ documentation, not the site). Weights: **300** body, **400** buttons, nav, card 
   sections below are for checking, not for copying.
 - The text under a section title wraps at 1302 / 1157 px (the 390 container is narrower), beside a
   toggle at 935 / 831.
-- `variables.css` keeps the palette, radii, type scale (`--text-*`), the ramps and the values several
-  blocks share (`--space-card`, `--icon-large`, `--gutter`, …); one block's own values sit in its stylesheet.
+- `variables.css` keeps the palette, radii, the type steps (`--text-*`) and the values several blocks
+  share (`--space-card`, `--icon-large`, `--gutter`, …) and the ramps; a role one block uses (the
+  rows of the type table named by a class) is a ramp in its stylesheet.
 
 ## Radii, borders, gradients
 
@@ -231,9 +225,8 @@ inside the hero card.
 
 ### Dotted decor
 
-Decorative backgrounds in `assets/images/decor/`, never content. The dotted ones are `avif`
-rasters at twice the CSS size, baked over the surface they sit on (`--grey-10` or `--grey-11`); a
-new photo or decor is `webp` or `avif`, never a vector with a path per dot:
+Decorative backgrounds in `assets/images/decor/`, never content: `avif` rasters baked over the
+surface they sit on (`--grey-10` or `--grey-11`), as `ai/rules/assets-performance.md` says:
 
 | Decor                      | Where                                                                                                     |
 | -------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -245,29 +238,30 @@ new photo or decor is `webp` or `avif`, never a vector with a path per dot:
 
 ## Pages
 
-Every page: the navbar, its sections one after another with the section gap, the footer (also a section gap after the last section).
-The footer is the same on all four: the logo centred, the four links in a row, a divider, a
-row of three contacts (envelope, phone, pin icons in `--green-60`), a divider, then a pill bar
-with three social circles at the left, the copyright centred (`--grey-70`) and
-`Privacy Policy | Terms of Service` at the right (plain text) and, under the bar, the muted author
-line (`--grey-60`, weight 300) with a 44 px GitHub icon link beside it (`--green-60`; not in the design). At 390 these stack into centred rows. The drawn footer is
-578 / 440 / 503 px tall. Total page height: Home 7128 / 5674 / 9290, Careers
-7478 / 6089 / 8819, About 5223 / 4197 / 5870, Security 4025 / 3258 / 4397.
+Every page: the navbar, its sections one after another with the section gap, the footer (also a
+section gap after the last section). The footer is the same on all four: the logo centred, the four
+links in a row, a divider, a row of three contacts (envelope, phone, pin icons in `--green-60`), a
+divider, then a pill bar with three social circles at the left, the copyright centred (`--grey-70`)
+and `Privacy Policy | Terms of Service` at the right (plain text) and, under the bar, the muted
+author line (`--grey-60`, weight 300) with a 44 px GitHub icon link beside it (`--green-60`; not in
+the design). At 390 these stack into centred rows. The drawn footer is 578 / 440 / 503 px tall. Total
+page height: Home 7128 / 5674 / 9290, Careers 7478 / 6089 / 8819, About 5223 / 4197 / 5870, Security
+4025 / 3258 / 4397.
 
 ### Home
 
 1. **Hero.** Left: a `--grey-15` badge (check icon, "No LLC Required, No Credit Check."), the
-   title (three lines, accent words `--green-60`), a paragraph, the hero action. Right: the
-   hero card, 515 × 624 at 1920, padding 34, with two olive pills overhanging (`+ $5000,00
-Monthly Income` over its top-left corner; `Supported Currency` with four coin icons below it,
-   52 sticking out at the right). The card holds **Your Transactions**: a stack of three 75 px rows,
-   the first whole, the 2nd and 3rd 53 px lower, 17 px narrower per side, behind the one above at
-   50 % and 20 %; and **Money Exchange**: a 179 px box (flag, code, one-line name; amount and
-   result) and the olive Exchange button. Every size in the card is in `em`, its 1920 value / 16:
-   the card's font-size is its width / 515 * 16 px, so it scales with its width (410 wide at 1440, 305 at 390,
-   no design for either); type has a 12 px floor. The currency list of the native select is dark:
-   `color-scheme: dark` and token colours on `option`. Growth arrows behind the card. The columns are 826 and
-   515 wide with a 120 gap at 1920; at 390 all of it is centred and stacked: text, button, card.
+   title (three lines, accent words `--green-60`), a paragraph, the hero action. Right: the hero
+   card, 515 × 624 at 1920, padding 34, with two olive pills overhanging (`+ $5000,00 Monthly Income`
+   over its top-left corner; `Supported Currency` with four coin icons below it, 52 sticking out at
+   the right). The card holds **Your Transactions**: a stack of three 75 px rows, the first whole, the
+   2nd and 3rd 53 px lower, 17 px narrower per side, behind the one above at 50 % and 20 %; and
+   **Money Exchange**: a 179 px box (flag, code, one-line name; amount and result) and the olive
+   Exchange button. Every size in the card is in `em`, its 1920 value / 16: the card's font-size is
+   its width / 515 * 16 px, so it scales with its width (410 wide at 1440, 305 at 390, no design for
+   either); type has a 12 px floor. The currency list of the native select is dark (`color-scheme: dark`,
+   token colours on `option`). Growth arrows behind the card. The columns are 826 and 515 wide with a
+   120 gap at 1920; at 390 all of it is centred and stacked: text, button, card.
 2. **Our Products.** Heading block with the toggle; three product cards in columns
    separated by 1 px `--grey-15` vertical rules (two panels, one per audience); at 390 stacked.
 3. **Use Cases.** Heading block (no toggle); two rows. Row 1: the plate (2 × 2 cards) on
@@ -333,19 +327,17 @@ of the two. At 390 the photo is first and the text card, centred, follows it, wi
 
 ## Known inconsistencies
 
-- **Title sizes:** the home h1 is a section title (`--text-title`); the page-hero title is
-  larger (58 / 48 / 28, line 1.3). Both are intended.
-- **Heading block gap** to the content is 80 / 60 / 60, or 100 / 80 / 60 with a toggle;
-  the FAQ and Values blocks at 390 are 10 px tighter and take 60 like the rest.
-- **Value titles** are drawn in `--grey-30` (about 2:1); the page uses `--grey-45` for 3:1.
-- **Approximate values**, read from the rendered pages because the layout data does not carry
-  them: the corner radii of the use-case plate, the job, press and security cards; the CTA title
-  size (about 38 / 32 / 26) and its inner spacing; the weights of card and badge text; the
-  icon-circle tints, and every hover and focus look. Check them against the design when building that element.
+- **Heading block gap:** the FAQ and Values blocks are drawn 10 px tighter at 390 and take the
+  common 60.
+- **Value titles** are drawn in `#4c4c4d` (about 2:1); the page uses `--grey-45` for 3:1.
+- **Approximate values**, read from the rendered pages because the layout data does not carry them:
+  the corner radii of the use-case plate, the job, press and security cards; the CTA title size (about
+  38 / 32 / 26) and its inner spacing; the weights of card and badge text; the icon-circle tints, and
+  every hover and focus look. Check them against the design when building that element.
 - **Guessed in the code**, where the layout data has no number: the navbar paddings, link gap and the
-  logo width at 1440 (156); the hero column gap (120 / 80 / 80); the Careers photo height at 1440 and 390; in
-  the footer the author line, the 12 × 8 link padding (44 px targets, so it runs about 45 px taller than
-  drawn), the bar padding and the green current link; the testimonial text, its gaps and its width (600 at
-  most), and five cards per audience.
+  logo width at 1440 (156); the hero column gap (120 / 80 / 80); the Careers photo height at 1440 and
+  390; in the footer the author line, the 12 × 8 link padding (44 px targets, so it runs about 45 px
+  taller than drawn), the bar padding and the green current link; the testimonial text, its gaps and
+  its width (600 at most), and five cards per audience.
 - **Page hero at 390:** the card overlaps the photo by about 42 px on About, not on Security (the
   photo is drawn about 276 high there), so the photo stays 253 and the card follows it.

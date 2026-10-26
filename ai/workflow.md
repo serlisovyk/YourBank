@@ -144,7 +144,7 @@ git branch -d my-<n>-<slug>
 - After a rebase that brings in another branch's page work, check the combined result in
   the browser too: a global style change in one branch can break a block of the other.
 - `main` deploys to Vercel production on the push: check the live site read-only (open it,
-  fetch it) and never touch the Vercel project (decision `clean-urls-vercel-json`).
+  fetch it) and never touch the Vercel project (decision `vercel-json-without-old-redirect`).
 - History stays linear: rebase onto `main`, then fast-forward. Never force-push `main`.
 - If the branch was pushed (for a preview), delete it on the remote too
   (`git push origin --delete my-<n>-<slug>`).

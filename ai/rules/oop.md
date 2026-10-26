@@ -55,7 +55,7 @@ Each class has one reason to change:
 
 ## One method vocabulary
 
-- `render*` puts state into the DOM (`renderTab`, `renderExpanded`).
+- `render*` puts state into the DOM (`renderTabs`, `renderExpanded`).
 - `show*` / `hide*` is a transient decoration.
 - `open*` / `close*` is something expandable: a menu, an expander
   (`HeaderMenuController.open`, `Disclosure.close`).

@@ -15,7 +15,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
   preview: the Home header and hero, the author's name), `robots.txt`, `sitemap.xml`, `llms.txt`, `logo.svg` (for the JSON-LD).
 - `vite.config.js` — only re-exports `vite/config.js` (Vite: `root: 'src'`, `appType: 'mpa'` — dev and preview open `/careers` and answer an unknown path with 404 like production, output `dist/` at the repo root). `vite/paths.js` — the
   path constants and the pages (`PAGES`, the Rollup inputs); `vite/parts/` — one module per concern (`build`, `plugins`, `handlebars`,
-  `image-optimizer`); `vite/handlebars/` — `helpers.js` (`eq`) and `context.js` (`context(pagePath)`: the current `page`, the `data/` constants and the converter's first state, built with `CurrencyConverter.convert`).
+  `image-optimizer`); `vite/handlebars/` — `helpers.js` (`eq`) and `context.js` (`createContext(pagePath)`: the current `page`, the `data/` constants and the converter's first state, built with `CurrencyConverter.convert`).
 - `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`, `lint`, `lint:fix`, `lint:css`, `lint:css:fix`, `size`;
   `package-lock.json` — the lockfile (npm, decision `npm-package-manager`). License: MIT, declared in `package.json` only
   (decision `license-in-package-json`).
@@ -83,7 +83,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Styles (`src/styles/`)
 
 - `style.css` — imports the files below in order: `general`, `ui`, `components`, `sections`.
-- `general/` — `reset.css`, `fonts.css` (`@font-face`), `variables.css` (every token), `main.css` (`body`, focus ring, `.container`, `.section`).
+- `general/` — `reset.css`, `fonts.css` (`@font-face`), `variables.css` (the shared tokens and ramps), `main.css` (`body`, focus ring, `.container`, `.section`).
 - `ui/` — the shared elements: `button.css`, `toggle.css` (the Individuals / Businesses pill), `visually-hidden.css` (text for assistive technology only), `hit-area.css` (a 44 px clickable box for a smaller control), `reveal.css` (the fade-in of `data-reveal`).
 - `components/`, `sections/` — one stylesheet per partial of the same name.
 

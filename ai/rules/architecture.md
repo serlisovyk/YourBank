@@ -24,7 +24,7 @@ it. Each folder has one job:
   pages is one partial, not a copy.
 - `vite/handlebars/context.js` is the one place that wires `context`: a `data/`
   constant reaches the templates only through it, and the current `page` only from
-  `context(pagePath)`.
+  `createContext(pagePath)`.
 - A formula is never in `data/`. What a partial renders before the script runs (the converter's first result) is
   assembled in `context.js` with the class that owns the formula, never a second copy of it.
 - A new page is an HTML file in `src/`, added to `PAGES` in `vite/paths.js`; it gets an entry in
