@@ -1,7 +1,12 @@
 .header {
+  view-transition-name: header;
   margin-top: calc(
     40px + (30 - 40) * var(--ramp-390-1440) + (50 - 30) * var(--ramp-1440-1920)
   );
+}
+
+::view-transition-group(header) {
+  animation: none;
 }
 
 .header__skip-link {

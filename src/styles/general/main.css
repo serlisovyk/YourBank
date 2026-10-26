@@ -6,6 +6,16 @@ html {
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+::view-transition-group(*) {
+  animation-duration: var(--transition-duration);
+}
+
 body {
   font-family: var(--font-family);
   font-weight: 300;
