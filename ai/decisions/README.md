@@ -72,6 +72,7 @@ each with the record that replaced it.
 - [Carousel: CSS scroll-snap, no library](2026-10-24-carousel-scroll-snap.md)
 - [Touch targets: the drawn size stays, the hit area grows to 44 px](2026-10-24-touch-targets-hit-area.md)
 - [Reveal on scroll: opt-in, hidden only behind a script class, never the first screen](2026-10-24-reveal-on-scroll.md)
+- [Page transitions: cross-document view transitions in CSS, the header named](2026-10-26-cross-document-view-transitions.md)
 - [Open Account leads to Our Products, the tab in the address](2026-10-24-open-account-to-products.md)
 - [Link previews: the Home header and hero as the one image, the origin, fixed by hand in `public/` and `data/site.js`](2026-10-25-link-preview-home-hero.md)
 - [Search files are hand-written in `public/`; the JSON-LD comes from `data/`](2026-10-24-seo-files-in-public.md)

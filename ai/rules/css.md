@@ -80,10 +80,14 @@ framework. `styles/style.css` imports every file, in this order: `general`, `ui`
 
 ## Motion and focus
 
-- Reduced motion is handled once, in `general/reset.css`; a component never adds its own
+- Reduced motion is handled once, in `general/reset.css` (the page transition aside, below); a component never adds its own
   `prefers-reduced-motion` block. A duration comes from `--transition-duration`, or is written in
   the one block that uses it (the reveal).
 - A `transition` names its properties, never `all`.
+- Pages cross-fade by `@view-transition` (`general/main.css`), only under `no-preference`; a new page
+  gets it for free. A `view-transition-name` is unique on its page and sits on an element that has the
+  same place on every page (the header), with its group `animation: none`
+  (`ai/decisions/2026-10-26-cross-document-view-transitions.md`).
 - A state that hides content for an animation applies only under a class a script puts on `<html>`
   (`.js-reveal`), so the page is complete without script.
 - One `:focus-visible` rule in `general/main.css` draws the ring for every control (2px
