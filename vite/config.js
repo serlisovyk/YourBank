@@ -5,6 +5,7 @@ import { PUBLIC, SRC } from './paths.js'
 
 export default defineConfig({
   root: SRC,
+  appType: 'mpa',
   publicDir: PUBLIC,
   build: getBuild(),
   plugins: getPlugins(),
