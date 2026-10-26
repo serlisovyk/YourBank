@@ -25,6 +25,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `.husky/pre-commit` runs lint-staged (`.lintstagedrc.json`): ESLint and Stylelint `--fix`, then Prettier, on staged files.
 - `vercel.json` — Vercel: clean URLs and the cache header of `/assets/`.
 - `AGENTS.md` — the entry point for agents; `CLAUDE.md` points to it.
+- `README.md` — the repo's front page; `assets/` — its demo GIF, outside `src/`, not part of the build.
 - `ai/` — agent docs: this map, `workflow.md`, `rules/`, `skills/`, `decisions/`, `prompts/`,
   `linear-task-template.md`, and the archive `superpowers/`.
 - Build plugins, `build` only (`vite/plugins/`, options in `vite/parts/`): `vite-plugin-image-optimizer` (sharp, SVGO) and an HTML minifier

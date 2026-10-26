@@ -1,7 +1,7 @@
 {
   "name": "banking",
   "version": "1.0.0",
-  "description": "A multi-page bank website built with HTML, plain CSS, vanilla JavaScript and Vite",
+  "description": "A multi-page bank website built with HTML, CSS, vanilla JavaScript, Vite and Handlebars partials.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
