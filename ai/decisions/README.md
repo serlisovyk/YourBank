@@ -55,7 +55,7 @@ each with the record that replaced it.
 - [License declared in `package.json` only, no `LICENSE` file](2026-10-23-license-in-package-json.md)
 - [Linters: ESLint, Stylelint, Husky and lint-staged](2026-10-23-linters.md)
 - [Line endings: Prettier `endOfLine: auto`, no `.gitattributes`](2026-10-23-line-endings-auto.md)
-- [CI on GitHub Actions and size-limit: the checks, the size limits, room for the font fallback in the CSS](2026-10-24-ci-size-limit-css-room.md)
+- [CI on GitHub Actions and size-limit: the checks, limits by fact](2026-10-26-ci-size-limits-by-fact.md)
 - [The design is a third-party template: a reference only, never published](2026-10-23-design-is-a-reference.md)
 
 ### Code
@@ -85,6 +85,7 @@ each with the record that replaced it.
 - [Vercel: clean URLs, a real 404 and cached assets, without the old `/pages/` redirect](2026-10-25-vercel-json-without-old-redirect.md) — superseded by `vercel-json-dev-clean-urls`
 - [CI on GitHub Actions and size-limit: the checks and the size limits](2026-10-24-ci-size-limit.md) — superseded by `ci-size-limit-photos`
 - [CI on GitHub Actions and size-limit: the checks, the size limits, room for the page photos](2026-10-24-ci-size-limit-photos.md) — superseded by `ci-size-limit-css-room`
+- [CI on GitHub Actions and size-limit: the checks, the size limits, room for the font fallback in the CSS](2026-10-24-ci-size-limit-css-room.md) — superseded by `ci-size-limits-by-fact`
 - [Lighthouse 100: the font loads early and swaps without a shift; what is left alone](2026-10-24-lighthouse-100.md) — superseded by `font-stack-no-fallback-face`
 - [Link previews: one image and the origin, fixed by hand in `public/` and `data/site.js`](2026-10-24-link-previews.md) — superseded by `link-preview-home-hero`
 - [Breakpoints: two structural queries, fluid tokens between the three drawn widths](2026-10-23-breakpoint-scheme.md) — superseded by `fluid-ramps`

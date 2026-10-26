@@ -63,5 +63,5 @@ decision `vanilla-js-vite-handlebars`.
 - No source maps in the production build: `vite/parts/build.js` sets no `build.sourcemap`.
 - A dependency is added only with the author's yes; the runtime has none today.
 - `npm run size` holds the built JS, CSS, font and images to the limits in `.size-limit.json`
-  (decision `ci-size-limit-css-room`). A change that comes near them is questioned first: a lighter way,
+  (decision `ci-size-limits-by-fact`). A change that comes near them is questioned first: a lighter way,
   a smaller image; raising a limit is a new dated record.

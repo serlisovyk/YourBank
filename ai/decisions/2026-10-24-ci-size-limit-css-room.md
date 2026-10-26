@@ -1,6 +1,6 @@
 # CI on GitHub Actions and size-limit: room for the font fallback in the CSS
 
-Date: 2026-10-24 · Status: accepted
+Date: 2026-10-24 · Status: superseded by `ci-size-limits-by-fact`
 
 ## Context
 
