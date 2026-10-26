@@ -43,7 +43,10 @@ What really differs from Vercel is only the unknown path: the `spa` app type ans
 3. The plugin as written in the issue (rewrite in `configureServer` / `configurePreviewServer`):
    not recommended, no behavior to add on top of Vite's.
 
-Recommendation: option 2. Nothing is implemented until the author picks.
+Answer: option 2, chosen by the orchestrator because the plugin would duplicate Vite. Changes: `appType: 'mpa'`
+in `vite/config.js`; the record `2026-10-26-vercel-json-dev-clean-urls` supersedes
+`vercel-json-without-old-redirect` (only its `Status` line changes; the index moves it to Superseded and lists the
+new one); `ai/map.md` mentions the setting. No rule says "locally open `/careers.html`".
 
 ## Verification (for options 1 and 2)
 

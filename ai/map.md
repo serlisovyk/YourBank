@@ -13,7 +13,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 - `src/assets/` — `fonts/`, `images/`: referenced as `/assets/…`, bundled and hashed (below).
 - `public/` — files that need a fixed URL, served as they are: `favicon.svg`, `og-image.png` (the link
   preview: the Home header and hero, the author's name), `robots.txt`, `sitemap.xml`, `llms.txt`, `logo.svg` (for the JSON-LD).
-- `vite.config.js` — only re-exports `vite/config.js` (Vite: `root: 'src'`, output `dist/` at the repo root). `vite/paths.js` — the
+- `vite.config.js` — only re-exports `vite/config.js` (Vite: `root: 'src'`, `appType: 'mpa'` — dev and preview open `/careers` and answer an unknown path with 404 like production, output `dist/` at the repo root). `vite/paths.js` — the
   path constants and the pages (`PAGES`, the Rollup inputs); `vite/parts/` — one module per concern (`build`, `plugins`, `handlebars`,
   `image-optimizer`); `vite/handlebars/` — `helpers.js` (`eq`) and `context.js` (`context(pagePath)`: the current `page`, the `data/` constants and the converter's first state, built with `CurrencyConverter.convert`).
 - `package.json` — scripts `dev`, `build`, `preview`, `format`, `format:check`, `lint`, `lint:fix`, `lint:css`, `lint:css:fix`, `size`;
@@ -112,7 +112,7 @@ Navigation only: where things live and who owns what. How it works is in the cod
 ## Deployment
 
 Live at <https://banking-coral-three.vercel.app> on Vercel through its Git integration: `main` is production, other
-branches get previews; the config is `vercel.json` only (decision `vercel-json-without-old-redirect`).
+branches get previews; the config is `vercel.json` only (decision `vercel-json-dev-clean-urls`).
 
 ## Not in this project
 

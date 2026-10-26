@@ -1,6 +1,6 @@
 # Vercel: clean URLs, a real 404 and cached assets, without the old `/pages/` redirect
 
-Date: 2026-10-25 · Status: accepted
+Date: 2026-10-25 · Status: superseded by `vercel-json-dev-clean-urls`
 
 ## Context
 
