@@ -23,7 +23,7 @@ A bank website of four pages, built from a third-party design template and writt
 
 ## 📈 Lighthouse
 
-Measured on production with Lighthouse 13.5.0, best of two runs:
+Measured on production with Lighthouse 13.5.0, the best of several runs:
 
 | Page     | Device  | Performance | Accessibility | Best Practices | SEO |
 | -------- | ------- | ----------- | ------------- | -------------- | --- |
@@ -31,7 +31,7 @@ Measured on production with Lighthouse 13.5.0, best of two runs:
 | Home     | Desktop | 100         | 100           | 100            | 100 |
 | Careers  | Mobile  | 100         | 100           | 100            | 100 |
 | Careers  | Desktop | 100         | 100           | 100            | 100 |
-| About    | Mobile  | 99          | 100           | 100            | 100 |
+| About    | Mobile  | 100         | 100           | 100            | 100 |
 | About    | Desktop | 100         | 100           | 100            | 100 |
 | Security | Mobile  | 100         | 100           | 100            | 100 |
 | Security | Desktop | 100         | 100           | 100            | 100 |
@@ -41,11 +41,9 @@ Mobile Performance varies between 98 and 100 from run to run.
 ## 🧰 Tech Stack
 
 - HTML
-- Handlebars (vite-plugin-handlebars)
 - CSS (native nesting, design tokens)
 - JavaScript (ES modules)
-- Vite 8
-- sharp and SVGO (vite-plugin-image-optimizer)
+- Vite 8 with Handlebars partials (vite-plugin-handlebars) and image optimisation (vite-plugin-image-optimizer: sharp and SVGO)
 - html-minifier-terser
 - ESLint
 - Stylelint
