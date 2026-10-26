@@ -43,7 +43,9 @@ Mobile Performance varies between 98 and 100 from run to run.
 - HTML
 - CSS (native nesting, design tokens)
 - JavaScript (ES modules)
-- Vite 8 with Handlebars partials (vite-plugin-handlebars) and image optimisation (vite-plugin-image-optimizer: sharp and SVGO)
+- Vite 8
+  - vite-plugin-handlebars (Handlebars partials)
+  - vite-plugin-image-optimizer (sharp and SVGO)
 - html-minifier-terser
 - ESLint
 - Stylelint
