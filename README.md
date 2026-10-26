@@ -17,26 +17,9 @@ A bank website of four pages, built from a third-party design template and writt
 - An FAQ with a preview under a fade and a Load All expander
 - Cross-fade page transitions (cross-document View Transitions) and reveal on scroll, both off for reduced motion
 - Accessible: skip link, focus rings, 44px hit areas, keyboard support, no axe violations on any page
-- Link previews with an Open Graph image, `robots.txt`, `sitemap.xml`, `llms.txt` and JSON-LD
+- Link previews with an Open Graph image, `robots.txt`, `sitemap.xml`, `llms.txt`, JSON-LD and a real 404 for an unknown address
 - Optimised AVIF and WebP images, a preloaded self-hosted font, minified HTML and hashed assets cached for a year
-- An unknown address answers with the home page and a 404 status
-
-## 📈 Lighthouse
-
-Measured on production with Lighthouse 13.5.0, the best of several runs:
-
-| Page     | Device  | Performance | Accessibility | Best Practices | SEO |
-| -------- | ------- | ----------- | ------------- | -------------- | --- |
-| Home     | Mobile  | 100         | 100           | 100            | 100 |
-| Home     | Desktop | 100         | 100           | 100            | 100 |
-| Careers  | Mobile  | 100         | 100           | 100            | 100 |
-| Careers  | Desktop | 100         | 100           | 100            | 100 |
-| About    | Mobile  | 100         | 100           | 100            | 100 |
-| About    | Desktop | 100         | 100           | 100            | 100 |
-| Security | Mobile  | 100         | 100           | 100            | 100 |
-| Security | Desktop | 100         | 100           | 100            | 100 |
-
-Mobile Performance varies between 98 and 100 from run to run.
+- Lighthouse 100 for performance, accessibility, best practices and SEO on every page, mobile and desktop
 
 ## 🧰 Tech Stack
 
